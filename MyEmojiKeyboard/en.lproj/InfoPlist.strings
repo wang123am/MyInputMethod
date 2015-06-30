@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  MyInputMethod
+
+  Created by luowei on 15/6/30.
+  Copyright (c) 2015年 luowei. All rights reserved.
+*/
+"CFBundleDisplayName" = "My Emoji";
