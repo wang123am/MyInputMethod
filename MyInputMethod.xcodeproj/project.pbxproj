@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BEF0622F4BCDB4DC8FEC575F /* BaseKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06610E5C29E6082948E95 /* BaseKeyboard.m */; };
 		EA56C0601B42E1140076EC00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56C05F1B42E1140076EC00 /* main.m */; };
 		EA56C0631B42E1140076EC00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56C0621B42E1140076EC00 /* AppDelegate.m */; };
 		EA56C0661B42E1140076EC00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56C0651B42E1140076EC00 /* ViewController.m */; };
@@ -24,6 +25,8 @@
 		EA56C0C01B42F1740076EC00 /* MyEmojiKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EA56C0B71B42F1740076EC00 /* MyEmojiKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EA56C0C81B42F1F00076EC00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA56C0CA1B42F1F00076EC00 /* InfoPlist.strings */; };
 		EA56C0CC1B42F1F60076EC00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA56C0CE1B42F1F60076EC00 /* Localizable.strings */; };
+		EABF4BCA1B42FFBE00918AE1 /* FullKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF4BC91B42FFBE00918AE1 /* FullKeyboard.m */; };
+		EABF4BCD1B43015300918AE1 /* FullKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EABF4BCF1B43015300918AE1 /* FullKeyboard.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BEF06610E5C29E6082948E95 /* BaseKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseKeyboard.m; sourceTree = "<group>"; };
+		BEF06B7D461D112027F7EED7 /* BaseKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKeyboard.h; sourceTree = "<group>"; };
 		EA56C05A1B42E1140076EC00 /* MyInputMethod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyInputMethod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA56C05E1B42E1140076EC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA56C05F1B42E1140076EC00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,6 +109,10 @@
 		EA56C0CD1B42F1F60076EC00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA56C0CF1B42F1F70076EC00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA56C0D01B42F2480076EC00 /* MyEmojiKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyEmojiKeyboard.entitlements; sourceTree = "<group>"; };
+		EABF4BC81B42FFBE00918AE1 /* FullKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullKeyboard.h; sourceTree = "<group>"; };
+		EABF4BC91B42FFBE00918AE1 /* FullKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullKeyboard.m; sourceTree = "<group>"; };
+		EABF4BCE1B43015300918AE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FullKeyboard.xib; sourceTree = "<group>"; };
+		EABF4BD11B43015500918AE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FullKeyboard.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +147,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BEF06698A96455417C48CF67 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BEF06B7D461D112027F7EED7 /* BaseKeyboard.h */,
+				BEF06610E5C29E6082948E95 /* BaseKeyboard.m */,
+				EABF4BC81B42FFBE00918AE1 /* FullKeyboard.h */,
+				EABF4BC91B42FFBE00918AE1 /* FullKeyboard.m */,
+				EABF4BCF1B43015300918AE1 /* FullKeyboard.xib */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
 		EA56C0511B42E1140076EC00 = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +232,7 @@
 				EA56C08B1B42E1670076EC00 /* MyKeyboardViewController.h */,
 				EA56C08C1B42E1670076EC00 /* MyKeyboardViewController.m */,
 				EA56C0891B42E1670076EC00 /* Supporting Files */,
+				BEF06698A96455417C48CF67 /* Keyboard */,
 			);
 			path = MyKeyboard;
 			sourceTree = "<group>";
@@ -412,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA56C0AB1B42E42A0076EC00 /* InfoPlist.strings in Resources */,
+				EABF4BCD1B43015300918AE1 /* FullKeyboard.xib in Resources */,
 				EA56C0AE1B42E4300076EC00 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,7 +473,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABF4BCA1B42FFBE00918AE1 /* FullKeyboard.m in Sources */,
 				EA56C08D1B42E1670076EC00 /* MyKeyboardViewController.m in Sources */,
+				BEF0622F4BCDB4DC8FEC575F /* BaseKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +578,15 @@
 				EA56C0CF1B42F1F70076EC00 /* en */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		EABF4BCF1B43015300918AE1 /* FullKeyboard.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EABF4BCE1B43015300918AE1 /* Base */,
+				EABF4BD11B43015500918AE1 /* en */,
+			);
+			name = FullKeyboard.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -789,6 +823,7 @@
 				EA56C07F1B42E1140076EC00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA56C0801B42E1140076EC00 /* Build configuration list for PBXNativeTarget "MyInputMethodTests" */ = {
 			isa = XCConfigurationList;
@@ -797,6 +832,7 @@
 				EA56C0821B42E1140076EC00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA56C0911B42E1670076EC00 /* Build configuration list for PBXNativeTarget "MyKeyboard" */ = {
 			isa = XCConfigurationList;
@@ -805,6 +841,7 @@
 				EA56C0931B42E1670076EC00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA56C0C11B42F1740076EC00 /* Build configuration list for PBXNativeTarget "MyEmojiKeyboard" */ = {
 			isa = XCConfigurationList;
@@ -813,6 +850,7 @@
 				EA56C0C31B42F1740076EC00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
