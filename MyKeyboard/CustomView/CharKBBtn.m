@@ -50,9 +50,4 @@
 }
 
 
-- (void)setImage:(UIImage *)image forState:(UIControlState)state {
-
-}
-
-
 @end

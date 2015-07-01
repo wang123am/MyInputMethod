@@ -18,5 +18,4 @@
 
 @property(nonatomic, strong) KBLabel *mainLabel;
 
-- (void)setImage:(UIImage *)image forState:(UIControlState)state;
 @end

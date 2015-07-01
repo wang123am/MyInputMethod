@@ -10,5 +10,6 @@
 
 @interface BaseKBBtn : UIControl
 
+- (void)setImage:(UIImage *)image forState:(UIControlState)state;
 
 @end

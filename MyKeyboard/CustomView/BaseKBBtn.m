@@ -62,4 +62,8 @@
     shadowlayer.frame = CGRectOffset(self.layer.frame, 0, OFFSET_SHADOWLAYER);
 }
 
+- (void)setImage:(UIImage *)image forState:(UIControlState)state {
+
+}
+
 @end

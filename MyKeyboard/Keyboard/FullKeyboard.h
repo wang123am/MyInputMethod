@@ -10,4 +10,11 @@
 
 @interface FullKeyboard : BaseKeyboard
 
+
+//设置功能按键显示及事件处理
+- (void)setKeyKBBtns:(NSDictionary *)keyTextTagDict;
+
+//设置字符按键显示及事件处理
+- (void)setCharKBBtns:(NSDictionary *)charTextTagDict;
+
 @end
