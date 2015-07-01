@@ -7,6 +7,11 @@
 //
 
 #import "MyKeyboardViewController.h"
+#import "FullKeyboard.h"
+#import "BaseKeyboard.h"
+#import "Defines.h"
+
+
 
 @interface MyKeyboardViewController ()
 @property (nonatomic, strong) UIButton *nextKeyboardButton;
@@ -16,33 +21,60 @@
 
 - (void)updateViewConstraints {
     [super updateViewConstraints];
-    
+
     // Add custom view sizing constraints here
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    CGFloat inputHeight = (CGFloat) (screenSize.width > screenSize.height ? KEYBOARD_LANDSCAPE_HEIGHT : KEYBOARD_HEIGHT);
+    _inputViewHeightConstraint = [NSLayoutConstraint constraintWithItem:self.inputView
+                                                                  attribute:NSLayoutAttributeHeight
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:nil
+                                                                  attribute:NSLayoutAttributeNotAnAttribute
+                                                                 multiplier:1
+                                                                   constant:inputHeight];
+
+
+    _keyboardHorizonConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"|[keyboard]|" options:0 metrics:nil views:@{@"keyboard":_keyboard}];
+    _keyboardVerticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[keyboard]|" options:0 metrics:nil views:@{@"keyboard":_keyboard}];
+
+    [NSLayoutConstraint activateConstraints:@[_inputViewHeightConstraint]];
+    [NSLayoutConstraint activateConstraints:_keyboardHorizonConstraints];
+    [NSLayoutConstraint activateConstraints:_keyboardVerticalConstraints];
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Perform custom UI setup here
-    self.nextKeyboardButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    
-    [self.nextKeyboardButton setTitle:NSLocalizedString(@"Next Keyboard", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
-    [self.nextKeyboardButton sizeToFit];
-    self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    [self.nextKeyboardButton addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:self.nextKeyboardButton];
-    
-    NSLayoutConstraint *nextKeyboardButtonLeftSideConstraint = [NSLayoutConstraint constraintWithItem:self.nextKeyboardButton attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0];
-    NSLayoutConstraint *nextKeyboardButtonBottomConstraint = [NSLayoutConstraint constraintWithItem:self.nextKeyboardButton attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0];
-    [self.view addConstraints:@[nextKeyboardButtonLeftSideConstraint, nextKeyboardButtonBottomConstraint]];
+
+    if(!self.keyboard){
+        //26键盘
+        _keyboard = (FullKeyboard *)[[NSBundle mainBundle] loadNibNamed:@"FullKeyboard" owner:self.view options:nil][0];
+
+        //todo:设置keyboard的内容与事件响应
+
+    }
+    [self.inputView addSubview:_keyboard];
+    _keyboard.translatesAutoresizingMaskIntoConstraints = NO;
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated
 }
+
+
+#pragma mark UITextInputDelegate Implamentation
 
 - (void)textWillChange:(id<UITextInput>)textInput {
     // The app is about to change the document's contents. Perform any preparation here.

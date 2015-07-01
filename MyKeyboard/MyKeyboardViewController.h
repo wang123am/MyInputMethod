@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class BaseKeyboard;
+
+
 @interface MyKeyboardViewController : UIInputViewController
 
+@property(nonatomic, strong) NSLayoutConstraint *inputViewHeightConstraint;
+@property(nonatomic, strong) BaseKeyboard *keyboard;
+
+@property(nonatomic, strong) NSArray *keyboardHorizonConstraints;
+@property(nonatomic, strong) NSArray *keyboardVerticalConstraints;
 @end

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		BEF0622F4BCDB4DC8FEC575F /* BaseKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06610E5C29E6082948E95 /* BaseKeyboard.m */; };
+		BEF0636B284989C1554E22F9 /* KBLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06A1F6E55004864B0230E /* KBLabel.m */; };
+		BEF0648D569B86A109B153FB /* BaseKBBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06549AF4314DF3E4F4284 /* BaseKBBtn.m */; };
+		BEF0670CCDDD21259FA67C09 /* KeyKBBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF068700E3B18B5F9C80A66 /* KeyKBBtn.m */; };
+		BEF0696049A242C462CCFA37 /* KeyboardConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06E9EEE76F27FEC5567DA /* KeyboardConfiguration.m */; };
+		BEF069A2AB9991757EFDD99D /* CharKBBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06EF726C48C6B56EF035C /* CharKBBtn.m */; };
 		EA56C0601B42E1140076EC00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56C05F1B42E1140076EC00 /* main.m */; };
 		EA56C0631B42E1140076EC00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56C0621B42E1140076EC00 /* AppDelegate.m */; };
 		EA56C0661B42E1140076EC00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56C0651B42E1140076EC00 /* ViewController.m */; };
@@ -69,8 +74,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BEF0642BFB2F6B36868DD497 /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		BEF06549AF4314DF3E4F4284 /* BaseKBBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseKBBtn.m; sourceTree = "<group>"; };
 		BEF06610E5C29E6082948E95 /* BaseKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseKeyboard.m; sourceTree = "<group>"; };
+		BEF0679C79D49F1625F5CD25 /* BaseKBBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKBBtn.h; sourceTree = "<group>"; };
+		BEF0684133F3FE4B216BCEAB /* CharKBBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharKBBtn.h; sourceTree = "<group>"; };
+		BEF068700E3B18B5F9C80A66 /* KeyKBBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyKBBtn.m; sourceTree = "<group>"; };
+		BEF06A1F6E55004864B0230E /* KBLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBLabel.m; sourceTree = "<group>"; };
 		BEF06B7D461D112027F7EED7 /* BaseKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKeyboard.h; sourceTree = "<group>"; };
+		BEF06BEBA65AC6FEBCEEFF1F /* KeyboardConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardConfiguration.h; sourceTree = "<group>"; };
+		BEF06E9EEE76F27FEC5567DA /* KeyboardConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardConfiguration.m; sourceTree = "<group>"; };
+		BEF06EF726C48C6B56EF035C /* CharKBBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharKBBtn.m; sourceTree = "<group>"; };
+		BEF06F017DB5A1DB2B86E831 /* KeyKBBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyKBBtn.h; sourceTree = "<group>"; };
+		BEF06F663D64BA1D3513C500 /* KBLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBLabel.h; sourceTree = "<group>"; };
 		EA56C05A1B42E1140076EC00 /* MyInputMethod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyInputMethod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA56C05E1B42E1140076EC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA56C05F1B42E1140076EC00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -147,6 +163,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BEF0619E6600B0A7E5B8C418 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BEF06E9EEE76F27FEC5567DA /* KeyboardConfiguration.m */,
+				BEF06BEBA65AC6FEBCEEFF1F /* KeyboardConfiguration.h */,
+				BEF0642BFB2F6B36868DD497 /* Defines.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BEF0660F38ACD9F151D4FA28 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				BEF0679C79D49F1625F5CD25 /* BaseKBBtn.h */,
+				BEF06549AF4314DF3E4F4284 /* BaseKBBtn.m */,
+				BEF0684133F3FE4B216BCEAB /* CharKBBtn.h */,
+				BEF06EF726C48C6B56EF035C /* CharKBBtn.m */,
+				BEF06F017DB5A1DB2B86E831 /* KeyKBBtn.h */,
+				BEF068700E3B18B5F9C80A66 /* KeyKBBtn.m */,
+				BEF06A1F6E55004864B0230E /* KBLabel.m */,
+				BEF06F663D64BA1D3513C500 /* KBLabel.h */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		BEF06698A96455417C48CF67 /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +274,8 @@
 				EA56C08C1B42E1670076EC00 /* MyKeyboardViewController.m */,
 				EA56C0891B42E1670076EC00 /* Supporting Files */,
 				BEF06698A96455417C48CF67 /* Keyboard */,
+				BEF0660F38ACD9F151D4FA28 /* CustomView */,
+				BEF0619E6600B0A7E5B8C418 /* Common */,
 			);
 			path = MyKeyboard;
 			sourceTree = "<group>";
@@ -476,6 +519,11 @@
 				EABF4BCA1B42FFBE00918AE1 /* FullKeyboard.m in Sources */,
 				EA56C08D1B42E1670076EC00 /* MyKeyboardViewController.m in Sources */,
 				BEF0622F4BCDB4DC8FEC575F /* BaseKeyboard.m in Sources */,
+				BEF0648D569B86A109B153FB /* BaseKBBtn.m in Sources */,
+				BEF0696049A242C462CCFA37 /* KeyboardConfiguration.m in Sources */,
+				BEF069A2AB9991757EFDD99D /* CharKBBtn.m in Sources */,
+				BEF0670CCDDD21259FA67C09 /* KeyKBBtn.m in Sources */,
+				BEF0636B284989C1554E22F9 /* KBLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
