@@ -14,20 +14,27 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        //注意:layerSize比boundSize小一圈
+        [self setupSubViews];
     
-        //subView的大小根据layerSize来设置
-        CGSize layerSize = self.layer.bounds.size;
-        _mainLabel = [[KBLabel alloc] initWithFrame:CGRectMake(0, 0, layerSize.width, layerSize.height /2)];
-    
-        //subView的中心点位置根据boundSize来设置
-        CGSize boundSize = self.bounds.size;
-        _mainLabel.center = CGPointMake((CGFloat) boundSize.width / 2, (CGFloat) boundSize.height / 2);
-
-        [self addSubview:_mainLabel];
     }
 
     return self;
+}
+
+- (void)setupSubViews {
+    [super setupSubViews];
+
+    //注意:layerSize比boundSize小一圈
+
+    //subView的大小根据layerSize来设置
+    CGSize layerSize = self.layer.bounds.size;
+    _mainLabel = [[KBLabel alloc] initWithFrame:CGRectMake(0, 0, layerSize.width, layerSize.height /2)];
+
+    //subView的中心点位置根据boundSize来设置
+    CGSize boundSize = self.bounds.size;
+    _mainLabel.center = CGPointMake((CGFloat) boundSize.width / 2, (CGFloat) boundSize.height / 2);
+
+    [self addSubview:_mainLabel];
 }
 
 - (void)layoutSubviews {

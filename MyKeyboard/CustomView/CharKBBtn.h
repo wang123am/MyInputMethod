@@ -18,4 +18,6 @@
 
 @property(nonatomic, strong) KBLabel *mainLabel;
 
+- (void)setupSubViews;
+
 @end

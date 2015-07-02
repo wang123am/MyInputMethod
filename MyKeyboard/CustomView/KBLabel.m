@@ -11,19 +11,19 @@
     NSString *kbText;
 }
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self setupSubViews];
+    }
+
+    return self;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        //当前主题
-        NSString *themeName = [KeyboardConfiguration currentTheme];
-        //当有主题设置
-        if(themeName){
-            UIImage *kbLabImamge = [KeyboardConfiguration getKBLabImageWithByName:themeName withText:nil];
-            self.layer.contents = (__bridge id)kbLabImamge.CGImage;
-            self.layer.contentsGravity = kCAGravityResizeAspect;    //等同于UIViewContentModeScaleAspectFit
-            self.layer.contentsScale = [[UIScreen mainScreen] scale];
-
-        }
+        [self setupSubViews];
     }
 
 //    // required to prevent Auto Layout from compressing the label (by 1 point usually) for certain constraint solutions
@@ -31,6 +31,19 @@
 //                                          forAxis:UILayoutConstraintAxisVertical];
 
     return self;
+}
+
+- (void)setupSubViews {
+//当前主题
+    NSString *themeName = [KeyboardConfiguration currentTheme];
+    //当有主题设置
+    if(themeName){
+            UIImage *kbLabImamge = [KeyboardConfiguration getKBLabImageWithByName:themeName withText:nil];
+            self.layer.contents = (__bridge id)kbLabImamge.CGImage;
+            self.layer.contentsGravity = kCAGravityResizeAspect;    //等同于UIViewContentModeScaleAspectFit
+            self.layer.contentsScale = [[UIScreen mainScreen] scale];
+
+        }
 }
 
 - (void)layoutSubviews {

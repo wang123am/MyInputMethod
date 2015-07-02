@@ -8,5 +8,6 @@
 
 @interface KBLabel : UILabel
 
+- (void)setupSubViews;
 
 @end

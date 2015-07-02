@@ -17,33 +17,76 @@
 
 }
 
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    Log(@"--------%d:%s---------", __LINE__, __func__);
+    
+    if (self) {
+//        [self setUpFullKeyboard];
+    }
+
+    return self;
+}
+
+
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    [super traitCollectionDidChange:previousTraitCollection];
+
+    Log(@"--------%d:%s---------", __LINE__, __func__);
+}
+
+
 - (void)awakeFromNib {
     [super awakeFromNib];
 
+    Log(@"--------%d:%s---------", __LINE__, __func__);
+//    [self setUpFullKeyboard];
+    CharKBBtn *charKBBtn = (CharKBBtn *) [self viewWithTag:101];
+    [charKBBtn setupSubViews];
+    charKBBtn.mainLabel.text = @"Q";
+
+}
+
+- (void)setUpFullKeyboard {
     //约定:1.按键上下字符内容以 | 分隔,没有分隔默认填充为按键下方字符；2.如果分隔符左边为 image,则设置image；
     NSDictionary *fullKeyboard_zh_char_text_tag_dict = @{@"1|Q" : @101, @"2|W" : @102, @"3|E" : @103, @"4|R" : @104, @"5|T" : @105, @"6|Y" : @106, @"7|U" : @107, @"8|I" : @108, @"9|O" : @109, @"0|P" : @110,
             @"@|A" : @201, @"~|S" : @202, @"?|D" : @203, @"…|F" : @204, @"；|G" : @205, @"：|H" : @206, @"、|J" : @207, @"（|K" : @208, @"）|L" : @209,
-            @".|Z" : @302, @"！|X" : @303, @"=|C" : @304, @"“|V" : @305, @"”|B" : @306, @"《|N" : @307, @"》|M" : @308, @"image|space_normal,space_Highlighted" : @404, @"。|，" : @405};
+            @".|Z" : @302, @"！|X" : @303, @"=|C" : @304, @"“|V" : @305, @"”|B" : @306, @"《|N" : @307, @"》|M" : @308, @"image|space,space_Highlighted" : @404, @"。|，" : @405};
     NSDictionary *fullKeyboard_en_char_text_tag_dict = @{@"1|q" : @101, @"2|w" : @102, @"3|e" : @103, @"4|r" : @104, @"5|t" : @105, @"6|y" : @106, @"7|u" : @107, @"8|i" : @108, @"9|o" : @109, @"0|p" : @110,
             @"@|a" : @201, @"~|s" : @202, @"?|d" : @203, @"…|f" : @204, @"；|g" : @205, @"：|h" : @206, @"、|j" : @207, @"（|k" : @208, @"）|l" : @209,
-            @".|z" : @302, @"！|x" : @303, @"=|c" : @304, @"“|v" : @305, @"”|b" : @306, @"《|n" : @307, @"》|m" : @308, @"image|space_normal,space_Highlighted" : @404, @"。|，" : @405};
+            @".|z" : @302, @"！|x" : @303, @"=|c" : @304, @"“|v" : @305, @"”|b" : @306, @"《|n" : @307, @"》|m" : @308, @"image|space,space_highlighted" : @404, @"。|，" : @405};
 
+    NSInteger count = self.subviews.count;
+    KeyKBBtn *keyKBBtn = (KeyKBBtn *) [self viewWithTag:101];
+    if(self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact){
+        NSLog(@"=====UIUserInterfaceSizeClassCompact=====:%@",@"UIUserInterfaceSizeClassCompact");
+    }
 
-    NSDictionary *fullKeyboard_Key_text_tag_dict = @{@"符" : @301, @"image|delete_normal,delete_Highlighted" : @309, @"ABC" : @401, @"image|next_normal,next_Highlighted" : @402, NSLocalizedString(@"BreakLine", nil) : @406};
+    [self.subviews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if ([obj isKindOfClass:[UIView class]]) {
+            NSLog(@"----------log:%d", ((UIView *) obj).tag);
+        }
+    }];
 
-    [self setCharKBBtns:fullKeyboard_Key_text_tag_dict];
+    //shift: ⇧⇪ next:🌐 delete:⌫
+    NSDictionary *fullKeyboard_zh_Key_text_tag_dict = @{@"符" : @301, @"⌫" : @309, @"ABC" : @401, @"🌐" : @402, NSLocalizedString(@"BreakLine", nil) : @406};
+    NSDictionary *fullKeyboard_en_Key_text_tag_dict = @{@"⇧" : @301, @"⌫" : @309, @"中文" : @401, @"🌐" : @402, NSLocalizedString(@"BreakLine", nil) : @406};
 
-    [self setKeyKBBtns:fullKeyboard_Key_text_tag_dict];
+    [self setUpCharKBBtns:fullKeyboard_zh_char_text_tag_dict];
+//    [self setUpCharKBBtns:fullKeyboard_en_char_text_tag_dict];
 
-
+    [self setUpKeyKBBtns:fullKeyboard_zh_Key_text_tag_dict];
+//    [self setUpKeyKBBtns:fullKeyboard_en_Key_text_tag_dict];
 }
 
 
 //设置功能按键显示及事件处理
-- (void)setKeyKBBtns:(NSDictionary *)keyTextTagDict {
+- (void)setUpKeyKBBtns:(NSDictionary *)keyTextTagDict {
 
     __block KeyKBBtn *keyKBBtn = nil;
-    [keyTextTagDict keysOfEntriesWithOptions:NSEnumerationConcurrent passingTest:^BOOL(NSString *key, NSNumber *tag, BOOL *stop) {
+//    [keyTextTagDict keysOfEntriesWithOptions:NSEnumerationConcurrent passingTest:^BOOL(NSString *key, NSNumber *tag, BOOL *stop) {
+
+    [keyTextTagDict enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSNumber *tag, BOOL *stop) {
 
         keyKBBtn = (KeyKBBtn *) [self viewWithTag:tag.intValue];
 
@@ -73,17 +116,17 @@
         [keyKBBtn addGestureRecognizer:longPressGesture];
         [keyKBBtn addGestureRecognizer:swipeGesture];
 
-
-        return NO;
+//        return NO;
     }];
 }
 
 
 //设置字符按键显示及事件处理
-- (void)setCharKBBtns:(NSDictionary *)charTextTagDict {
+- (void)setUpCharKBBtns:(NSDictionary *)charTextTagDict {
 
     __block CharKBBtn *charKBBtn = nil;
-    [charTextTagDict keysOfEntriesWithOptions:NSEnumerationConcurrent passingTest:^BOOL(NSString *key, NSNumber *tag, BOOL *stop) {
+//    [charTextTagDict keysOfEntriesWithOptions:NSEnumerationConcurrent passingTest:^BOOL(NSString *key, NSNumber *tag, BOOL *stop) {
+    [charTextTagDict enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSNumber *tag, BOOL *stop) {
 
         charKBBtn = (CharKBBtn *) [self viewWithTag:tag.intValue];
 
@@ -117,7 +160,7 @@
         [charKBBtn addGestureRecognizer:swipeGesture];
         [charKBBtn addGestureRecognizer:panGestureRecognizer];
 
-        return NO;
+//        return NO;
     }];
 }
 

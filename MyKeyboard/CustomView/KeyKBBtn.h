@@ -15,4 +15,7 @@
 @interface KeyKBBtn : BaseKBBtn
 
 @property(nonatomic, strong) KBLabel *mainLabel;
+
+- (void)setupSubViews;
+
 @end

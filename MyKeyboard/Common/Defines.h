@@ -9,6 +9,12 @@
 #ifndef MyInputMethod_Defines____FILEEXTENSION___
 #define MyInputMethod_Defines____FILEEXTENSION___
 
+#ifdef DEBUG
+#define Log(format, ...) NSLog(format, ## __VA_ARGS__)
+#else
+    #define Log(format, ...)
+#endif
+
 //按键阴影颜色
 #define COLOR_SHADOWLAYER [UIColor blackColor].CGColor
 //按键阴影圆角半径

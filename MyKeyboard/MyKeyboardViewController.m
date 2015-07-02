@@ -10,7 +10,7 @@
 #import "FullKeyboard.h"
 #import "BaseKeyboard.h"
 #import "Defines.h"
-
+#import "UIInputViewController.h"
 
 
 @interface MyKeyboardViewController ()

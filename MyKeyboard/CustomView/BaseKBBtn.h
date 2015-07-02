@@ -12,4 +12,6 @@
 
 - (void)setImage:(UIImage *)image forState:(UIControlState)state;
 
+- (void)setupSubViews;
+
 @end
