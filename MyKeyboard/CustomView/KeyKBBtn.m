@@ -7,44 +7,98 @@
 //
 
 #import "KeyKBBtn.h"
-#import "KBLabel.h"
+#import "KeyboardConfiguration.h"
 
-@implementation KeyKBBtn
+@implementation KeyKBBtn{
+    NSString *mainText;
+}
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
+- (instancetype)init {
+    self = [super init];
     if (self) {
         [self setupSubViews];
-    
     }
 
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self setupSubViews];
+    }
+
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupSubViews];
+    }
+
+    return self;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+
+    [self setupSubViews];
+}
+
 - (void)setupSubViews {
     [super setupSubViews];
 
-    //注意:layerSize比boundSize小一圈
-
-    //subView的大小根据layerSize来设置
-    CGSize layerSize = self.layer.bounds.size;
-    _mainLabel = [[KBLabel alloc] initWithFrame:CGRectMake(0, 0, layerSize.width, layerSize.height /2)];
-
-    //subView的中心点位置根据boundSize来设置
-    CGSize boundSize = self.bounds.size;
-    _mainLabel.center = CGPointMake((CGFloat) boundSize.width / 2, (CGFloat) boundSize.height / 2);
-
-    [self addSubview:_mainLabel];
+//    [self setText:nil];
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
 
-    [_mainLabel sizeToFit];
+    NSString *themeName = [KeyboardConfiguration currentTheme];
+    //当有主题设置
+    if (themeName) {
+        [_mainLabel sizeToFit];
 
-    //subView的中心点位置根据boundSize来设置
-    CGSize boundSize = self.bounds.size;
-    _mainLabel.center = CGPointMake((CGFloat) boundSize.width / 2, (CGFloat) boundSize.height / 2 - boundSize.height * 3 / 8);
+        //subView的中心点位置根据boundSize来设置
+        CGSize boundSize = self.contentView.bounds.size;
+        CGSize mainLbSize = _mainLabel.bounds.size;
+        _mainLabel.frame = CGRectMake((boundSize.width - mainLbSize.width) / 2, boundSize.height / 8 + (boundSize.height * 3 / 4 - mainLbSize.height) / 2, mainLbSize.width, mainLbSize.height);
+    }
+}
+
+-(void)setText:(NSString *)text{
+    NSString *themeName = [KeyboardConfiguration currentTheme];
+    //当有主题设置
+    if (themeName) {
+        [_mainLabel removeFromSuperview];
+        _mainLabel = nil;
+
+        //设置图片
+        UIImage *kbLabImamge = [KeyboardConfiguration getKBLabImageWithByName:themeName withText:text];
+        self.contentView.layer.contents = (__bridge id) kbLabImamge.CGImage;
+        self.contentView.layer.contentsGravity = kCAGravityResizeAspect;    //等同于UIViewContentModeScaleAspectFit
+        self.contentView.layer.contentsScale = [[UIScreen mainScreen] scale];
+
+    } else {
+        if(text){
+            if(!_mainLabel){
+                CGSize boundSize = self.contentView.bounds.size;
+                _mainLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, boundSize.height/8, boundSize.width, boundSize.height*3 /4)];
+                _mainLabel.textAlignment = NSTextAlignmentCenter;
+                [self.contentView addSubview:_mainLabel];
+            }
+            _mainLabel.text = text;
+        } else{
+            [_mainLabel removeFromSuperview];
+            _mainLabel = nil;
+        }
+    }
+    mainText = text;
+}
+
+-(NSString *)text{
+    return _mainLabel?_mainLabel.text:mainText;
 }
 
 @end

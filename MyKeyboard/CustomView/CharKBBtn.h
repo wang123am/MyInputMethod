@@ -10,14 +10,21 @@
 
 #import "BaseKBBtn.h"
 
-@class KBLabel;
-
 @interface CharKBBtn : BaseKBBtn
 
-@property(nonatomic, strong) KBLabel *topLabel;
+@property(nonatomic, strong) UILabel *topLabel;
 
-@property(nonatomic, strong) KBLabel *mainLabel;
+@property(nonatomic, strong) UILabel *mainLabel;
 
 - (void)setupSubViews;
+
+- (void)setText:(NSString *)text topText:(NSString *)topText;
+
+-(void)setText:(NSString *)text;
+
+-(NSString *)text;
+
+-(NSString *)topText;
+
 
 @end

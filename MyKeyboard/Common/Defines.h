@@ -15,15 +15,19 @@
     #define Log(format, ...)
 #endif
 
-//按键阴影颜色
+//按键/阴影颜色
+#define COLOR_KBBTN_CONTENTVIEW [UIColor lightGrayColor].CGColor
 #define COLOR_SHADOWLAYER [UIColor blackColor].CGColor
-//按键阴影圆角半径
+//按键/阴影圆角半径
+#define R_KBBTN_CONTENTVIEW 5.0
 #define R_SHADOWLAYER 5.0
 //按键阴影偏移距离
-#define OFFSET_SHADOWLAYER 1.0
+#define OFFSET_SHADOWLAYER 0.5
+//按阴影高度
+#define HEIGHT_SHADOWLAYER 10.0
 
 //btn的background横向与纵向的半倍间隙
-#define SPACE_BTN_BG_HORIZON 3.0
+#define SPACE_BTN_BG_HORIZON 4.0
 #define SPACE_BTN_BG_VERTICAL 4.0
 
 //横屏键盘高度

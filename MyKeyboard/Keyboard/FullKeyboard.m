@@ -9,7 +9,6 @@
 #import "FullKeyboard.h"
 #import "Defines.h"
 #import "CharKBBtn.h"
-#import "KBLabel.h"
 #import "KeyKBBtn.h"
 
 
@@ -19,7 +18,7 @@
 
 - (id)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
-    Log(@"--------%d:%s---------", __LINE__, __func__);
+    Log(@"--------%d:%s：", __LINE__, __func__);
     
     if (self) {
 //        [self setUpFullKeyboard];
@@ -32,18 +31,17 @@
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
     [super traitCollectionDidChange:previousTraitCollection];
 
-    Log(@"--------%d:%s---------", __LINE__, __func__);
+    Log(@"--------%d:%s：", __LINE__, __func__);
 }
 
 
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-    Log(@"--------%d:%s---------", __LINE__, __func__);
+    Log(@"--------%d:%s：", __LINE__, __func__);
 //    [self setUpFullKeyboard];
     CharKBBtn *charKBBtn = (CharKBBtn *) [self viewWithTag:101];
-    [charKBBtn setupSubViews];
-    charKBBtn.mainLabel.text = @"Q";
+    charKBBtn.text = @"Q";
 
 }
 
@@ -64,7 +62,7 @@
 
     [self.subviews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         if ([obj isKindOfClass:[UIView class]]) {
-            NSLog(@"----------log:%d", ((UIView *) obj).tag);
+            Log(@"----------log:%d", ((UIView *) obj).tag);
         }
     }];
 

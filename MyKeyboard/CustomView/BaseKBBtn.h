@@ -10,6 +10,8 @@
 
 @interface BaseKBBtn : UIControl
 
+@property(nonatomic, strong) UIView *contentView;
+
 - (void)setImage:(UIImage *)image forState:(UIControlState)state;
 
 - (void)setupSubViews;
