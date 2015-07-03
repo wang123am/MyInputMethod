@@ -10,4 +10,9 @@
 
 @implementation BaseKeyboard
 
+//设置键盘
+- (void)setupKeyboard:(KBKeyboardType)keyboardType{
+
+}
+
 @end

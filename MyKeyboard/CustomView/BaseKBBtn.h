@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseKBBtn : UIControl
+@interface BaseKBBtn : UIButton
 
 @property(nonatomic, strong) UIView *contentView;
-
-- (void)setImage:(UIImage *)image forState:(UIControlState)state;
 
 - (void)setupSubViews;
 

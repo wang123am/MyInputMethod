@@ -25,6 +25,9 @@ iOS-Headers私有API:https://github.com/MP0w/iOS-Headers
 Undo typing in UITextView:http://stackoverflow.com/questions/1991897/undo-typing-in-uitextview
 Undo/redo with a UITextView:http://stackoverflow.com/questions/4070291/undo-redo-with-a-uitextview-ios-iphone/4071681#4071681
 
+Designing for iOS - Taming UIButton:https://robots.thoughtbot.com/designing-for-ios-taming-uibutton
+
+
 特殊符号:
 Unicode字符:https://en.wikipedia.org/wiki/Category:Unicode
 

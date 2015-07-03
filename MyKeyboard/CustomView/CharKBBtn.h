@@ -18,7 +18,7 @@
 
 - (void)setupSubViews;
 
-- (void)setText:(NSString *)text topText:(NSString *)topText;
+- (void)setTopText:(NSString *)upText text:(NSString *)text;
 
 -(void)setText:(NSString *)text;
 

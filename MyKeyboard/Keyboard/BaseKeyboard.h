@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Defines.h"
 
 @interface BaseKeyboard : UIView
+
+//设置键盘
+- (void)setupKeyboard:(KBKeyboardType)keyboardType;
 
 @end

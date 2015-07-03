@@ -12,9 +12,9 @@
 
 
 //设置功能按键显示及事件处理
-- (void)setUpKeyKBBtns:(NSDictionary *)keyTextTagDict;
+- (void)setupKeyKBBtns:(NSDictionary *)keyTextTagDict;
 
 //设置字符按键显示及事件处理
-- (void)setUpCharKBBtns:(NSDictionary *)charTextTagDict;
+- (void)setupCharKBBtns:(NSDictionary *)charTextTagDict;
 
 @end

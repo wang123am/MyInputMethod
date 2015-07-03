@@ -10,7 +10,7 @@
 		BEF0622F4BCDB4DC8FEC575F /* BaseKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06610E5C29E6082948E95 /* BaseKeyboard.m */; };
 		BEF0648D569B86A109B153FB /* BaseKBBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06549AF4314DF3E4F4284 /* BaseKBBtn.m */; };
 		BEF0670CCDDD21259FA67C09 /* KeyKBBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF068700E3B18B5F9C80A66 /* KeyKBBtn.m */; };
-		BEF0696049A242C462CCFA37 /* KeyboardConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06E9EEE76F27FEC5567DA /* KeyboardConfiguration.m */; };
+		BEF0696049A242C462CCFA37 /* KeyboardConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06E9EEE76F27FEC5567DA /* KeyboardConfig.m */; };
 		BEF069A2AB9991757EFDD99D /* CharKBBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06EF726C48C6B56EF035C /* CharKBBtn.m */; };
 		EA56C0601B42E1140076EC00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56C05F1B42E1140076EC00 /* main.m */; };
 		EA56C0631B42E1140076EC00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56C0621B42E1140076EC00 /* AppDelegate.m */; };
@@ -81,9 +81,9 @@
 		BEF068700E3B18B5F9C80A66 /* KeyKBBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyKBBtn.m; sourceTree = "<group>"; };
 		BEF06A7A98F3FCF853A84C24 /* UIInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIInputViewController.h; sourceTree = "<group>"; };
 		BEF06B7D461D112027F7EED7 /* BaseKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKeyboard.h; sourceTree = "<group>"; };
-		BEF06BEBA65AC6FEBCEEFF1F /* KeyboardConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardConfiguration.h; sourceTree = "<group>"; };
+		BEF06BEBA65AC6FEBCEEFF1F /* KeyboardConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardConfig.h; sourceTree = "<group>"; };
 		BEF06C2913B1D37966CFAD2E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
-		BEF06E9EEE76F27FEC5567DA /* KeyboardConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardConfiguration.m; sourceTree = "<group>"; };
+		BEF06E9EEE76F27FEC5567DA /* KeyboardConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardConfig.m; sourceTree = "<group>"; };
 		BEF06EF726C48C6B56EF035C /* CharKBBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharKBBtn.m; sourceTree = "<group>"; };
 		BEF06F017DB5A1DB2B86E831 /* KeyKBBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyKBBtn.h; sourceTree = "<group>"; };
 		EA56C05A1B42E1140076EC00 /* MyInputMethod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyInputMethod.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,8 +165,8 @@
 		BEF0619E6600B0A7E5B8C418 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				BEF06E9EEE76F27FEC5567DA /* KeyboardConfiguration.m */,
-				BEF06BEBA65AC6FEBCEEFF1F /* KeyboardConfiguration.h */,
+				BEF06E9EEE76F27FEC5567DA /* KeyboardConfig.m */,
+				BEF06BEBA65AC6FEBCEEFF1F /* KeyboardConfig.h */,
 				BEF0642BFB2F6B36868DD497 /* Defines.h */,
 			);
 			path = Common;
@@ -527,7 +527,7 @@
 				EA56C08D1B42E1670076EC00 /* MyKeyboardViewController.m in Sources */,
 				BEF0622F4BCDB4DC8FEC575F /* BaseKeyboard.m in Sources */,
 				BEF0648D569B86A109B153FB /* BaseKBBtn.m in Sources */,
-				BEF0696049A242C462CCFA37 /* KeyboardConfiguration.m in Sources */,
+				BEF0696049A242C462CCFA37 /* KeyboardConfig.m in Sources */,
 				BEF069A2AB9991757EFDD99D /* CharKBBtn.m in Sources */,
 				BEF0670CCDDD21259FA67C09 /* KeyKBBtn.m in Sources */,
 			);
