@@ -50,6 +50,18 @@
         case KBKeyboard_PingYingFull: {
             [self setupCharKBBtns:[KeyboardConfig pingYingFullKBCharTextTagDict]];
             [self setupKeyKBBtns:[KeyboardConfig pingYingFullKBKeyTextTagDict]];
+
+/*
+            NSString *key = @"image|space,space_Highlighted";
+            NSArray *charTextArr = [key componentsSeparatedByString:@"|"];
+            if (charTextArr.count && [charTextArr[0] isEqualToString:@"image"]) {
+                NSArray *imgNameArr = [charTextArr[1] componentsSeparatedByString:@","];
+                CharKBBtn *charKBBtn = (CharKBBtn *) [self viewWithTag:404];
+                [charKBBtn setImage:[UIImage imageNamed:imgNameArr[0]] forState:UIControlStateNormal];
+//              [_aView setImage:[UIImage imageNamed:imgNameArr[1]] forState:UIControlStateHighlighted];
+            }
+*/
+
             break;
         };
         default: {
@@ -87,12 +99,12 @@
         [charKBBtn addTarget:self action:@selector(charKBBtnTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
         [charKBBtn addTarget:self action:@selector(charKBBtnTouchCancel:) forControlEvents:UIControlEventTouchCancel | UIControlEventTouchUpOutside];
 
-        UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(keyKBBtnLongPress:)];
         UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(keyKBBtnSwip:)];
         swipeGesture.direction = UISwipeGestureRecognizerDirectionUp;
         UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(keyKBBtnPanUp:)];
+//        UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(keyKBBtnLongPress:)];
 
-        [charKBBtn addGestureRecognizer:longPressGesture];
+//        [charKBBtn addGestureRecognizer:longPressGesture];
         [charKBBtn addGestureRecognizer:swipeGesture];
         [charKBBtn addGestureRecognizer:panGestureRecognizer];
 

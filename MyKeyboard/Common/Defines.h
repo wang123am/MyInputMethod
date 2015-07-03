@@ -53,8 +53,10 @@ typedef NS_OPTIONS(NSUInteger, KBKeyboardType) {
 #define COLOR_KBBTN_CONTENTVIEW_INNERBORDER [UIColor whiteColor].CGColor
 
 //按键背景色
-#define COLOR_KBBTN_CONTENTVIEW_BG_A [UIColor lightGrayColor].CGColor
-#define COLOR_KBBTN_CONTENTVIEW_BG_B [UIColor grayColor].CGColor
+#define COLOR_KBBTN_CONTENTVIEW_BG [UIColor grayColor].CGColor
+//按键背景色不透明度
+#define OPACITY_KBBTN_CONTENTVIEW_BG 0.2
+#define OPACITY_KBBTN_CONTENTVIEW_BG_HIGHLIGHT 0.5
 
 
 

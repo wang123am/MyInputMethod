@@ -31,6 +31,7 @@
 		EA56C0CC1B42F1F60076EC00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA56C0CE1B42F1F60076EC00 /* Localizable.strings */; };
 		EABF4BCA1B42FFBE00918AE1 /* FullKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF4BC91B42FFBE00918AE1 /* FullKeyboard.m */; };
 		EABF4BCD1B43015300918AE1 /* FullKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EABF4BCF1B43015300918AE1 /* FullKeyboard.xib */; };
+		EAFB53841B46A1700076DAA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFB53831B46A1700076DAA7 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		EABF4BC91B42FFBE00918AE1 /* FullKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullKeyboard.m; sourceTree = "<group>"; };
 		EABF4BCE1B43015300918AE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FullKeyboard.xib; sourceTree = "<group>"; };
 		EABF4BD11B43015500918AE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FullKeyboard.strings; sourceTree = "<group>"; };
+		EAFB53831B46A1700076DAA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 				EA56C0951B42E1AF0076EC00 /* MyKeyboard.entitlements */,
 				EA56C08B1B42E1670076EC00 /* MyKeyboardViewController.h */,
 				EA56C08C1B42E1670076EC00 /* MyKeyboardViewController.m */,
+				EAFB53831B46A1700076DAA7 /* Images.xcassets */,
 				EA56C0891B42E1670076EC00 /* Supporting Files */,
 				BEF06698A96455417C48CF67 /* Keyboard */,
 				BEF0660F38ACD9F151D4FA28 /* CustomView */,
@@ -484,6 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA56C0AB1B42E42A0076EC00 /* InfoPlist.strings in Resources */,
+				EAFB53841B46A1700076DAA7 /* Images.xcassets in Resources */,
 				EABF4BCD1B43015300918AE1 /* FullKeyboard.xib in Resources */,
 				EA56C0AE1B42E4300076EC00 /* Localizable.strings in Resources */,
 			);

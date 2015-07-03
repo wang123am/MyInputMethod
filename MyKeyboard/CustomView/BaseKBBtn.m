@@ -74,13 +74,9 @@
 
 - (void)setImage:(UIImage *)image forState:(UIControlState)state {
     if (state & UIControlStateHighlighted || state & UIControlStateSelected) {
-        _highlightBackgroundLayer.contents = (__bridge id) image.CGImage;
-        _highlightBackgroundLayer.contentsScale = [[UIScreen mainScreen] scale];
-        _highlightBackgroundLayer.contentsGravity = kCAGravityCenter;//kCAGravityResizeAspect;
+        [self setupHighlightBackgroundLayer:image];
     } else {
-        _backgroundLayer.contents = (__bridge id) image.CGImage;
-        _backgroundLayer.contentsScale = [[UIScreen mainScreen] scale];
-        _backgroundLayer.contentsGravity = kCAGravityCenter;//kCAGravityResizeAspect;
+        [self setupBackgroundLayer:image];
     }
 }
 
@@ -107,8 +103,8 @@
         //当没有设置主题
         //设置背景图层
         //_contentView.layer.backgroundColor = COLOR_KBBTN_CONTENTVIEW_BG_A;
-        [self setupBackgroundLayer];
-        [self setupHighlightBackgroundLayer];
+        [self setupBackgroundLayer:nil];
+        [self setupHighlightBackgroundLayer:nil];
         _highlightBackgroundLayer.hidden = YES;
 
         //给contentView添加内外边框
@@ -121,44 +117,38 @@
 }
 
 //按Normal状态时的背景色
-- (void)setupBackgroundLayer {
+- (void)setupBackgroundLayer:(UIImage *)image {
     if (!_backgroundLayer) {
-
-        CAGradientLayer *gradientLayer = [CAGradientLayer layer];
-        gradientLayer.colors = (@[
-                (__bridge id) COLOR_KBBTN_CONTENTVIEW_BG_A,
-                (__bridge id) COLOR_KBBTN_CONTENTVIEW_BG_B
-        ]);
-        gradientLayer.locations = (@[
-                @0.0f,
-                @1.0f
-        ]);
-        gradientLayer.opacity = 0.2;
-        _backgroundLayer = gradientLayer;
-        _backgroundLayer.frame = CGRectInset(_contentView.frame, 0, 0);
+        _backgroundLayer = [CALayer layer];
         _backgroundLayer.cornerRadius = RADIUS_KBBTN_CONTENTVIEW;
+        _backgroundLayer.frame = CGRectInset(_contentView.frame, 0, 0);
         [self.layer insertSublayer:_backgroundLayer atIndex:0];
+    }
+    if(image){
+        _backgroundLayer.contents = (__bridge id) image.CGImage;
+        _backgroundLayer.contentsScale = [[UIScreen mainScreen] scale];
+        _backgroundLayer.contentsGravity = kCAGravityCenter;//kCAGravityResizeAspect;
+    }else{
+        _backgroundLayer.backgroundColor = COLOR_KBBTN_CONTENTVIEW_BG;
+        _backgroundLayer.opacity = OPACITY_KBBTN_CONTENTVIEW_BG;
     }
 }
 
 //按Highlight状态时的背景色
-- (void)setupHighlightBackgroundLayer {
+- (void)setupHighlightBackgroundLayer:(UIImage *)image {
     if (!_highlightBackgroundLayer) {
-
-        CAGradientLayer *gradientLayer = [CAGradientLayer layer];
-        gradientLayer.colors = (@[
-                (__bridge id) COLOR_KBBTN_CONTENTVIEW_BG_B,
-                (__bridge id) COLOR_KBBTN_CONTENTVIEW_BG_A
-        ]);
-        gradientLayer.locations = (@[
-                @0.0f,
-                @1.0f
-        ]);
-        gradientLayer.opacity = 0.5;
-        _highlightBackgroundLayer = gradientLayer;
-        _highlightBackgroundLayer.frame = CGRectInset(_contentView.frame, 0, 0);
+        _highlightBackgroundLayer = [CALayer layer];
         _highlightBackgroundLayer.cornerRadius = RADIUS_KBBTN_CONTENTVIEW;
+        _highlightBackgroundLayer.frame = CGRectInset(_contentView.frame, 0, 0);
         [self.layer insertSublayer:_highlightBackgroundLayer atIndex:1];
+    }
+    if(image){
+        _highlightBackgroundLayer.contents = (__bridge id) image.CGImage;
+        _highlightBackgroundLayer.contentsScale = [[UIScreen mainScreen] scale];
+        _highlightBackgroundLayer.contentsGravity = kCAGravityCenter;//kCAGravityResizeAspect;
+    }else{
+        _highlightBackgroundLayer.backgroundColor = COLOR_KBBTN_CONTENTVIEW_BG;
+        _highlightBackgroundLayer.opacity = OPACITY_KBBTN_CONTENTVIEW_BG_HIGHLIGHT;
     }
 }
 
