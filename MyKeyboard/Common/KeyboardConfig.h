@@ -22,7 +22,7 @@
 
 + (NSString *)currentTheme;
 
-+ (UIImage *)getBtnImageWithByName:(NSString *)name;
++ (UIImage *)getBtnImagesWithByName:(NSString *)name;
 
 + (UIImage *)getKBLabImageWithByName:(NSString *)name withText:(NSString *)text;
 

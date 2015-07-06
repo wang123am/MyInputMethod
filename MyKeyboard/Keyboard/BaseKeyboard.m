@@ -15,4 +15,16 @@
 
 }
 
+
+-(void)setupBackgroundColor:(UIColor *)color{
+    self.backgroundColor = color;
+}
+
+-(void)setupBackground:(UIImage *)image{
+    self.layer.contents = (__bridge id)image.CGImage;
+    self.layer.contentsScale = [[UIScreen mainScreen] scale];
+    self.layer.contentsGravity = kCAGravityResizeAspectFill;
+}
+
+
 @end

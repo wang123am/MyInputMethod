@@ -11,6 +11,39 @@
 #import "Defines.h"
 
 
+@interface UIImage(Alpha)
+
+- (UIImage *)imageByApplyingAlpha:(CGFloat) alpha;
+
+@end
+
+@implementation UIImage(Alpha)
+
+//修改图片透明度
+- (UIImage *)imageByApplyingAlpha:(CGFloat) alpha {
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0f);
+
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGRect area = CGRectMake(0, 0, self.size.width, self.size.height);
+
+    CGContextScaleCTM(ctx, 1, -1);
+    CGContextTranslateCTM(ctx, 0, -area.size.height);
+
+    CGContextSetBlendMode(ctx, kCGBlendModeMultiply);
+
+    CGContextSetAlpha(ctx, alpha);
+
+    CGContextDrawImage(ctx, area, self.CGImage);
+
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+
+    UIGraphicsEndImageContext();
+
+    return newImage;
+}
+
+@end
+
 @interface BaseKBBtn ()
 
 @end
@@ -60,6 +93,8 @@
     [self setupSubViews];
 }
 
+
+
 - (void)setHighlighted:(BOOL)highlighted {
     // Disable隐式动画
     [CATransaction begin];
@@ -74,9 +109,9 @@
 
 - (void)setImage:(UIImage *)image forState:(UIControlState)state {
     if (state & UIControlStateHighlighted || state & UIControlStateSelected) {
-        [self setupHighlightBackgroundLayer:image];
+        [self setupHighlightBackgroundLayer:image withGravity:kCAGravityCenter];
     } else {
-        [self setupBackgroundLayer:image];
+        [self setupBackgroundLayer:image withGravity:kCAGravityCenter];
     }
 }
 
@@ -95,16 +130,22 @@
     //当有主题设置
     NSString *themeName = [KeyboardConfig currentTheme];
     if (themeName) {
-        UIImage *kbBtnImamge = [KeyboardConfig getBtnImageWithByName:themeName];
-        _contentView.layer.contents = (__bridge id) kbBtnImamge.CGImage;
-        _contentView.layer.contentsScale = [[UIScreen mainScreen] scale];
+        UIImage *kbBtnImamge = [KeyboardConfig getBtnImagesWithByName:themeName];
+//        _contentView.layer.contents = (__bridge id) kbBtnImamge.CGImage;
+//        _contentView.layer.contentsScale = [[UIScreen mainScreen] scale];
+//        _contentView.layer.contentsGravity = kCAGravityResizeAspectFill;
+
+        [self setupBackgroundLayer:kbBtnImamge withGravity:kCAGravityResizeAspectFill];
+        //修改图片透明度
+        UIImage *kbNewBtnImage = [kbBtnImamge imageByApplyingAlpha:OPACITY_KBBTN_CONTENTVIEW_BG_HIGHLIGHT];
+        [self setupHighlightBackgroundLayer:kbNewBtnImage withGravity:kCAGravityResizeAspectFill];
 
     } else {
         //当没有设置主题
         //设置背景图层
         //_contentView.layer.backgroundColor = COLOR_KBBTN_CONTENTVIEW_BG_A;
-        [self setupBackgroundLayer:nil];
-        [self setupHighlightBackgroundLayer:nil];
+        [self setupBackgroundLayer:nil withGravity:kCAGravityCenter];
+        [self setupHighlightBackgroundLayer:nil withGravity:kCAGravityCenter];
         _highlightBackgroundLayer.hidden = YES;
 
         //给contentView添加内外边框
@@ -117,7 +158,7 @@
 }
 
 //按Normal状态时的背景色
-- (void)setupBackgroundLayer:(UIImage *)image {
+- (void)setupBackgroundLayer:(UIImage *)image withGravity:(NSString *)gravity{
     if (!_backgroundLayer) {
         _backgroundLayer = [CALayer layer];
         _backgroundLayer.cornerRadius = RADIUS_KBBTN_CONTENTVIEW;
@@ -127,7 +168,7 @@
     if(image){
         _backgroundLayer.contents = (__bridge id) image.CGImage;
         _backgroundLayer.contentsScale = [[UIScreen mainScreen] scale];
-        _backgroundLayer.contentsGravity = kCAGravityCenter;//kCAGravityResizeAspect;
+        _backgroundLayer.contentsGravity = gravity;//kCAGravityResizeAspect;
     }else{
         _backgroundLayer.backgroundColor = COLOR_KBBTN_CONTENTVIEW_BG;
         _backgroundLayer.opacity = OPACITY_KBBTN_CONTENTVIEW_BG;
@@ -135,7 +176,7 @@
 }
 
 //按Highlight状态时的背景色
-- (void)setupHighlightBackgroundLayer:(UIImage *)image {
+- (void)setupHighlightBackgroundLayer:(UIImage *)image withGravity:(NSString *)gravity{
     if (!_highlightBackgroundLayer) {
         _highlightBackgroundLayer = [CALayer layer];
         _highlightBackgroundLayer.cornerRadius = RADIUS_KBBTN_CONTENTVIEW;
@@ -145,7 +186,7 @@
     if(image){
         _highlightBackgroundLayer.contents = (__bridge id) image.CGImage;
         _highlightBackgroundLayer.contentsScale = [[UIScreen mainScreen] scale];
-        _highlightBackgroundLayer.contentsGravity = kCAGravityCenter;//kCAGravityResizeAspect;
+        _highlightBackgroundLayer.contentsGravity = gravity;//kCAGravityResizeAspect;
     }else{
         _highlightBackgroundLayer.backgroundColor = COLOR_KBBTN_CONTENTVIEW_BG;
         _highlightBackgroundLayer.opacity = OPACITY_KBBTN_CONTENTVIEW_BG_HIGHLIGHT;

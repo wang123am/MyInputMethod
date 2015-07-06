@@ -99,7 +99,7 @@
         //设置图片
         UIImage *kbLabImamge = [KeyboardConfig getKBLabImageWithByName:themeName withText:text];
         self.contentView.layer.contents = (__bridge id) kbLabImamge.CGImage;
-        self.contentView.layer.contentsGravity = kCAGravityResizeAspect;    //等同于UIViewContentModeScaleAspectFit
+        self.contentView.layer.contentsGravity = kCAGravityResizeAspectFill;//kCAGravityResizeAspect;    //等同于UIViewContentModeScaleAspectFit
         self.contentView.layer.contentsScale = [[UIScreen mainScreen] scale];
         
     } else {

@@ -14,4 +14,11 @@
 //设置键盘
 - (void)setupKeyboard:(KBKeyboardType)keyboardType;
 
+
+//设置背景颜色
+-(void)setupBackgroundColor:(UIColor *)color;
+
+//设置背景图片
+-(void)setupBackground:(UIImage *)image;
+
 @end

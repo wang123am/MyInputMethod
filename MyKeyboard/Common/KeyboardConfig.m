@@ -22,31 +22,33 @@
 
 //英文全键功能键text->tag字典
 +(NSDictionary *)enFullKBKeyTextTagDict{
-    return @{@"符" : @301, @"⌫" : @309, @"ABC" : @401, @"🌐" : @402, @"123":@403, NSLocalizedString(@"BreakLine", nil) : @406};
+    return @{@"符" : @301, @"image|delete,delete_highlighted" : @309, @"ABC" : @401, @"image|next,next_highlighted" : @402, @"123":@403, NSLocalizedString(@"BreakLine", nil) : @406};
 }
 
 //拼音全键字符键text->tag字典
 +(NSDictionary *)pingYingFullKBCharTextTagDict{
     return @{@"1|Q" : @101, @"2|W" : @102, @"3|E" : @103, @"4|R" : @104, @"5|T" : @105, @"6|Y" : @106, @"7|U" : @107, @"8|I" : @108, @"9|O" : @109, @"0|P" : @110,
             @"@|A" : @201, @"~|S" : @202, @"?|D" : @203, @"…|F" : @204, @"；|G" : @205, @"：|H" : @206, @"、|J" : @207, @"（|K" : @208, @"）|L" : @209,
-            @".|Z" : @302, @"！|X" : @303, @"=|C" : @304, @"“|V" : @305, @"”|B" : @306, @"《|N" : @307, @"》|M" : @308, @"image|space,space_Highlighted" : @404, @"。|，" : @405};
+            @".|Z" : @302, @"！|X" : @303, @"=|C" : @304, @"“|V" : @305, @"”|B" : @306, @"《|N" : @307, @"》|M" : @308, @"image|space,space_highlighted" : @404, @"。|，" : @405};
 }
 
 //拼音全键功能键text->tag字典
 +(NSDictionary *)pingYingFullKBKeyTextTagDict {
-    return @{@"⇧" : @301, @"⌫" : @309, @"中文" : @401, @"🌐" : @402, @"123":@403, NSLocalizedString(@"BreakLine", nil) : @406};
+    return @{@"image|shift,shift_highlighted" : @301, @"image|delete,delete_highlighted" : @309, @"ABC" : @401, @"image|next,next_highlighted" : @402, @"123":@403, NSLocalizedString(@"BreakLine", nil) : @406};
 }
 
 
+//获得当前主题
 + (NSString *)currentTheme {
     return nil;
 }
 
-
-+ (UIImage *)getBtnImageWithByName:(NSString *)name {
+//根据当前主题获得按键主题图片
++ (UIImage *)getBtnImagesWithByName:(NSString *)name {
     return nil;
 }
 
+//根据当前主题获得按键的内容图片
 + (UIImage *)getKBLabImageWithByName:(NSString *)name withText:(NSString *)text {
 
     //如果text是nil,返回一张默认图
@@ -56,4 +58,6 @@
 
     return nil;
 }
+
+
 @end

@@ -31,6 +31,7 @@
 		EA56C0CC1B42F1F60076EC00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA56C0CE1B42F1F60076EC00 /* Localizable.strings */; };
 		EABF4BCA1B42FFBE00918AE1 /* FullKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF4BC91B42FFBE00918AE1 /* FullKeyboard.m */; };
 		EABF4BCD1B43015300918AE1 /* FullKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EABF4BCF1B43015300918AE1 /* FullKeyboard.xib */; };
+		EAE29B141B4A48770051FF98 /* KBToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE29B131B4A48770051FF98 /* KBToolbar.m */; };
 		EAFB53841B46A1700076DAA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFB53831B46A1700076DAA7 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +130,8 @@
 		EABF4BC91B42FFBE00918AE1 /* FullKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullKeyboard.m; sourceTree = "<group>"; };
 		EABF4BCE1B43015300918AE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FullKeyboard.xib; sourceTree = "<group>"; };
 		EABF4BD11B43015500918AE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FullKeyboard.strings; sourceTree = "<group>"; };
+		EAE29B121B4A48770051FF98 /* KBToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBToolbar.h; sourceTree = "<group>"; };
+		EAE29B131B4A48770051FF98 /* KBToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBToolbar.m; sourceTree = "<group>"; };
 		EAFB53831B46A1700076DAA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,6 +186,8 @@
 				BEF06EF726C48C6B56EF035C /* CharKBBtn.m */,
 				BEF06F017DB5A1DB2B86E831 /* KeyKBBtn.h */,
 				BEF068700E3B18B5F9C80A66 /* KeyKBBtn.m */,
+				EAE29B121B4A48770051FF98 /* KBToolbar.h */,
+				EAE29B131B4A48770051FF98 /* KBToolbar.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -533,6 +538,7 @@
 				BEF0648D569B86A109B153FB /* BaseKBBtn.m in Sources */,
 				BEF0696049A242C462CCFA37 /* KeyboardConfig.m in Sources */,
 				BEF069A2AB9991757EFDD99D /* CharKBBtn.m in Sources */,
+				EAE29B141B4A48770051FF98 /* KBToolbar.m in Sources */,
 				BEF0670CCDDD21259FA67C09 /* KeyKBBtn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -30,6 +30,8 @@ typedef NS_OPTIONS(NSUInteger, KBKeyboardType) {
 
 };
 
+#define WEAKSELF typeof(self) __weak weakSelf = self;
+
 
 //横屏键盘高度
 #define KEYBOARD_LANDSCAPE_HEIGHT 216.0
@@ -44,12 +46,12 @@ typedef NS_OPTIONS(NSUInteger, KBKeyboardType) {
 
 //按键外边框圆角半径、宽度、颜色
 #define RADIUS_KBBTN_CONTENTVIEW 5.0
-#define WIDTH_KBBTN_CONTENTVIEW_BORDER 1
+#define WIDTH_KBBTN_CONTENTVIEW_BORDER 1.0
 #define COLOR_KBBTN_CONTENTVIEW_BORDER [UIColor grayColor].CGColor
 
 //按键内边框宽度及颜色
 #define RADIUS_KBBTN_CONTENTVIEW_INNERBORDER 4.0
-#define WIDTH_KBBTN_CONTENTVIEW_INNERBORDER 1
+#define WIDTH_KBBTN_CONTENTVIEW_INNERBORDER 1.0
 #define COLOR_KBBTN_CONTENTVIEW_INNERBORDER [UIColor whiteColor].CGColor
 
 //按键背景色
@@ -61,7 +63,7 @@ typedef NS_OPTIONS(NSUInteger, KBKeyboardType) {
 
 
 //按键阴影颜色
-#define COLOR_SHADOWLAYER [UIColor blackColor].CGColor
+#define COLOR_SHADOWLAYER [UIColor grayColor].CGColor
 //按键阴影偏移距离
 #define OFFSET_SHADOWLAYER 0.5
 //按键阴影圆角半径
@@ -77,6 +79,15 @@ typedef NS_OPTIONS(NSUInteger, KBKeyboardType) {
 
 //按键中topLb与mainLb的间距
 #define SPACE_TOP_MAIN 0.5
+
+
+
+//工具栏背景色
+#define COLOR_TOOLBAR_BG [UIColor clearColor]
+//工具栏边框
+#define WIDTH_TOOLBAR_BORDER 1.0
+//工具栏边框颜色
+#define COLOR_TOOLBAR_BORDER [UIColor grayColor].CGColor
 
 
 #endif
