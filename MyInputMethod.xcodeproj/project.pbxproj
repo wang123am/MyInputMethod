@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		BEF0622F4BCDB4DC8FEC575F /* BaseKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06610E5C29E6082948E95 /* BaseKeyboard.m */; };
+		BEF0634800B82D34169C244D /* MyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06779280E30F7628A2474 /* MyHelper.m */; };
 		BEF0648D569B86A109B153FB /* BaseKBBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06549AF4314DF3E4F4284 /* BaseKBBtn.m */; };
 		BEF0670CCDDD21259FA67C09 /* KeyKBBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF068700E3B18B5F9C80A66 /* KeyKBBtn.m */; };
+		BEF068B7C57694B6E02C6D47 /* MyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06779280E30F7628A2474 /* MyHelper.m */; };
 		BEF0696049A242C462CCFA37 /* KeyboardConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06E9EEE76F27FEC5567DA /* KeyboardConfig.m */; };
 		BEF069A2AB9991757EFDD99D /* CharKBBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06EF726C48C6B56EF035C /* CharKBBtn.m */; };
+		BEF06A2B32C1793DF9B52331 /* MyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06779280E30F7628A2474 /* MyHelper.m */; };
 		EA56C0601B42E1140076EC00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56C05F1B42E1140076EC00 /* main.m */; };
 		EA56C0631B42E1140076EC00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56C0621B42E1140076EC00 /* AppDelegate.m */; };
 		EA56C0661B42E1140076EC00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56C0651B42E1140076EC00 /* ViewController.m */; };
@@ -29,6 +32,18 @@
 		EA56C0C01B42F1740076EC00 /* MyEmojiKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EA56C0B71B42F1740076EC00 /* MyEmojiKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EA56C0C81B42F1F00076EC00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA56C0CA1B42F1F00076EC00 /* InfoPlist.strings */; };
 		EA56C0CC1B42F1F60076EC00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA56C0CE1B42F1F60076EC00 /* Localizable.strings */; };
+		EA57CF121B4BC4B100E658E7 /* BubbleTheme.png in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF111B4BC4B100E658E7 /* BubbleTheme.png */; };
+		EA57CF131B4BC4B100E658E7 /* BubbleTheme.png in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF111B4BC4B100E658E7 /* BubbleTheme.png */; };
+		EA57CF151B4BC4CE00E658E7 /* BubbleTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF141B4BC4CE00E658E7 /* BubbleTheme.plist */; };
+		EA57CF161B4BC4CE00E658E7 /* BubbleTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF141B4BC4CE00E658E7 /* BubbleTheme.plist */; };
+		EA57CF181B4BC4D900E658E7 /* MachineTheme.png in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF171B4BC4D900E658E7 /* MachineTheme.png */; };
+		EA57CF191B4BC4D900E658E7 /* MachineTheme.png in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF171B4BC4D900E658E7 /* MachineTheme.png */; };
+		EA57CF1B1B4BC4EB00E658E7 /* MachineTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF1A1B4BC4EB00E658E7 /* MachineTheme.plist */; };
+		EA57CF1C1B4BC4EB00E658E7 /* MachineTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF1A1B4BC4EB00E658E7 /* MachineTheme.plist */; };
+		EA57CF1E1B4BC4F700E658E7 /* DishuTheme.png in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF1D1B4BC4F700E658E7 /* DishuTheme.png */; };
+		EA57CF1F1B4BC4F700E658E7 /* DishuTheme.png in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF1D1B4BC4F700E658E7 /* DishuTheme.png */; };
+		EA57CF211B4BC50900E658E7 /* DishuTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF201B4BC50900E658E7 /* DishuTheme.plist */; };
+		EA57CF221B4BC50900E658E7 /* DishuTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF201B4BC50900E658E7 /* DishuTheme.plist */; };
 		EABF4BCA1B42FFBE00918AE1 /* FullKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF4BC91B42FFBE00918AE1 /* FullKeyboard.m */; };
 		EABF4BCD1B43015300918AE1 /* FullKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EABF4BCF1B43015300918AE1 /* FullKeyboard.xib */; };
 		EAE29B141B4A48770051FF98 /* KBToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE29B131B4A48770051FF98 /* KBToolbar.m */; };
@@ -78,9 +93,11 @@
 		BEF0642BFB2F6B36868DD497 /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 		BEF06549AF4314DF3E4F4284 /* BaseKBBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseKBBtn.m; sourceTree = "<group>"; };
 		BEF06610E5C29E6082948E95 /* BaseKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseKeyboard.m; sourceTree = "<group>"; };
+		BEF06779280E30F7628A2474 /* MyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHelper.m; sourceTree = "<group>"; };
 		BEF0679C79D49F1625F5CD25 /* BaseKBBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKBBtn.h; sourceTree = "<group>"; };
 		BEF0684133F3FE4B216BCEAB /* CharKBBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharKBBtn.h; sourceTree = "<group>"; };
 		BEF068700E3B18B5F9C80A66 /* KeyKBBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyKBBtn.m; sourceTree = "<group>"; };
+		BEF068E22F3B59EE7A8CCD18 /* MyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHelper.h; sourceTree = "<group>"; };
 		BEF06A7A98F3FCF853A84C24 /* UIInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIInputViewController.h; sourceTree = "<group>"; };
 		BEF06B7D461D112027F7EED7 /* BaseKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKeyboard.h; sourceTree = "<group>"; };
 		BEF06BEBA65AC6FEBCEEFF1F /* KeyboardConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardConfig.h; sourceTree = "<group>"; };
@@ -126,6 +143,12 @@
 		EA56C0CD1B42F1F60076EC00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA56C0CF1B42F1F70076EC00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA56C0D01B42F2480076EC00 /* MyEmojiKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyEmojiKeyboard.entitlements; sourceTree = "<group>"; };
+		EA57CF111B4BC4B100E658E7 /* BubbleTheme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleTheme.png; sourceTree = "<group>"; };
+		EA57CF141B4BC4CE00E658E7 /* BubbleTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BubbleTheme.plist; sourceTree = "<group>"; };
+		EA57CF171B4BC4D900E658E7 /* MachineTheme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MachineTheme.png; sourceTree = "<group>"; };
+		EA57CF1A1B4BC4EB00E658E7 /* MachineTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MachineTheme.plist; sourceTree = "<group>"; };
+		EA57CF1D1B4BC4F700E658E7 /* DishuTheme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DishuTheme.png; sourceTree = "<group>"; };
+		EA57CF201B4BC50900E658E7 /* DishuTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DishuTheme.plist; sourceTree = "<group>"; };
 		EABF4BC81B42FFBE00918AE1 /* FullKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullKeyboard.h; sourceTree = "<group>"; };
 		EABF4BC91B42FFBE00918AE1 /* FullKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullKeyboard.m; sourceTree = "<group>"; };
 		EABF4BCE1B43015300918AE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FullKeyboard.xib; sourceTree = "<group>"; };
@@ -173,8 +196,20 @@
 				BEF06E9EEE76F27FEC5567DA /* KeyboardConfig.m */,
 				BEF06BEBA65AC6FEBCEEFF1F /* KeyboardConfig.h */,
 				BEF0642BFB2F6B36868DD497 /* Defines.h */,
+				BEF06779280E30F7628A2474 /* MyHelper.m */,
+				BEF068E22F3B59EE7A8CCD18 /* MyHelper.h */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		BEF0656EBCD36EB5E1859C96 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				EA57CEEF1B4B7A4300E658E7 /* DishuTheme */,
+				BEF0672AF363AECBC7388E07 /* BubbleTheme */,
+				BEF06F6B02870CBF4AF535F2 /* MachineTheme */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		BEF0660F38ACD9F151D4FA28 /* CustomView */ = {
@@ -204,12 +239,30 @@
 			path = Keyboard;
 			sourceTree = "<group>";
 		};
+		BEF0672AF363AECBC7388E07 /* BubbleTheme */ = {
+			isa = PBXGroup;
+			children = (
+				EA57CF141B4BC4CE00E658E7 /* BubbleTheme.plist */,
+				EA57CF111B4BC4B100E658E7 /* BubbleTheme.png */,
+			);
+			path = BubbleTheme;
+			sourceTree = "<group>";
+		};
 		BEF06D77CB55D5AD7BDC1D85 /* PrivateHeaders */ = {
 			isa = PBXGroup;
 			children = (
 				BEF06A7A98F3FCF853A84C24 /* UIInputViewController.h */,
 			);
 			path = PrivateHeaders;
+			sourceTree = "<group>";
+		};
+		BEF06F6B02870CBF4AF535F2 /* MachineTheme */ = {
+			isa = PBXGroup;
+			children = (
+				EA57CF1A1B4BC4EB00E658E7 /* MachineTheme.plist */,
+				EA57CF171B4BC4D900E658E7 /* MachineTheme.png */,
+			);
+			path = MachineTheme;
 			sourceTree = "<group>";
 		};
 		EA56C0511B42E1140076EC00 = {
@@ -291,6 +344,7 @@
 				BEF0660F38ACD9F151D4FA28 /* CustomView */,
 				BEF0619E6600B0A7E5B8C418 /* Common */,
 				BEF06D77CB55D5AD7BDC1D85 /* PrivateHeaders */,
+				BEF0656EBCD36EB5E1859C96 /* Resource */,
 			);
 			path = MyKeyboard;
 			sourceTree = "<group>";
@@ -324,6 +378,15 @@
 				EA56C0CE1B42F1F60076EC00 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA57CEEF1B4B7A4300E658E7 /* DishuTheme */ = {
+			isa = PBXGroup;
+			children = (
+				EA57CF201B4BC50900E658E7 /* DishuTheme.plist */,
+				EA57CF1D1B4BC4F700E658E7 /* DishuTheme.png */,
+			);
+			name = DishuTheme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -472,11 +535,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA57CF1E1B4BC4F700E658E7 /* DishuTheme.png in Resources */,
+				EA57CF1B1B4BC4EB00E658E7 /* MachineTheme.plist in Resources */,
 				EA56C0A71B42E4190076EC00 /* Localizable.strings in Resources */,
+				EA57CF181B4BC4D900E658E7 /* MachineTheme.png in Resources */,
 				EA56C0691B42E1140076EC00 /* Main.storyboard in Resources */,
+				EA57CF211B4BC50900E658E7 /* DishuTheme.plist in Resources */,
 				EA56C0A31B42E4110076EC00 /* InfoPlist.strings in Resources */,
 				EA56C06E1B42E1140076EC00 /* LaunchScreen.xib in Resources */,
+				EA57CF121B4BC4B100E658E7 /* BubbleTheme.png in Resources */,
 				EA56C06B1B42E1140076EC00 /* Images.xcassets in Resources */,
+				EA57CF151B4BC4CE00E658E7 /* BubbleTheme.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,9 +560,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA57CF221B4BC50900E658E7 /* DishuTheme.plist in Resources */,
+				EA57CF131B4BC4B100E658E7 /* BubbleTheme.png in Resources */,
+				EA57CF161B4BC4CE00E658E7 /* BubbleTheme.plist in Resources */,
+				EA57CF191B4BC4D900E658E7 /* MachineTheme.png in Resources */,
 				EA56C0AB1B42E42A0076EC00 /* InfoPlist.strings in Resources */,
 				EAFB53841B46A1700076DAA7 /* Images.xcassets in Resources */,
 				EABF4BCD1B43015300918AE1 /* FullKeyboard.xib in Resources */,
+				EA57CF1F1B4BC4F700E658E7 /* DishuTheme.png in Resources */,
+				EA57CF1C1B4BC4EB00E658E7 /* MachineTheme.plist in Resources */,
 				EA56C0AE1B42E4300076EC00 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +592,7 @@
 				EA56C0661B42E1140076EC00 /* ViewController.m in Sources */,
 				EA56C0631B42E1140076EC00 /* AppDelegate.m in Sources */,
 				EA56C0601B42E1140076EC00 /* main.m in Sources */,
+				BEF06A2B32C1793DF9B52331 /* MyHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +616,7 @@
 				BEF069A2AB9991757EFDD99D /* CharKBBtn.m in Sources */,
 				EAE29B141B4A48770051FF98 /* KBToolbar.m in Sources */,
 				BEF0670CCDDD21259FA67C09 /* KeyKBBtn.m in Sources */,
+				BEF068B7C57694B6E02C6D47 /* MyHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +625,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA56C0BD1B42F1740076EC00 /* EmojiKeyboardViewController.m in Sources */,
+				BEF0634800B82D34169C244D /* MyHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

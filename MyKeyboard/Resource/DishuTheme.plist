@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+===================================================================
+
+Sprite sheet file created for UIKit using TexturePacker
+http://www.codeandweb.com/texturepacker
+
+===================================================================
+$TexturePacker:SmartUpdate:9e0b3b8bb4aeec3f66ae2c883b294c2d:1/1$
+-->
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+
+                        <key>background</key>
+			<dict>
+				<key>x</key><real>2</real>
+				<key>y</key><real>2</real>
+				<key>w</key><real>10</real>
+				<key>h</key><real>10</real>
+				
+				
+			</dict>
+                        <key>e</key>
+			<dict>
+				<key>x</key><real>472</real>
+				<key>y</key><real>2</real>
+				<key>w</key><real>74</real>
+				<key>h</key><real>140</real>
+				
+				
+			</dict>
+                        <key>q</key>
+			<dict>
+				<key>x</key><real>395</real>
+				<key>y</key><real>2</real>
+				<key>w</key><real>75</real>
+				<key>h</key><real>140</real>
+				
+				
+			</dict>
+                        <key>y</key>
+			<dict>
+				<key>x</key><real>548</real>
+				<key>y</key><real>2</real>
+				<key>w</key><real>72</real>
+				<key>h</key><real>140</real>
+				
+				
+			</dict>
+                        <key>u</key>
+			<dict>
+				<key>x</key><real>697</real>
+				<key>y</key><real>2</real>
+				<key>w</key><real>74</real>
+				<key>h</key><real>140</real>
+				
+				
+			</dict>
+                        <key>w</key>
+			<dict>
+				<key>x</key><real>622</real>
+				<key>y</key><real>2</real>
+				<key>w</key><real>73</real>
+				<key>h</key><real>140</real>
+				
+				
+			</dict>
+                        <key>toolbar</key>
+			<dict>
+				<key>x</key><real>2</real>
+				<key>y</key><real>144</real>
+				<key>w</key><real>750</real>
+				<key>h</key><real>140</real>
+				
+				
+			</dict>
+                        <key>i</key>
+			<dict>
+				<key>x</key><real>14</real>
+				<key>y</key><real>2</real>
+				<key>w</key><real>74</real>
+				<key>h</key><real>140</real>
+				
+				
+			</dict>
+                        <key>t</key>
+			<dict>
+				<key>x</key><real>90</real>
+				<key>y</key><real>2</real>
+				<key>w</key><real>74</real>
+				<key>h</key><real>140</real>
+				
+				
+			</dict>
+                        <key>o</key>
+			<dict>
+				<key>x</key><real>319</real>
+				<key>y</key><real>2</real>
+				<key>w</key><real>74</real>
+				<key>h</key><real>140</real>
+				
+				
+			</dict>
+                        <key>r</key>
+			<dict>
+				<key>x</key><real>166</real>
+				<key>y</key><real>2</real>
+				<key>w</key><real>75</real>
+				<key>h</key><real>140</real>
+				
+				
+			</dict>
+                        <key>p</key>
+			<dict>
+				<key>x</key><real>243</real>
+				<key>y</key><real>2</real>
+				<key>w</key><real>74</real>
+				<key>h</key><real>140</real>
+				
+				
+			</dict>
+                        <key>m</key>
+			<dict>
+				<key>x</key><real>492</real>
+				<key>y</key><real>438</real>
+				<key>w</key><real>75</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>123</key>
+			<dict>
+				<key>x</key><real>150</real>
+				<key>y</key><real>438</real>
+				<key>w</key><real>84</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>d</key>
+			<dict>
+				<key>x</key><real>416</real>
+				<key>y</key><real>438</real>
+				<key>w</key><real>74</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>,.</key>
+			<dict>
+				<key>x</key><real>236</real>
+				<key>y</key><real>438</real>
+				<key>w</key><real>88</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>ABC</key>
+			<dict>
+				<key>x</key><real>326</real>
+				<key>y</key><real>438</real>
+				<key>w</key><real>88</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>l</key>
+			<dict>
+				<key>x</key><real>569</real>
+				<key>y</key><real>438</real>
+				<key>w</key><real>74</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>h</key>
+			<dict>
+				<key>x</key><real>2</real>
+				<key>y</key><real>585</real>
+				<key>w</key><real>75</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>delete</key>
+			<dict>
+				<key>x</key><real>645</real>
+				<key>y</key><real>438</real>
+				<key>w</key><real>146</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>f</key>
+			<dict>
+				<key>x</key><real>945</real>
+				<key>y</key><real>438</real>
+				<key>w</key><real>74</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>k</key>
+			<dict>
+				<key>x</key><real>793</real>
+				<key>y</key><real>438</real>
+				<key>w</key><real>74</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>j</key>
+			<dict>
+				<key>x</key><real>869</real>
+				<key>y</key><real>438</real>
+				<key>w</key><real>74</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>return</key>
+			<dict>
+				<key>x</key><real>564</real>
+				<key>y</key><real>291</real>
+				<key>w</key><real>173</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>v</key>
+			<dict>
+				<key>x</key><real>323</real>
+				<key>y</key><real>291</real>
+				<key>w</key><real>73</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>a</key>
+			<dict>
+				<key>x</key><real>74</real>
+				<key>y</key><real>438</real>
+				<key>w</key><real>74</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>next</key>
+			<dict>
+				<key>x</key><real>238</real>
+				<key>y</key><real>291</real>
+				<key>w</key><real>83</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>x</key>
+			<dict>
+				<key>x</key><real>754</real>
+				<key>y</key><real>144</real>
+				<key>w</key><real>74</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>space</key>
+			<dict>
+				<key>x</key><real>2</real>
+				<key>y</key><real>291</real>
+				<key>w</key><real>234</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>s</key>
+			<dict>
+				<key>x</key><real>398</real>
+				<key>y</key><real>291</real>
+				<key>w</key><real>74</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>z</key>
+			<dict>
+				<key>x</key><real>2</real>
+				<key>y</key><real>438</real>
+				<key>w</key><real>70</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>symbol</key>
+			<dict>
+				<key>x</key><real>474</real>
+				<key>y</key><real>291</real>
+				<key>w</key><real>88</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>b</key>
+			<dict>
+				<key>x</key><real>892</real>
+				<key>y</key><real>291</real>
+				<key>w</key><real>75</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>n</key>
+			<dict>
+				<key>x</key><real>739</real>
+				<key>y</key><real>291</real>
+				<key>w</key><real>74</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>g</key>
+			<dict>
+				<key>x</key><real>79</real>
+				<key>y</key><real>585</real>
+				<key>w</key><real>73</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+                        <key>c</key>
+			<dict>
+				<key>x</key><real>815</real>
+				<key>y</key><real>291</real>
+				<key>w</key><real>75</real>
+				<key>h</key><real>145</real>
+				
+				
+			</dict>
+		</dict>
+		<key>meta</key>
+		<dict>
+			<key>image</key>
+			<string>DishuTheme.png</string>
+			<key>width</key>
+			<integer>1024</integer>
+			<key>height</key>
+			<integer>1024</integer>
+		</dict>
+	</dict>
+</plist>

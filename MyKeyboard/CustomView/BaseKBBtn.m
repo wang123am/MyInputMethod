@@ -11,39 +11,6 @@
 #import "Defines.h"
 
 
-@interface UIImage(Alpha)
-
-- (UIImage *)imageByApplyingAlpha:(CGFloat) alpha;
-
-@end
-
-@implementation UIImage(Alpha)
-
-//修改图片透明度
-- (UIImage *)imageByApplyingAlpha:(CGFloat) alpha {
-    UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0f);
-
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    CGRect area = CGRectMake(0, 0, self.size.width, self.size.height);
-
-    CGContextScaleCTM(ctx, 1, -1);
-    CGContextTranslateCTM(ctx, 0, -area.size.height);
-
-    CGContextSetBlendMode(ctx, kCGBlendModeMultiply);
-
-    CGContextSetAlpha(ctx, alpha);
-
-    CGContextDrawImage(ctx, area, self.CGImage);
-
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-
-    UIGraphicsEndImageContext();
-
-    return newImage;
-}
-
-@end
-
 @interface BaseKBBtn ()
 
 @end
@@ -51,7 +18,6 @@
 @implementation BaseKBBtn {
     CALayer *_shadowlayer;      //阴影
     CALayer *_innerGlow;        //内边框
-    CALayer *_backgroundLayer, *_highlightBackgroundLayer;    //背景图层/高亮背景图层
 //    CALayer *backgroundLayer, *highlightBackgroundLayer;
 }
 
@@ -128,18 +94,11 @@
     [self addSubview:_contentView];
 
     //当有主题设置
-    NSString *themeName = [KeyboardConfig currentTheme];
-    if (themeName) {
-        UIImage *kbBtnImamge = [KeyboardConfig getBtnImagesWithByName:themeName];
+    if ([KeyboardConfig currentTheme]) {
+//        UIImage *kbBtnImamge = [KeyboardConfig getBtnImagesWithByName:themeName];
 //        _contentView.layer.contents = (__bridge id) kbBtnImamge.CGImage;
 //        _contentView.layer.contentsScale = [[UIScreen mainScreen] scale];
 //        _contentView.layer.contentsGravity = kCAGravityResizeAspectFill;
-
-        [self setupBackgroundLayer:kbBtnImamge withGravity:kCAGravityResizeAspectFill];
-        //修改图片透明度
-        UIImage *kbNewBtnImage = [kbBtnImamge imageByApplyingAlpha:OPACITY_KBBTN_CONTENTVIEW_BG_HIGHLIGHT];
-        [self setupHighlightBackgroundLayer:kbNewBtnImage withGravity:kCAGravityResizeAspectFill];
-
     } else {
         //当没有设置主题
         //设置背景图层
@@ -162,6 +121,7 @@
     if (!_backgroundLayer) {
         _backgroundLayer = [CALayer layer];
         _backgroundLayer.cornerRadius = RADIUS_KBBTN_CONTENTVIEW;
+        _backgroundLayer.masksToBounds = YES;
         _backgroundLayer.frame = CGRectInset(_contentView.frame, 0, 0);
         [self.layer insertSublayer:_backgroundLayer atIndex:0];
     }
@@ -235,12 +195,11 @@
 }
 
 - (void)layoutSubviews {
-    //当有主题设置
-    NSString *themeName = [KeyboardConfig currentTheme];
-    if (themeName) {
-    } else {
-        _contentView.frame = CGRectInset(self.bounds, SPACE_BTN_BG_HORIZON, SPACE_BTN_BG_VERTICAL);
+    _contentView.frame = CGRectInset(self.bounds, SPACE_BTN_BG_HORIZON, SPACE_BTN_BG_VERTICAL);
 
+    //当有主题设置
+    if ([KeyboardConfig currentTheme]) {
+    } else {
         //重设阴影大小
         _shadowlayer.frame = CGRectOffset(_contentView.frame, 0, OFFSET_SHADOWLAYER);
         _shadowlayer.frame = CGRectMake(_contentView.frame.origin.x, (CGFloat) (_contentView.frame.origin.y + _contentView.frame.size.height - HEIGHT_SHADOWLAYER + OFFSET_SHADOWLAYER),
@@ -248,9 +207,11 @@
 
         //重设置内边框、背景、高亮背景大小
         _innerGlow.frame = CGRectInset(self.bounds, 1, 1);
-        _backgroundLayer.frame = CGRectInset(_contentView.frame, 0, 0);
-        _highlightBackgroundLayer.frame = CGRectInset(_contentView.frame, 0, 0);
     }
+
+    _backgroundLayer.frame = CGRectInset(_contentView.frame, 0, 0);
+    _highlightBackgroundLayer.frame = CGRectInset(_contentView.frame, 0, 0);
+
     [super layoutSubviews];
 
 }

@@ -20,10 +20,13 @@
 //拼音全键功能键text->tag字典
 +(NSDictionary *)pingYingFullKBKeyTextTagDict;
 
-+ (NSString *)currentTheme;
+//按键Tag -> small image name 字典
++ (NSDictionary *)fullKBTagImageDic;
 
-+ (UIImage *)getBtnImagesWithByName:(NSString *)name;
++ (NSDictionary *)currentTheme;
 
-+ (UIImage *)getKBLabImageWithByName:(NSString *)name withText:(NSString *)text;
++ (UIImage *)getBtnImagesWithByTag:(NSInteger)tag;
+
++ (void)setKBLabImagewithTag:(NSInteger)tag onLayer:(CALayer *)layer ;
 
 @end

@@ -9,8 +9,9 @@
 #import "CharKBBtn.h"
 #import "KeyboardConfig.h"
 #import "Defines.h"
+#import "MyHelper.h"
 
-@implementation CharKBBtn{
+@implementation CharKBBtn {
     NSString *topText;
     NSString *mainText;
 }
@@ -61,10 +62,9 @@
     //    _topLabel.preferredMaxLayoutWidth = [_topLabel alignmentRectForFrame:_topLabel.frame].size.width;
     [super layoutSubviews];
 
-    NSString *themeName = [KeyboardConfig currentTheme];
     //当有主题设置
-    if (themeName) {
-    }else{
+    if ([KeyboardConfig currentTheme]) {
+    } else {
         [_topLabel sizeToFit];
         [_mainLabel sizeToFit];
         
@@ -74,7 +74,7 @@
         CGSize mainLbSize = _mainLabel.bounds.size;
 
         CGFloat mainLbY = boundSize.height / 4 + (boundSize.height * 3 / 4 - mainLbSize.height) / 2;
-        _topLabel.frame = CGRectMake((boundSize.width - topLbSize.width) / 2, (CGFloat) (mainLbY-SPACE_TOP_MAIN-topLbSize.height), topLbSize.width, topLbSize.height);
+        _topLabel.frame = CGRectMake((boundSize.width - topLbSize.width) / 2, (CGFloat) (mainLbY - SPACE_TOP_MAIN - topLbSize.height), topLbSize.width, topLbSize.height);
         _mainLabel.frame = CGRectMake((boundSize.width - mainLbSize.width) / 2, mainLbY, mainLbSize.width, mainLbSize.height);
         
     }
@@ -84,24 +84,44 @@
 
 - (void)setTopText:(NSString *)upText text:(NSString *)text {
     
-    NSString *themeName = [KeyboardConfig currentTheme];
     //当有主题设置
-    if (themeName) {
-        if(_topLabel){
+    if ([KeyboardConfig currentTheme]) {
+        if (_topLabel) {
             [_topLabel removeFromSuperview];
             _topLabel = nil;
         }
-        if(_mainLabel){
+        if (_mainLabel) {
             [_mainLabel removeFromSuperview];
             _mainLabel = nil;
         }
-        
+
         //设置图片
-        UIImage *kbLabImamge = [KeyboardConfig getKBLabImageWithByName:themeName withText:text];
-        self.contentView.layer.contents = (__bridge id) kbLabImamge.CGImage;
-        self.contentView.layer.contentsGravity = kCAGravityResizeAspectFill;//kCAGravityResizeAspect;    //等同于UIViewContentModeScaleAspectFit
-        self.contentView.layer.contentsScale = [[UIScreen mainScreen] scale];
+        NSString *smallName = [KeyboardConfig fullKBTagImageDic][@(self.tag)];
+        NSDictionary *rootDic = [KeyboardConfig currentTheme];
         
+        UIImage *bigImage = [UIImage imageNamed:rootDic[@"meta"][@"image"]];
+        CGFloat bigWidth = ((NSNumber *) rootDic[@"meta"][@"width"]).floatValue;
+        CGFloat bigHeight = ((NSNumber *) rootDic[@"meta"][@"height"]).floatValue;
+
+        NSDictionary *rectDict = rootDic[@"frames"][smallName];
+        CGFloat x = ((NSNumber *) rectDict[@"x"]).floatValue / bigWidth;
+        CGFloat y = ((NSNumber *) rectDict[@"y"]).floatValue / bigHeight;
+        CGFloat width = ((NSNumber *) rectDict[@"w"]).floatValue / bigWidth;
+        CGFloat height = ((NSNumber *) rectDict[@"h"]).floatValue / bigHeight;
+
+        [self setupBackgroundLayer:bigImage withGravity:kCAGravityResizeAspect];
+        self.backgroundLayer.contentsRect = CGRectMake(x, y, width, height);
+
+
+//        self.contentView.layer.contents = (__bridge id) kbLabImamge.CGImage;
+//        self.contentView.layer.contentsGravity = kCAGravityResizeAspectFill;//kCAGravityResizeAspect;    //等同于UIViewContentModeScaleAspectFit
+//        self.contentView.layer.contentsScale = [[UIScreen mainScreen] scale];
+
+
+        //修改图片透明度
+//        UIImage *kbNewLabBtnImage = [kbLabImamge imageByApplyingAlpha:OPACITY_KBBTN_CONTENTVIEW_BG_HIGHLIGHT];
+//        [self setupHighlightBackgroundLayer:kbNewLabBtnImage withGravity:kCAGravityResizeAspectFill];
+
     } else {
         CGSize boundSize = self.contentView.bounds.size;
         if (upText) {
@@ -113,7 +133,7 @@
                 [self.contentView addSubview:_topLabel];
             }
             _topLabel.text = upText;
-        }else{
+        } else {
             [_topLabel removeFromSuperview];
             _topLabel = nil;
         }
@@ -127,7 +147,7 @@
                 [self.contentView addSubview:_mainLabel];
             }
             _mainLabel.text = text;
-        }else{
+        } else {
             [_mainLabel removeFromSuperview];
             _mainLabel = nil;
         }
@@ -138,16 +158,16 @@
     
 }
 
--(void)setText:(NSString *)text{
+- (void)setText:(NSString *)text {
     [self setTopText:nil text:text];
 }
 
--(NSString *)text{
-    return _mainLabel?_mainLabel.text:mainText;
+- (NSString *)text {
+    return _mainLabel ? _mainLabel.text : mainText;
 }
 
--(NSString *)topText{
-    return _topLabel?_topLabel.text: topText;
+- (NSString *)topText {
+    return _topLabel ? _topLabel.text : topText;
 }
 
 @end

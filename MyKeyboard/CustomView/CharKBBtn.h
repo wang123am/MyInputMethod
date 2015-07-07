@@ -20,7 +20,7 @@
 
 - (void)setTopText:(NSString *)upText text:(NSString *)text;
 
--(void)setText:(NSString *)text;
+-(void)setText:(NSString *)text ;
 
 -(NSString *)text;
 

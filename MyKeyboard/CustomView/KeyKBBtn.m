@@ -9,6 +9,7 @@
 #import "KeyKBBtn.h"
 #import "KeyboardConfig.h"
 #import "Defines.h"
+#import "MyHelper.h"
 
 @implementation KeyKBBtn{
     NSString *mainText;
@@ -56,9 +57,8 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    NSString *themeName = [KeyboardConfig currentTheme];
     //当有主题设置
-    if (themeName) {
+    if ([KeyboardConfig currentTheme]) {
     }else{
         [_mainLabel sizeToFit];
         
@@ -73,18 +73,33 @@
 }
 
 -(void)setText:(NSString *)text{
-    NSString *themeName = [KeyboardConfig currentTheme];
     //当有主题设置
-    if (themeName) {
+    if ([KeyboardConfig currentTheme]) {
         [_mainLabel removeFromSuperview];
         _mainLabel = nil;
-        
+
         //设置图片
-        UIImage *kbLabImamge = [KeyboardConfig getKBLabImageWithByName:themeName withText:text];
-        self.contentView.layer.contents = (__bridge id) kbLabImamge.CGImage;
-        self.contentView.layer.contentsGravity = kCAGravityResizeAspect;    //等同于UIViewContentModeScaleAspectFit
-        self.contentView.layer.contentsScale = [[UIScreen mainScreen] scale];
-        
+        NSString *smallName = [KeyboardConfig fullKBTagImageDic][@(self.tag)];
+        NSDictionary *rootDic = [KeyboardConfig currentTheme];
+
+        UIImage *bigImage = [UIImage imageNamed:rootDic[@"meta"][@"image"]];
+        CGFloat bigWidth = ((NSNumber *)rootDic[@"meta"][@"width"]).floatValue;
+        CGFloat bigHeight = ((NSNumber *)rootDic[@"meta"][@"height"]).floatValue;
+
+        NSDictionary *rectDict = rootDic[@"frames"][smallName];
+        CGFloat x = ((NSNumber *)rectDict[@"x"]).floatValue/bigWidth;
+        CGFloat y = ((NSNumber *)rectDict[@"y"]).floatValue/bigHeight;
+        CGFloat width = ((NSNumber *)rectDict[@"w"]).floatValue/bigWidth;
+        CGFloat height = ((NSNumber *)rectDict[@"h"]).floatValue/bigHeight;
+
+        [self setupBackgroundLayer:bigImage withGravity:kCAGravityResizeAspect];
+        self.backgroundLayer.contentsRect = CGRectMake(x, y, width, height);
+
+//        [self setupBackgroundLayer:kbLabImamge withGravity:kCAGravityResizeAspectFill];
+//        //修改图片透明度
+//        UIImage *kbNewLabBtnImage = [kbLabImamge imageByApplyingAlpha:OPACITY_KBBTN_CONTENTVIEW_BG_HIGHLIGHT];
+//        [self setupHighlightBackgroundLayer:kbNewLabBtnImage withGravity:kCAGravityResizeAspectFill];
+
     } else {
         if(text){
             if(!_mainLabel){

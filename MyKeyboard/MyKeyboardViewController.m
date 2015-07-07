@@ -59,8 +59,8 @@
     if (!self.keyboard) {
         //26键盘
         _keyboard = (FullKeyboard *) [[NSBundle mainBundle] loadNibNamed:@"FullKeyboard" owner:self.view options:nil][0];
-        [_keyboard setupBackground:[UIImage imageNamed:@"keyboardBG"]];
-//        [_keyboard setupKeyboard:KBKeyboard_PingYingFull];
+//        [_keyboard setupBackground:[UIImage imageNamed:@"keyboardBG"]];
+        [_keyboard setupKeyboard:KBKeyboard_PingYingFull];
 
     }
     [self.inputView addSubview:_keyboard];
