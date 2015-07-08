@@ -45,7 +45,7 @@
 
 //获得当前主题
 + (NSDictionary *)currentTheme {
-    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"DishuTheme" ofType:@"plist"]];
+    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MachineTheme" ofType:@"plist"]];
     return dict;
 }
 

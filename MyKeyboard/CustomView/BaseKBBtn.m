@@ -21,16 +21,6 @@
 //    CALayer *backgroundLayer, *highlightBackgroundLayer;
 }
 
-- (instancetype)init {
-//    Log(@"--------%d:%s：", __LINE__, __func__);
-    self = [super init];
-    if (self) {
-        [self setupSubViews];
-    }
-
-    return self;
-}
-
 - (id)initWithCoder:(NSCoder *)coder {
 //    Log(@"--------%d:%s：", __LINE__, __func__);
     self = [super initWithCoder:coder];
@@ -40,26 +30,6 @@
 
     return self;
 }
-
-
-- (instancetype)initWithFrame:(CGRect)frame {
-//    Log(@"--------%d:%s：", __LINE__, __func__);
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self setupSubViews];
-    }
-
-    return self;
-}
-
-- (void)awakeFromNib {
-//    Log(@"--------%d:%s：", __LINE__, __func__);
-    [super awakeFromNib];
-
-    [self setupSubViews];
-}
-
-
 
 - (void)setHighlighted:(BOOL)highlighted {
     // Disable隐式动画
@@ -95,14 +65,9 @@
 
     //当有主题设置
     if ([KeyboardConfig currentTheme]) {
-//        UIImage *kbBtnImamge = [KeyboardConfig getBtnImagesWithByName:themeName];
-//        _contentView.layer.contents = (__bridge id) kbBtnImamge.CGImage;
-//        _contentView.layer.contentsScale = [[UIScreen mainScreen] scale];
-//        _contentView.layer.contentsGravity = kCAGravityResizeAspectFill;
     } else {
         //当没有设置主题
         //设置背景图层
-        //_contentView.layer.backgroundColor = COLOR_KBBTN_CONTENTVIEW_BG_A;
         [self setupBackgroundLayer:nil withGravity:kCAGravityCenter];
         [self setupHighlightBackgroundLayer:nil withGravity:kCAGravityCenter];
         _highlightBackgroundLayer.hidden = YES;

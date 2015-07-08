@@ -16,15 +16,6 @@
     NSString *mainText;
 }
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        [self setupSubViews];
-    }
-    
-    return self;
-}
-
 - (id)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
     if (self) {
@@ -32,22 +23,6 @@
     }
     
     return self;
-}
-
-
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self setupSubViews];
-    }
-    
-    return self;
-}
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    
-    [self setupSubViews];
 }
 
 - (void)setupSubViews {
@@ -112,12 +87,7 @@
         [self setupBackgroundLayer:bigImage withGravity:kCAGravityResizeAspect];
         self.backgroundLayer.contentsRect = CGRectMake(x, y, width, height);
 
-
-//        self.contentView.layer.contents = (__bridge id) kbLabImamge.CGImage;
-//        self.contentView.layer.contentsGravity = kCAGravityResizeAspectFill;//kCAGravityResizeAspect;    //等同于UIViewContentModeScaleAspectFit
-//        self.contentView.layer.contentsScale = [[UIScreen mainScreen] scale];
-
-
+//        [self setupBackgroundLayer:kbLabImamge withGravity:kCAGravityResizeAspectFill];
         //修改图片透明度
 //        UIImage *kbNewLabBtnImage = [kbLabImamge imageByApplyingAlpha:OPACITY_KBBTN_CONTENTVIEW_BG_HIGHLIGHT];
 //        [self setupHighlightBackgroundLayer:kbNewLabBtnImage withGravity:kCAGravityResizeAspectFill];

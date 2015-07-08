@@ -15,15 +15,6 @@
     NSString *mainText;
 }
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        [self setupSubViews];
-    }
-    
-    return self;
-}
-
 - (id)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
     if (self) {
@@ -31,21 +22,6 @@
     }
     
     return self;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self setupSubViews];
-    }
-    
-    return self;
-}
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    
-    [self setupSubViews];
 }
 
 - (void)setupSubViews {

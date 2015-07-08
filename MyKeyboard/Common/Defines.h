@@ -41,8 +41,8 @@ typedef NS_OPTIONS(NSUInteger, KBKeyboardType) {
 
 
 //按键的background横向与纵向的半倍间隙
-#define SPACE_BTN_BG_HORIZON 4.0
-#define SPACE_BTN_BG_VERTICAL 4.0
+#define SPACE_BTN_BG_HORIZON 1.0
+#define SPACE_BTN_BG_VERTICAL 2.0
 
 //按键外边框圆角半径、宽度、颜色
 #define RADIUS_KBBTN_CONTENTVIEW 5.0

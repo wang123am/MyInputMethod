@@ -11,15 +11,6 @@
 
 @implementation KBToolbar
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self setupToolbar];
-    }
-
-    return self;
-}
-
 - (id)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
     if (self) {
