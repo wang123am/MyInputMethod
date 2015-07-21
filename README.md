@@ -36,3 +36,14 @@ Unicode字符:https://en.wikipedia.org/wiki/Category:Unicode
 getEmoji:http://getemoji.com/
 Unicode/List of useful symbols:https://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols
 Emoji Unicode Tables:http://apps.timwhitlock.info/emoji/tables/unicode
+
+
+##词库
+
+五笔编码词库:https://github.com/ishitcno1/googleInputWubiTable
+
+
+汉字转拼音:
+https://github.com/jifei/Pinyin/
+https://github.com/cleverdeng/pinyin.py
+
