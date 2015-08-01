@@ -47,3 +47,5 @@ Emoji Unicode Tables:http://apps.timwhitlock.info/emoji/tables/unicode
 https://github.com/jifei/Pinyin/
 https://github.com/cleverdeng/pinyin.py
 
+一个iOS版的基于zinnia的手写汉字识别:https://github.com/Crazylitm/HZRC
+
