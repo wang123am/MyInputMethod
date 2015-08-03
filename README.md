@@ -27,6 +27,8 @@ Undo/redo with a UITextView:http://stackoverflow.com/questions/4070291/undo-redo
 
 Designing for iOS - Taming UIButton:https://robots.thoughtbot.com/designing-for-ios-taming-uibutton
 
+加密你的SQLite:http://foggry.com/blog/2014/05/19/jia-mi-ni-de-sqlite
+
 
 特殊符号:
 Unicode字符:https://en.wikipedia.org/wiki/Category:Unicode
@@ -48,4 +50,6 @@ https://github.com/jifei/Pinyin/
 https://github.com/cleverdeng/pinyin.py
 
 一个iOS版的基于zinnia的手写汉字识别:https://github.com/Crazylitm/HZRC
+
+
 
