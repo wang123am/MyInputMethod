@@ -8,147 +8,147 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FullKeyboard">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqf-2D-cOL" userLabel="ToolBar" customClass="KBToolbar">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="123"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
                     <color key="backgroundColor" red="0.72549019609999998" green="0.77647058820000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="101" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1t-lx-o3U" userLabel="Q" customClass="CharKBBtn">
-                    <rect key="frame" x="0.0" y="108" width="60" height="123"/>
+                    <rect key="frame" x="0.0" y="31" width="32" height="46"/>
                     <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="102" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDa-oz-PUf" userLabel="W" customClass="CharKBBtn">
-                    <rect key="frame" x="60" y="108" width="60" height="123"/>
+                    <rect key="frame" x="32" y="31" width="32" height="46"/>
                     <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="103" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LYo-Rj-ILu" userLabel="E" customClass="CharKBBtn">
-                    <rect key="frame" x="120" y="108" width="60" height="123"/>
+                    <rect key="frame" x="64" y="31" width="32" height="46"/>
                     <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJB-9C-Lu0" userLabel="R" customClass="CharKBBtn">
-                    <rect key="frame" x="180" y="108" width="60" height="123"/>
+                    <rect key="frame" x="96" y="31" width="32" height="46"/>
                     <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="105" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MzN-lQ-oHb" userLabel="T" customClass="CharKBBtn">
-                    <rect key="frame" x="240" y="108" width="60" height="123"/>
+                    <rect key="frame" x="128" y="31" width="32" height="46"/>
                     <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="106" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mh7-XG-cXj" userLabel="Y" customClass="CharKBBtn">
-                    <rect key="frame" x="300" y="108" width="60" height="123"/>
+                    <rect key="frame" x="160" y="31" width="32" height="46"/>
                     <color key="backgroundColor" red="1" green="0.767013114533734" blue="0.45985265590871116" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="107" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBv-H6-Whz" userLabel="U" customClass="CharKBBtn">
-                    <rect key="frame" x="360" y="108" width="60" height="123"/>
+                    <rect key="frame" x="192" y="31" width="32" height="46"/>
                     <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="108" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eon-b2-IjX" userLabel="I" customClass="CharKBBtn">
-                    <rect key="frame" x="420" y="108" width="60" height="123"/>
+                    <rect key="frame" x="224" y="31" width="32" height="46"/>
                     <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="109" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apE-Ba-qzV" userLabel="O" customClass="CharKBBtn">
-                    <rect key="frame" x="480" y="108" width="60" height="123"/>
+                    <rect key="frame" x="256" y="31" width="32" height="46"/>
                     <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="110" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYH-ZX-Ibq" userLabel="P" customClass="CharKBBtn">
-                    <rect key="frame" x="540" y="108" width="60" height="123"/>
+                    <rect key="frame" x="288" y="31" width="32" height="46"/>
                     <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="201" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0f9-gf-td4" userLabel="A" customClass="CharKBBtn">
-                    <rect key="frame" x="0.0" y="231" width="90" height="123"/>
+                    <rect key="frame" x="0.0" y="77" width="48" height="47"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="202" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rjJ-R9-iaW" userLabel="D" customClass="CharKBBtn">
-                    <rect key="frame" x="90" y="231" width="60" height="123"/>
+                    <rect key="frame" x="48" y="77" width="32" height="47"/>
                     <color key="backgroundColor" red="0.14161878357170726" green="0.54768386994949503" blue="0.16463383025961073" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="203" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kx5-ev-CWW" userLabel="S" customClass="CharKBBtn">
-                    <rect key="frame" x="150" y="231" width="60" height="123"/>
+                    <rect key="frame" x="80" y="77" width="32" height="47"/>
                     <color key="backgroundColor" red="0.64650410353535359" green="0.40318222449345709" blue="0.24779391375863905" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="204" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCv-QR-JoB" userLabel="F" customClass="CharKBBtn">
-                    <rect key="frame" x="210" y="231" width="60" height="123"/>
+                    <rect key="frame" x="112" y="77" width="32" height="47"/>
                     <color key="backgroundColor" red="0.14161878359999999" green="0.54768386989999995" blue="0.16463383030000001" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="205" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTf-Vz-5Ug" userLabel="G" customClass="CharKBBtn">
-                    <rect key="frame" x="270" y="231" width="60" height="123"/>
+                    <rect key="frame" x="144" y="77" width="32" height="47"/>
                     <color key="backgroundColor" red="0.64650410349999998" green="0.40318222450000002" blue="0.24779391379999999" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="206" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kv5-xR-3xK" userLabel="H" customClass="CharKBBtn">
-                    <rect key="frame" x="330" y="231" width="60" height="123"/>
+                    <rect key="frame" x="176" y="77" width="32" height="47"/>
                     <color key="backgroundColor" red="0.14161878359999999" green="0.54768386989999995" blue="0.16463383030000001" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="207" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWU-sQ-LLk" userLabel="J" customClass="CharKBBtn">
-                    <rect key="frame" x="390" y="231" width="60" height="123"/>
+                    <rect key="frame" x="208" y="77" width="32" height="47"/>
                     <color key="backgroundColor" red="0.64650410349999998" green="0.40318222450000002" blue="0.24779391379999999" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="208" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uiw-YM-kDV" userLabel="K" customClass="CharKBBtn">
-                    <rect key="frame" x="450" y="231" width="60" height="123"/>
+                    <rect key="frame" x="240" y="77" width="32" height="47"/>
                     <color key="backgroundColor" red="0.14161878359999999" green="0.54768386989999995" blue="0.16463383030000001" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faL-vx-bbU" userLabel="L" customClass="CharKBBtn">
-                    <rect key="frame" x="510" y="231" width="90" height="123"/>
+                    <rect key="frame" x="272" y="77" width="48" height="47"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="301" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QOA-nM-h8s" userLabel="Symbol" customClass="KeyKBBtn">
-                    <rect key="frame" x="0.0" y="354" width="90" height="123"/>
+                    <rect key="frame" x="0.0" y="124" width="48" height="46"/>
                     <color key="backgroundColor" red="1" green="0.76921394678796706" blue="0.66956683263063155" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="302" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSn-WI-pDv" userLabel="Z" customClass="CharKBBtn">
-                    <rect key="frame" x="90" y="354" width="60" height="123"/>
+                    <rect key="frame" x="48" y="124" width="32" height="46"/>
                     <color key="backgroundColor" red="0.82962436868686873" green="0.48285396224680954" blue="0.28828640098789587" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="303" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haO-vh-IOO" userLabel="X" customClass="CharKBBtn">
-                    <rect key="frame" x="150" y="354" width="60" height="123"/>
+                    <rect key="frame" x="80" y="124" width="32" height="46"/>
                     <color key="backgroundColor" red="0.64293455219852524" green="0.82962436868686873" blue="0.29349630450790687" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="304" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nr7-C2-bHU" userLabel="C" customClass="CharKBBtn">
-                    <rect key="frame" x="210" y="354" width="60" height="123"/>
+                    <rect key="frame" x="112" y="124" width="32" height="46"/>
                     <color key="backgroundColor" red="0.82962436868686873" green="0.48285396224680954" blue="0.28828640098789587" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="305" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JV9-Ij-UWX" userLabel="V" customClass="CharKBBtn">
-                    <rect key="frame" x="270" y="354" width="60" height="123"/>
+                    <rect key="frame" x="144" y="124" width="32" height="46"/>
                     <color key="backgroundColor" red="0.64293455219852524" green="0.82962436868686873" blue="0.29349630450790687" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="306" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LqJ-PS-bHq" userLabel="B" customClass="CharKBBtn">
-                    <rect key="frame" x="330" y="354" width="60" height="123"/>
+                    <rect key="frame" x="176" y="124" width="32" height="46"/>
                     <color key="backgroundColor" red="0.82962436868686873" green="0.48285396224680954" blue="0.28828640098789587" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="307" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evm-Kg-jrg" userLabel="N" customClass="CharKBBtn">
-                    <rect key="frame" x="390" y="354" width="60" height="123"/>
+                    <rect key="frame" x="208" y="124" width="32" height="46"/>
                     <color key="backgroundColor" red="0.64293455219852524" green="0.82962436868686873" blue="0.29349630450790687" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="308" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOb-QM-OiQ" userLabel="M" customClass="CharKBBtn">
-                    <rect key="frame" x="450" y="354" width="60" height="123"/>
+                    <rect key="frame" x="240" y="124" width="32" height="46"/>
                     <color key="backgroundColor" red="0.82962436868686873" green="0.48285396224680954" blue="0.28828640098789587" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="309" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LsO-kc-RRa" userLabel="Delete" customClass="KeyKBBtn">
-                    <rect key="frame" x="510" y="354" width="90" height="123"/>
+                    <rect key="frame" x="272" y="124" width="48" height="46"/>
                     <color key="backgroundColor" red="1" green="0.76921394678796706" blue="0.66956683263063155" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="401" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJW-nm-QuN" userLabel="ABC" customClass="KeyKBBtn">
-                    <rect key="frame" x="0.0" y="477" width="67" height="123"/>
+                    <rect key="frame" x="0.0" y="170" width="36" height="46"/>
                     <color key="backgroundColor" red="1" green="0.732640549696006" blue="0.28536337324522287" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="402" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvl-J8-fkF" userLabel="Next" customClass="KeyKBBtn">
-                    <rect key="frame" x="67" y="477" width="67" height="123"/>
+                    <rect key="frame" x="36" y="170" width="36" height="46"/>
                     <color key="backgroundColor" red="0.41600836476368286" green="1" blue="0.9500645873317658" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="403" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUS-FC-jg0" userLabel="123" customClass="KeyKBBtn">
-                    <rect key="frame" x="134" y="477" width="68" height="123"/>
+                    <rect key="frame" x="72" y="170" width="36" height="46"/>
                     <color key="backgroundColor" red="0.45183631916201938" green="0.6593589381488546" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="404" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1P-1h-sjl" userLabel="Space" customClass="CharKBBtn">
-                    <rect key="frame" x="202" y="477" width="196" height="123"/>
+                    <rect key="frame" x="108" y="170" width="104" height="46"/>
                     <color key="backgroundColor" red="0.77237464319844173" green="0.89552580138894511" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="405" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10o-ee-GEV" userLabel=",." customClass="CharKBBtn">
-                    <rect key="frame" x="398" y="477" width="68" height="123"/>
+                    <rect key="frame" x="212" y="170" width="36" height="46"/>
                     <color key="backgroundColor" red="0.4518363192" green="0.65935893810000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="406" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ug9-t0-Q6g" userLabel="BreakLine" customClass="KeyKBBtn">
-                    <rect key="frame" x="466" y="477" width="134" height="123"/>
+                    <rect key="frame" x="248" y="170" width="72" height="46"/>
                     <color key="backgroundColor" red="1" green="0.73264054970000003" blue="0.28536337319999999" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
             </subviews>

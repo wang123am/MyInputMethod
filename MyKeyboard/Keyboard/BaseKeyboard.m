@@ -7,6 +7,7 @@
 //
 
 #import "BaseKeyboard.h"
+#import "Defines.h"
 
 @implementation BaseKeyboard
 

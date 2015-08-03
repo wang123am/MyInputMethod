@@ -38,33 +38,14 @@ Unicode/List of useful symbols:https://en.wikibooks.org/wiki/Unicode/List_of_use
 Emoji Unicode Tables:http://apps.timwhitlock.info/emoji/tables/unicode
 
 
-color picker：https://github.com/kartech/colorpicker
+##词库
+
+五笔编码词库:https://github.com/ishitcno1/googleInputWubiTable
 
 
-# MyKeyboard设计需求
------------------
+汉字转拼音:
+https://github.com/jifei/Pinyin/
+https://github.com/cleverdeng/pinyin.py
 
-## 皮肤
-1.键盘背景(图片或渐变色)；
-3.按键背景透明 及 高亮不透明度；
-4.按键圆角、边框线、阴影；
-5.按键主字符字体类型、大小、颜色；
-6.按键辅字符字体类型、大小、颜色；
-
-7.“设置按钮”字体、反转颜色、图片
-
-
-## 主题设计
-1.无边框、无阴影；
-2.按键主字符字体类型,颜色；
-3.按键辅字符字体类型,颜色；
-参见:http://iosfonts.com/
-
-4.键盘背景图(1)；
-5.字符按键contentView背景图 与 高亮背景图 (2)；
-6.功能按键contentView背景图 与 高亮背景图 (2)；
-	
-7.“设置按钮”图片、字体反转颜色
-
-字体尽可能设置成动态字体，以支持系统的字体大小设置；
+一个iOS版的基于zinnia的手写汉字识别:https://github.com/Crazylitm/HZRC
 
