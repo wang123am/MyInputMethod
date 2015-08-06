@@ -9,13 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @class LWBaseKeyboard;
+@class LWToolBar;
+@class LWRootWrapView;
 
 
 @interface MyKeyboardViewController : UIInputViewController
 
-@property(nonatomic, strong) NSLayoutConstraint *inputViewHeightConstraint;
-@property(nonatomic, strong) LWBaseKeyboard *keyboard;
-
-@property(nonatomic, strong) NSArray *keyboardHorizonConstraints;
-@property(nonatomic, strong) NSArray *keyboardVerticalConstraints;
 @end

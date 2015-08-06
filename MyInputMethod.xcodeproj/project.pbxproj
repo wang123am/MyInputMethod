@@ -7,15 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BEF0622F4BCDB4DC8FEC575F /* LWBaseKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06610E5C29E6082948E95 /* LWBaseKeyboard.m */; };
-		BEF0634800B82D34169C244D /* LWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06779280E30F7628A2474 /* LWHelper.m */; };
-		BEF0648D569B86A109B153FB /* LWBaseKBBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06549AF4314DF3E4F4284 /* LWBaseKBBtn.m */; };
-		BEF0670CCDDD21259FA67C09 /* LWKeyKBBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF068700E3B18B5F9C80A66 /* LWKeyKBBtn.m */; };
-		BEF068B7C57694B6E02C6D47 /* LWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06779280E30F7628A2474 /* LWHelper.m */; };
-		BEF0696049A242C462CCFA37 /* LWKeyboardConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06E9EEE76F27FEC5567DA /* LWKeyboardConfig.m */; };
-		BEF069A2AB9991757EFDD99D /* LWCharKBBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06EF726C48C6B56EF035C /* LWCharKBBtn.m */; };
-		BEF06A2B32C1793DF9B52331 /* LWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06779280E30F7628A2474 /* LWHelper.m */; };
-		EA3E22F71B72F8D600349A95 /* LWPinYinFullKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3E22F51B72F8D600349A95 /* LWPinYinFullKeyboard.xib */; };
+		BEF063B061238131C98190AE /* DishuTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEF06626E8CC283B801A6384 /* DishuTheme.plist */; };
+		BEF069306002FA7C5CC700E1 /* DishuTheme.png in Resources */ = {isa = PBXBuildFile; fileRef = BEF060F67751233F3E1C1E86 /* DishuTheme.png */; };
+		EA3E237B1B732B5100349A95 /* LWBaseKBBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E235A1B732B5100349A95 /* LWBaseKBBtn.m */; };
+		EA3E237C1B732B5100349A95 /* LWCharKBBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E235C1B732B5100349A95 /* LWCharKBBtn.m */; };
+		EA3E237D1B732B5100349A95 /* LWFullCharBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E235E1B732B5100349A95 /* LWFullCharBtn.m */; };
+		EA3E237E1B732B5100349A95 /* LWKeyKBBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E23601B732B5100349A95 /* LWKeyKBBtn.m */; };
+		EA3E237F1B732B5100349A95 /* LWNineCharBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E23621B732B5100349A95 /* LWNineCharBtn.m */; };
+		EA3E23801B732B5100349A95 /* LWNumCharBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E23641B732B5100349A95 /* LWNumCharBtn.m */; };
+		EA3E23811B732B5100349A95 /* LWLeftTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E23661B732B5100349A95 /* LWLeftTabView.m */; };
+		EA3E23821B732B5100349A95 /* LWNumLeftTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E23681B732B5100349A95 /* LWNumLeftTabView.m */; };
+		EA3E23831B732B5100349A95 /* LWPinYinLeftTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E236A1B732B5100349A95 /* LWPinYinLeftTabView.m */; };
+		EA3E23841B732B5100349A95 /* LWToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E236C1B732B5100349A95 /* LWToolBar.m */; };
+		EA3E23851B732B5100349A95 /* LWOftenWordsPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E236F1B732B5100349A95 /* LWOftenWordsPopView.m */; };
+		EA3E23861B732B5100349A95 /* LWSettingPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E23711B732B5100349A95 /* LWSettingPopView.m */; };
+		EA3E23871B732B5100349A95 /* LWKeyboardWrap.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E23741B732B5100349A95 /* LWKeyboardWrap.m */; };
+		EA3E23881B732B5100349A95 /* LWRootWrapView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E23761B732B5100349A95 /* LWRootWrapView.m */; };
+		EA3E23891B732B5100349A95 /* LWSingleHandView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E23781B732B5100349A95 /* LWSingleHandView.m */; };
+		EA3E238A1B732B5100349A95 /* LWTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E237A1B732B5100349A95 /* LWTopView.m */; };
+		EA3E23921B732B6800349A95 /* LWDataConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E238D1B732B6800349A95 /* LWDataConfig.m */; };
+		EA3E23931B732B6800349A95 /* LWKeyboardConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E238F1B732B6800349A95 /* LWKeyboardConfig.m */; };
+		EA3E23941B732B6800349A95 /* LWKeyboardLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E23911B732B6800349A95 /* LWKeyboardLogic.m */; };
+		EA3E23981B732BDC00349A95 /* MyKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E23971B732BDC00349A95 /* MyKeyboardViewController.m */; };
+		EA3E23B91B732C0300349A95 /* LWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E239B1B732C0300349A95 /* LWHelper.m */; };
+		EA3E23BB1B732C0300349A95 /* LWBaseKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E23A01B732C0300349A95 /* LWBaseKeyboard.m */; };
+		EA3E23BC1B732C0300349A95 /* LWEnFullKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E23A21B732C0300349A95 /* LWEnFullKeyboard.m */; };
+		EA3E23BD1B732C0300349A95 /* LWEnFullKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3E23A31B732C0300349A95 /* LWEnFullKeyboard.xib */; };
+		EA3E23BE1B732C0300349A95 /* LWNumKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E23A51B732C0300349A95 /* LWNumKeyboard.m */; };
+		EA3E23BF1B732C0300349A95 /* LWNumKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3E23A61B732C0300349A95 /* LWNumKeyboard.xib */; };
+		EA3E23C01B732C0300349A95 /* LWPinYinFullKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E23A81B732C0300349A95 /* LWPinYinFullKeyboard.m */; };
+		EA3E23C11B732C0300349A95 /* LWPinYinFullKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3E23A91B732C0300349A95 /* LWPinYinFullKeyboard.xib */; };
+		EA3E23C21B732C0300349A95 /* LWPinYinNineKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E23AB1B732C0300349A95 /* LWPinYinNineKeyboard.m */; };
+		EA3E23C31B732C0300349A95 /* LWPinYinNineKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3E23AC1B732C0300349A95 /* LWPinYinNineKeyboard.xib */; };
+		EA3E23C41B732C0300349A95 /* BubbleTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA3E23AF1B732C0300349A95 /* BubbleTheme.plist */; };
+		EA3E23C51B732C0300349A95 /* BubbleTheme.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3E23B01B732C0300349A95 /* BubbleTheme.png */; };
+		EA3E23C81B732C0300349A95 /* MachineTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA3E23B41B732C0300349A95 /* MachineTheme.plist */; };
+		EA3E23C91B732C0300349A95 /* MachineTheme.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3E23B51B732C0300349A95 /* MachineTheme.png */; };
+		EA3E23CA1B732C0300349A95 /* UIColor+HexValue.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E23B81B732C0300349A95 /* UIColor+HexValue.m */; };
+		EA3E23CC1B73342400349A95 /* LWToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3E23CB1B73342400349A95 /* LWToolBar.xib */; };
+		EA3E23CF1B733C6600349A95 /* moonlight.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3E23CD1B733C6600349A95 /* moonlight.png */; };
+		EA3E23D01B733C6600349A95 /* sealight.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3E23CE1B733C6600349A95 /* sealight.png */; };
+		EA3E23D21B73652700349A95 /* waterglass.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3E23D11B73652700349A95 /* waterglass.png */; };
 		EA56C0601B42E1140076EC00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56C05F1B42E1140076EC00 /* main.m */; };
 		EA56C0631B42E1140076EC00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56C0621B42E1140076EC00 /* AppDelegate.m */; };
 		EA56C0661B42E1140076EC00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56C0651B42E1140076EC00 /* ViewController.m */; };
@@ -23,7 +55,6 @@
 		EA56C06B1B42E1140076EC00 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA56C06A1B42E1140076EC00 /* Images.xcassets */; };
 		EA56C06E1B42E1140076EC00 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA56C06C1B42E1140076EC00 /* LaunchScreen.xib */; };
 		EA56C07A1B42E1140076EC00 /* MyInputMethodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56C0791B42E1140076EC00 /* MyInputMethodTests.m */; };
-		EA56C08D1B42E1670076EC00 /* MyKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56C08C1B42E1670076EC00 /* MyKeyboardViewController.m */; };
 		EA56C0901B42E1670076EC00 /* MyKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EA56C0871B42E1670076EC00 /* MyKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EA56C0A31B42E4110076EC00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA56C0A51B42E4110076EC00 /* InfoPlist.strings */; };
 		EA56C0A71B42E4190076EC00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA56C0A91B42E4190076EC00 /* Localizable.strings */; };
@@ -33,20 +64,6 @@
 		EA56C0C01B42F1740076EC00 /* MyEmojiKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EA56C0B71B42F1740076EC00 /* MyEmojiKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EA56C0C81B42F1F00076EC00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA56C0CA1B42F1F00076EC00 /* InfoPlist.strings */; };
 		EA56C0CC1B42F1F60076EC00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA56C0CE1B42F1F60076EC00 /* Localizable.strings */; };
-		EA57CF121B4BC4B100E658E7 /* BubbleTheme.png in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF111B4BC4B100E658E7 /* BubbleTheme.png */; };
-		EA57CF131B4BC4B100E658E7 /* BubbleTheme.png in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF111B4BC4B100E658E7 /* BubbleTheme.png */; };
-		EA57CF151B4BC4CE00E658E7 /* BubbleTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF141B4BC4CE00E658E7 /* BubbleTheme.plist */; };
-		EA57CF161B4BC4CE00E658E7 /* BubbleTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF141B4BC4CE00E658E7 /* BubbleTheme.plist */; };
-		EA57CF181B4BC4D900E658E7 /* MachineTheme.png in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF171B4BC4D900E658E7 /* MachineTheme.png */; };
-		EA57CF191B4BC4D900E658E7 /* MachineTheme.png in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF171B4BC4D900E658E7 /* MachineTheme.png */; };
-		EA57CF1B1B4BC4EB00E658E7 /* MachineTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF1A1B4BC4EB00E658E7 /* MachineTheme.plist */; };
-		EA57CF1C1B4BC4EB00E658E7 /* MachineTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF1A1B4BC4EB00E658E7 /* MachineTheme.plist */; };
-		EA57CF1E1B4BC4F700E658E7 /* DishuTheme.png in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF1D1B4BC4F700E658E7 /* DishuTheme.png */; };
-		EA57CF1F1B4BC4F700E658E7 /* DishuTheme.png in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF1D1B4BC4F700E658E7 /* DishuTheme.png */; };
-		EA57CF211B4BC50900E658E7 /* DishuTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF201B4BC50900E658E7 /* DishuTheme.plist */; };
-		EA57CF221B4BC50900E658E7 /* DishuTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA57CF201B4BC50900E658E7 /* DishuTheme.plist */; };
-		EABF4BCA1B42FFBE00918AE1 /* LWPinYinFullKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF4BC91B42FFBE00918AE1 /* LWPinYinFullKeyboard.m */; };
-		EAE29B141B4A48770051FF98 /* LWToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE29B131B4A48770051FF98 /* LWToolbar.m */; };
 		EAFB53841B46A1700076DAA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFB53831B46A1700076DAA7 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -90,22 +107,77 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BEF0642BFB2F6B36868DD497 /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
-		BEF06549AF4314DF3E4F4284 /* LWBaseKBBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWBaseKBBtn.m; sourceTree = "<group>"; };
-		BEF06610E5C29E6082948E95 /* LWBaseKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWBaseKeyboard.m; sourceTree = "<group>"; };
-		BEF06779280E30F7628A2474 /* LWHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWHelper.m; sourceTree = "<group>"; };
-		BEF0679C79D49F1625F5CD25 /* LWBaseKBBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWBaseKBBtn.h; sourceTree = "<group>"; };
-		BEF0684133F3FE4B216BCEAB /* LWCharKBBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWCharKBBtn.h; sourceTree = "<group>"; };
-		BEF068700E3B18B5F9C80A66 /* LWKeyKBBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWKeyKBBtn.m; sourceTree = "<group>"; };
-		BEF068E22F3B59EE7A8CCD18 /* LWHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWHelper.h; sourceTree = "<group>"; };
-		BEF06B7D461D112027F7EED7 /* LWBaseKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWBaseKeyboard.h; sourceTree = "<group>"; };
-		BEF06BEBA65AC6FEBCEEFF1F /* LWKeyboardConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWKeyboardConfig.h; sourceTree = "<group>"; };
+		BEF060F67751233F3E1C1E86 /* DishuTheme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DishuTheme.png; sourceTree = "<group>"; };
+		BEF06626E8CC283B801A6384 /* DishuTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = DishuTheme.plist; sourceTree = "<group>"; };
 		BEF06C2913B1D37966CFAD2E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
 		BEF06E888D0180F5B2E41D1A /* doc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; path = doc; sourceTree = "<group>"; };
-		BEF06E9EEE76F27FEC5567DA /* LWKeyboardConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWKeyboardConfig.m; sourceTree = "<group>"; };
-		BEF06EF726C48C6B56EF035C /* LWCharKBBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWCharKBBtn.m; sourceTree = "<group>"; };
-		BEF06F017DB5A1DB2B86E831 /* LWKeyKBBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWKeyKBBtn.h; sourceTree = "<group>"; };
-		EA3E22F61B72F8D600349A95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LWPinYinFullKeyboard.xib; sourceTree = "<group>"; };
+		EA3E23591B732B5100349A95 /* LWBaseKBBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWBaseKBBtn.h; sourceTree = "<group>"; };
+		EA3E235A1B732B5100349A95 /* LWBaseKBBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWBaseKBBtn.m; sourceTree = "<group>"; };
+		EA3E235B1B732B5100349A95 /* LWCharKBBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWCharKBBtn.h; sourceTree = "<group>"; };
+		EA3E235C1B732B5100349A95 /* LWCharKBBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWCharKBBtn.m; sourceTree = "<group>"; };
+		EA3E235D1B732B5100349A95 /* LWFullCharBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWFullCharBtn.h; sourceTree = "<group>"; };
+		EA3E235E1B732B5100349A95 /* LWFullCharBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWFullCharBtn.m; sourceTree = "<group>"; };
+		EA3E235F1B732B5100349A95 /* LWKeyKBBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWKeyKBBtn.h; sourceTree = "<group>"; };
+		EA3E23601B732B5100349A95 /* LWKeyKBBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWKeyKBBtn.m; sourceTree = "<group>"; };
+		EA3E23611B732B5100349A95 /* LWNineCharBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWNineCharBtn.h; sourceTree = "<group>"; };
+		EA3E23621B732B5100349A95 /* LWNineCharBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWNineCharBtn.m; sourceTree = "<group>"; };
+		EA3E23631B732B5100349A95 /* LWNumCharBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWNumCharBtn.h; sourceTree = "<group>"; };
+		EA3E23641B732B5100349A95 /* LWNumCharBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWNumCharBtn.m; sourceTree = "<group>"; };
+		EA3E23651B732B5100349A95 /* LWLeftTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWLeftTabView.h; sourceTree = "<group>"; };
+		EA3E23661B732B5100349A95 /* LWLeftTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWLeftTabView.m; sourceTree = "<group>"; };
+		EA3E23671B732B5100349A95 /* LWNumLeftTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWNumLeftTabView.h; sourceTree = "<group>"; };
+		EA3E23681B732B5100349A95 /* LWNumLeftTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWNumLeftTabView.m; sourceTree = "<group>"; };
+		EA3E23691B732B5100349A95 /* LWPinYinLeftTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWPinYinLeftTabView.h; sourceTree = "<group>"; };
+		EA3E236A1B732B5100349A95 /* LWPinYinLeftTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWPinYinLeftTabView.m; sourceTree = "<group>"; };
+		EA3E236B1B732B5100349A95 /* LWToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWToolBar.h; sourceTree = "<group>"; };
+		EA3E236C1B732B5100349A95 /* LWToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWToolBar.m; sourceTree = "<group>"; };
+		EA3E236E1B732B5100349A95 /* LWOftenWordsPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWOftenWordsPopView.h; sourceTree = "<group>"; };
+		EA3E236F1B732B5100349A95 /* LWOftenWordsPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWOftenWordsPopView.m; sourceTree = "<group>"; };
+		EA3E23701B732B5100349A95 /* LWSettingPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSettingPopView.h; sourceTree = "<group>"; };
+		EA3E23711B732B5100349A95 /* LWSettingPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSettingPopView.m; sourceTree = "<group>"; };
+		EA3E23731B732B5100349A95 /* LWKeyboardWrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWKeyboardWrap.h; sourceTree = "<group>"; };
+		EA3E23741B732B5100349A95 /* LWKeyboardWrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWKeyboardWrap.m; sourceTree = "<group>"; };
+		EA3E23751B732B5100349A95 /* LWRootWrapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWRootWrapView.h; sourceTree = "<group>"; };
+		EA3E23761B732B5100349A95 /* LWRootWrapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWRootWrapView.m; sourceTree = "<group>"; };
+		EA3E23771B732B5100349A95 /* LWSingleHandView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSingleHandView.h; sourceTree = "<group>"; };
+		EA3E23781B732B5100349A95 /* LWSingleHandView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSingleHandView.m; sourceTree = "<group>"; };
+		EA3E23791B732B5100349A95 /* LWTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWTopView.h; sourceTree = "<group>"; };
+		EA3E237A1B732B5100349A95 /* LWTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWTopView.m; sourceTree = "<group>"; };
+		EA3E238C1B732B6800349A95 /* LWDataConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWDataConfig.h; sourceTree = "<group>"; };
+		EA3E238D1B732B6800349A95 /* LWDataConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWDataConfig.m; sourceTree = "<group>"; };
+		EA3E238E1B732B6800349A95 /* LWKeyboardConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWKeyboardConfig.h; sourceTree = "<group>"; };
+		EA3E238F1B732B6800349A95 /* LWKeyboardConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWKeyboardConfig.m; sourceTree = "<group>"; };
+		EA3E23901B732B6800349A95 /* LWKeyboardLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWKeyboardLogic.h; sourceTree = "<group>"; };
+		EA3E23911B732B6800349A95 /* LWKeyboardLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWKeyboardLogic.m; sourceTree = "<group>"; };
+		EA3E23951B732B8E00349A95 /* LWDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LWDefines.h; path = MyKeyboard/LWDefines.h; sourceTree = "<group>"; };
+		EA3E23961B732BDC00349A95 /* MyKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyKeyboardViewController.h; path = MyKeyboard/MyKeyboardViewController.h; sourceTree = "<group>"; };
+		EA3E23971B732BDC00349A95 /* MyKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyKeyboardViewController.m; path = MyKeyboard/MyKeyboardViewController.m; sourceTree = "<group>"; };
+		EA3E239A1B732C0300349A95 /* LWHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWHelper.h; sourceTree = "<group>"; };
+		EA3E239B1B732C0300349A95 /* LWHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWHelper.m; sourceTree = "<group>"; };
+		EA3E239F1B732C0300349A95 /* LWBaseKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWBaseKeyboard.h; sourceTree = "<group>"; };
+		EA3E23A01B732C0300349A95 /* LWBaseKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWBaseKeyboard.m; sourceTree = "<group>"; };
+		EA3E23A11B732C0300349A95 /* LWEnFullKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWEnFullKeyboard.h; sourceTree = "<group>"; };
+		EA3E23A21B732C0300349A95 /* LWEnFullKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWEnFullKeyboard.m; sourceTree = "<group>"; };
+		EA3E23A31B732C0300349A95 /* LWEnFullKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LWEnFullKeyboard.xib; sourceTree = "<group>"; };
+		EA3E23A41B732C0300349A95 /* LWNumKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWNumKeyboard.h; sourceTree = "<group>"; };
+		EA3E23A51B732C0300349A95 /* LWNumKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWNumKeyboard.m; sourceTree = "<group>"; };
+		EA3E23A61B732C0300349A95 /* LWNumKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LWNumKeyboard.xib; sourceTree = "<group>"; };
+		EA3E23A71B732C0300349A95 /* LWPinYinFullKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWPinYinFullKeyboard.h; sourceTree = "<group>"; };
+		EA3E23A81B732C0300349A95 /* LWPinYinFullKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWPinYinFullKeyboard.m; sourceTree = "<group>"; };
+		EA3E23A91B732C0300349A95 /* LWPinYinFullKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LWPinYinFullKeyboard.xib; sourceTree = "<group>"; };
+		EA3E23AA1B732C0300349A95 /* LWPinYinNineKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWPinYinNineKeyboard.h; sourceTree = "<group>"; };
+		EA3E23AB1B732C0300349A95 /* LWPinYinNineKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWPinYinNineKeyboard.m; sourceTree = "<group>"; };
+		EA3E23AC1B732C0300349A95 /* LWPinYinNineKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LWPinYinNineKeyboard.xib; sourceTree = "<group>"; };
+		EA3E23AF1B732C0300349A95 /* BubbleTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BubbleTheme.plist; sourceTree = "<group>"; };
+		EA3E23B01B732C0300349A95 /* BubbleTheme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleTheme.png; sourceTree = "<group>"; };
+		EA3E23B41B732C0300349A95 /* MachineTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MachineTheme.plist; sourceTree = "<group>"; };
+		EA3E23B51B732C0300349A95 /* MachineTheme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MachineTheme.png; sourceTree = "<group>"; };
+		EA3E23B71B732C0300349A95 /* UIColor+HexValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexValue.h"; sourceTree = "<group>"; };
+		EA3E23B81B732C0300349A95 /* UIColor+HexValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexValue.m"; sourceTree = "<group>"; };
+		EA3E23CB1B73342400349A95 /* LWToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LWToolBar.xib; sourceTree = "<group>"; };
+		EA3E23CD1B733C6600349A95 /* moonlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moonlight.png; sourceTree = "<group>"; };
+		EA3E23CE1B733C6600349A95 /* sealight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sealight.png; sourceTree = "<group>"; };
+		EA3E23D11B73652700349A95 /* waterglass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waterglass.png; sourceTree = "<group>"; };
 		EA56C05A1B42E1140076EC00 /* MyInputMethod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyInputMethod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA56C05E1B42E1140076EC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA56C05F1B42E1140076EC00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -121,9 +193,7 @@
 		EA56C0791B42E1140076EC00 /* MyInputMethodTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyInputMethodTests.m; sourceTree = "<group>"; };
 		EA56C0871B42E1670076EC00 /* MyKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA56C08A1B42E1670076EC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA56C08B1B42E1670076EC00 /* MyKeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyKeyboardViewController.h; sourceTree = "<group>"; };
-		EA56C08C1B42E1670076EC00 /* MyKeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyKeyboardViewController.m; sourceTree = "<group>"; };
-		EA56C0951B42E1AF0076EC00 /* MyKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyKeyboard.entitlements; sourceTree = "<group>"; };
+		EA56C0951B42E1AF0076EC00 /* MyKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = MyKeyboard.entitlements; path = MyKeyboard/MyKeyboard.entitlements; sourceTree = "<group>"; };
 		EA56C0961B42E20F0076EC00 /* MyInputMethod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyInputMethod.entitlements; sourceTree = "<group>"; };
 		EA56C0A01B42E3ED0076EC00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		EA56C0A21B42E3F80076EC00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -144,17 +214,7 @@
 		EA56C0CD1B42F1F60076EC00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA56C0CF1B42F1F70076EC00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA56C0D01B42F2480076EC00 /* MyEmojiKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyEmojiKeyboard.entitlements; sourceTree = "<group>"; };
-		EA57CF111B4BC4B100E658E7 /* BubbleTheme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleTheme.png; sourceTree = "<group>"; };
-		EA57CF141B4BC4CE00E658E7 /* BubbleTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BubbleTheme.plist; sourceTree = "<group>"; };
-		EA57CF171B4BC4D900E658E7 /* MachineTheme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MachineTheme.png; sourceTree = "<group>"; };
-		EA57CF1A1B4BC4EB00E658E7 /* MachineTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MachineTheme.plist; sourceTree = "<group>"; };
-		EA57CF1D1B4BC4F700E658E7 /* DishuTheme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DishuTheme.png; sourceTree = "<group>"; };
-		EA57CF201B4BC50900E658E7 /* DishuTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DishuTheme.plist; sourceTree = "<group>"; };
-		EABF4BC81B42FFBE00918AE1 /* LWPinYinFullKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWPinYinFullKeyboard.h; sourceTree = "<group>"; };
-		EABF4BC91B42FFBE00918AE1 /* LWPinYinFullKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWPinYinFullKeyboard.m; sourceTree = "<group>"; };
-		EAE29B121B4A48770051FF98 /* LWToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWToolbar.h; sourceTree = "<group>"; };
-		EAE29B131B4A48770051FF98 /* LWToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWToolbar.m; sourceTree = "<group>"; };
-		EAFB53831B46A1700076DAA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EAFB53831B46A1700076DAA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MyKeyboard/Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,71 +249,160 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BEF0619E6600B0A7E5B8C418 /* Common */ = {
+		BEF06B7F63B98F1B23953992 /* DishuTheme */ = {
 			isa = PBXGroup;
 			children = (
-				BEF06E9EEE76F27FEC5567DA /* LWKeyboardConfig.m */,
-				BEF06BEBA65AC6FEBCEEFF1F /* LWKeyboardConfig.h */,
-				BEF0642BFB2F6B36868DD497 /* Defines.h */,
-				BEF06779280E30F7628A2474 /* LWHelper.m */,
-				BEF068E22F3B59EE7A8CCD18 /* LWHelper.h */,
+				BEF06626E8CC283B801A6384 /* DishuTheme.plist */,
+				BEF060F67751233F3E1C1E86 /* DishuTheme.png */,
+			);
+			path = DishuTheme;
+			sourceTree = "<group>";
+		};
+		EA3E23571B732B5100349A95 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				EA3E236D1B732B5100349A95 /* PopViews */,
+				EA3E23581B732B5100349A95 /* KBBtn */,
+				EA3E23721B732B5100349A95 /* WrapViews */,
+				EA3E23651B732B5100349A95 /* LWLeftTabView.h */,
+				EA3E23661B732B5100349A95 /* LWLeftTabView.m */,
+				EA3E23671B732B5100349A95 /* LWNumLeftTabView.h */,
+				EA3E23681B732B5100349A95 /* LWNumLeftTabView.m */,
+				EA3E23691B732B5100349A95 /* LWPinYinLeftTabView.h */,
+				EA3E236A1B732B5100349A95 /* LWPinYinLeftTabView.m */,
+				EA3E236B1B732B5100349A95 /* LWToolBar.h */,
+				EA3E236C1B732B5100349A95 /* LWToolBar.m */,
+				EA3E23CB1B73342400349A95 /* LWToolBar.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		EA3E23581B732B5100349A95 /* KBBtn */ = {
+			isa = PBXGroup;
+			children = (
+				EA3E23591B732B5100349A95 /* LWBaseKBBtn.h */,
+				EA3E235A1B732B5100349A95 /* LWBaseKBBtn.m */,
+				EA3E235B1B732B5100349A95 /* LWCharKBBtn.h */,
+				EA3E235C1B732B5100349A95 /* LWCharKBBtn.m */,
+				EA3E235D1B732B5100349A95 /* LWFullCharBtn.h */,
+				EA3E235E1B732B5100349A95 /* LWFullCharBtn.m */,
+				EA3E235F1B732B5100349A95 /* LWKeyKBBtn.h */,
+				EA3E23601B732B5100349A95 /* LWKeyKBBtn.m */,
+				EA3E23611B732B5100349A95 /* LWNineCharBtn.h */,
+				EA3E23621B732B5100349A95 /* LWNineCharBtn.m */,
+				EA3E23631B732B5100349A95 /* LWNumCharBtn.h */,
+				EA3E23641B732B5100349A95 /* LWNumCharBtn.m */,
+			);
+			path = KBBtn;
+			sourceTree = "<group>";
+		};
+		EA3E236D1B732B5100349A95 /* PopViews */ = {
+			isa = PBXGroup;
+			children = (
+				EA3E236E1B732B5100349A95 /* LWOftenWordsPopView.h */,
+				EA3E236F1B732B5100349A95 /* LWOftenWordsPopView.m */,
+				EA3E23701B732B5100349A95 /* LWSettingPopView.h */,
+				EA3E23711B732B5100349A95 /* LWSettingPopView.m */,
+			);
+			path = PopViews;
+			sourceTree = "<group>";
+		};
+		EA3E23721B732B5100349A95 /* WrapViews */ = {
+			isa = PBXGroup;
+			children = (
+				EA3E23731B732B5100349A95 /* LWKeyboardWrap.h */,
+				EA3E23741B732B5100349A95 /* LWKeyboardWrap.m */,
+				EA3E23751B732B5100349A95 /* LWRootWrapView.h */,
+				EA3E23761B732B5100349A95 /* LWRootWrapView.m */,
+				EA3E23771B732B5100349A95 /* LWSingleHandView.h */,
+				EA3E23781B732B5100349A95 /* LWSingleHandView.m */,
+				EA3E23791B732B5100349A95 /* LWTopView.h */,
+				EA3E237A1B732B5100349A95 /* LWTopView.m */,
+			);
+			path = WrapViews;
+			sourceTree = "<group>";
+		};
+		EA3E238B1B732B6800349A95 /* DataManage */ = {
+			isa = PBXGroup;
+			children = (
+				EA3E238C1B732B6800349A95 /* LWDataConfig.h */,
+				EA3E238D1B732B6800349A95 /* LWDataConfig.m */,
+				EA3E238E1B732B6800349A95 /* LWKeyboardConfig.h */,
+				EA3E238F1B732B6800349A95 /* LWKeyboardConfig.m */,
+				EA3E23901B732B6800349A95 /* LWKeyboardLogic.h */,
+				EA3E23911B732B6800349A95 /* LWKeyboardLogic.m */,
+			);
+			path = DataManage;
+			sourceTree = "<group>";
+		};
+		EA3E23991B732C0300349A95 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EA3E239A1B732C0300349A95 /* LWHelper.h */,
+				EA3E239B1B732C0300349A95 /* LWHelper.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
 		};
-		BEF0656EBCD36EB5E1859C96 /* Resource */ = {
+		EA3E239E1B732C0300349A95 /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				EA57CEEF1B4B7A4300E658E7 /* DishuTheme */,
-				BEF0672AF363AECBC7388E07 /* BubbleTheme */,
-				BEF06F6B02870CBF4AF535F2 /* MachineTheme */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
-		BEF0660F38ACD9F151D4FA28 /* CustomView */ = {
-			isa = PBXGroup;
-			children = (
-				BEF0679C79D49F1625F5CD25 /* LWBaseKBBtn.h */,
-				BEF06549AF4314DF3E4F4284 /* LWBaseKBBtn.m */,
-				BEF0684133F3FE4B216BCEAB /* LWCharKBBtn.h */,
-				BEF06EF726C48C6B56EF035C /* LWCharKBBtn.m */,
-				BEF06F017DB5A1DB2B86E831 /* LWKeyKBBtn.h */,
-				BEF068700E3B18B5F9C80A66 /* LWKeyKBBtn.m */,
-				EAE29B121B4A48770051FF98 /* LWToolbar.h */,
-				EAE29B131B4A48770051FF98 /* LWToolbar.m */,
-			);
-			path = CustomView;
-			sourceTree = "<group>";
-		};
-		BEF06698A96455417C48CF67 /* Keyboard */ = {
-			isa = PBXGroup;
-			children = (
-				BEF06B7D461D112027F7EED7 /* LWBaseKeyboard.h */,
-				BEF06610E5C29E6082948E95 /* LWBaseKeyboard.m */,
-				EABF4BC81B42FFBE00918AE1 /* LWPinYinFullKeyboard.h */,
-				EABF4BC91B42FFBE00918AE1 /* LWPinYinFullKeyboard.m */,
-				EA3E22F51B72F8D600349A95 /* LWPinYinFullKeyboard.xib */,
+				EA3E239F1B732C0300349A95 /* LWBaseKeyboard.h */,
+				EA3E23A01B732C0300349A95 /* LWBaseKeyboard.m */,
+				EA3E23A11B732C0300349A95 /* LWEnFullKeyboard.h */,
+				EA3E23A21B732C0300349A95 /* LWEnFullKeyboard.m */,
+				EA3E23A31B732C0300349A95 /* LWEnFullKeyboard.xib */,
+				EA3E23A41B732C0300349A95 /* LWNumKeyboard.h */,
+				EA3E23A51B732C0300349A95 /* LWNumKeyboard.m */,
+				EA3E23A61B732C0300349A95 /* LWNumKeyboard.xib */,
+				EA3E23A71B732C0300349A95 /* LWPinYinFullKeyboard.h */,
+				EA3E23A81B732C0300349A95 /* LWPinYinFullKeyboard.m */,
+				EA3E23A91B732C0300349A95 /* LWPinYinFullKeyboard.xib */,
+				EA3E23AA1B732C0300349A95 /* LWPinYinNineKeyboard.h */,
+				EA3E23AB1B732C0300349A95 /* LWPinYinNineKeyboard.m */,
+				EA3E23AC1B732C0300349A95 /* LWPinYinNineKeyboard.xib */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
 		};
-		BEF0672AF363AECBC7388E07 /* BubbleTheme */ = {
+		EA3E23AD1B732C0300349A95 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				EA57CF141B4BC4CE00E658E7 /* BubbleTheme.plist */,
-				EA57CF111B4BC4B100E658E7 /* BubbleTheme.png */,
+				EA3E23D11B73652700349A95 /* waterglass.png */,
+				EA3E23CD1B733C6600349A95 /* moonlight.png */,
+				EA3E23CE1B733C6600349A95 /* sealight.png */,
+				EA3E23AE1B732C0300349A95 /* BubbleTheme */,
+				EA3E23B31B732C0300349A95 /* MachineTheme */,
+				BEF06B7F63B98F1B23953992 /* DishuTheme */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		EA3E23AE1B732C0300349A95 /* BubbleTheme */ = {
+			isa = PBXGroup;
+			children = (
+				EA3E23AF1B732C0300349A95 /* BubbleTheme.plist */,
+				EA3E23B01B732C0300349A95 /* BubbleTheme.png */,
 			);
 			path = BubbleTheme;
 			sourceTree = "<group>";
 		};
-		BEF06F6B02870CBF4AF535F2 /* MachineTheme */ = {
+		EA3E23B31B732C0300349A95 /* MachineTheme */ = {
 			isa = PBXGroup;
 			children = (
-				EA57CF1A1B4BC4EB00E658E7 /* MachineTheme.plist */,
-				EA57CF171B4BC4D900E658E7 /* MachineTheme.png */,
+				EA3E23B41B732C0300349A95 /* MachineTheme.plist */,
+				EA3E23B51B732C0300349A95 /* MachineTheme.png */,
 			);
 			path = MachineTheme;
+			sourceTree = "<group>";
+		};
+		EA3E23B61B732C0300349A95 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EA3E23B71B732C0300349A95 /* UIColor+HexValue.h */,
+				EA3E23B81B732C0300349A95 /* UIColor+HexValue.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		EA56C0511B42E1140076EC00 = {
@@ -262,6 +411,11 @@
 				EA56C05C1B42E1140076EC00 /* MyInputMethod */,
 				EA56C0761B42E1140076EC00 /* MyInputMethodTests */,
 				EA56C0881B42E1670076EC00 /* MyKeyboard */,
+				EA56C0951B42E1AF0076EC00 /* MyKeyboard.entitlements */,
+				EAFB53831B46A1700076DAA7 /* Images.xcassets */,
+				EA3E23961B732BDC00349A95 /* MyKeyboardViewController.h */,
+				EA3E23971B732BDC00349A95 /* MyKeyboardViewController.m */,
+				EA3E23951B732B8E00349A95 /* LWDefines.h */,
 				EA56C0B81B42F1740076EC00 /* MyEmojiKeyboard */,
 				EA56C05B1B42E1140076EC00 /* Products */,
 				BEF06C2913B1D37966CFAD2E /* README.md */,
@@ -327,15 +481,13 @@
 		EA56C0881B42E1670076EC00 /* MyKeyboard */ = {
 			isa = PBXGroup;
 			children = (
-				EA56C0951B42E1AF0076EC00 /* MyKeyboard.entitlements */,
-				EA56C08B1B42E1670076EC00 /* MyKeyboardViewController.h */,
-				EA56C08C1B42E1670076EC00 /* MyKeyboardViewController.m */,
-				EAFB53831B46A1700076DAA7 /* Images.xcassets */,
+				EA3E23991B732C0300349A95 /* Common */,
+				EA3E239E1B732C0300349A95 /* Keyboard */,
+				EA3E23B61B732C0300349A95 /* Utils */,
+				EA3E238B1B732B6800349A95 /* DataManage */,
+				EA3E23571B732B5100349A95 /* CustomViews */,
 				EA56C0891B42E1670076EC00 /* Supporting Files */,
-				BEF06698A96455417C48CF67 /* Keyboard */,
-				BEF0660F38ACD9F151D4FA28 /* CustomView */,
-				BEF0619E6600B0A7E5B8C418 /* Common */,
-				BEF0656EBCD36EB5E1859C96 /* Resource */,
+				EA3E23AD1B732C0300349A95 /* Resource */,
 			);
 			path = MyKeyboard;
 			sourceTree = "<group>";
@@ -369,15 +521,6 @@
 				EA56C0CE1B42F1F60076EC00 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		EA57CEEF1B4B7A4300E658E7 /* DishuTheme */ = {
-			isa = PBXGroup;
-			children = (
-				EA57CF201B4BC50900E658E7 /* DishuTheme.plist */,
-				EA57CF1D1B4BC4F700E658E7 /* DishuTheme.png */,
-			);
-			name = DishuTheme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -526,17 +669,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA57CF1E1B4BC4F700E658E7 /* DishuTheme.png in Resources */,
-				EA57CF1B1B4BC4EB00E658E7 /* MachineTheme.plist in Resources */,
 				EA56C0A71B42E4190076EC00 /* Localizable.strings in Resources */,
-				EA57CF181B4BC4D900E658E7 /* MachineTheme.png in Resources */,
 				EA56C0691B42E1140076EC00 /* Main.storyboard in Resources */,
-				EA57CF211B4BC50900E658E7 /* DishuTheme.plist in Resources */,
 				EA56C0A31B42E4110076EC00 /* InfoPlist.strings in Resources */,
 				EA56C06E1B42E1140076EC00 /* LaunchScreen.xib in Resources */,
-				EA57CF121B4BC4B100E658E7 /* BubbleTheme.png in Resources */,
 				EA56C06B1B42E1140076EC00 /* Images.xcassets in Resources */,
-				EA57CF151B4BC4CE00E658E7 /* BubbleTheme.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,16 +688,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA57CF221B4BC50900E658E7 /* DishuTheme.plist in Resources */,
-				EA57CF131B4BC4B100E658E7 /* BubbleTheme.png in Resources */,
-				EA57CF161B4BC4CE00E658E7 /* BubbleTheme.plist in Resources */,
-				EA57CF191B4BC4D900E658E7 /* MachineTheme.png in Resources */,
+				EA3E23BF1B732C0300349A95 /* LWNumKeyboard.xib in Resources */,
+				EA3E23C11B732C0300349A95 /* LWPinYinFullKeyboard.xib in Resources */,
+				EA3E23C81B732C0300349A95 /* MachineTheme.plist in Resources */,
+				EA3E23C41B732C0300349A95 /* BubbleTheme.plist in Resources */,
+				EA3E23D01B733C6600349A95 /* sealight.png in Resources */,
+				EA3E23CC1B73342400349A95 /* LWToolBar.xib in Resources */,
+				EA3E23C91B732C0300349A95 /* MachineTheme.png in Resources */,
 				EA56C0AB1B42E42A0076EC00 /* InfoPlist.strings in Resources */,
+				EA3E23CF1B733C6600349A95 /* moonlight.png in Resources */,
 				EAFB53841B46A1700076DAA7 /* Images.xcassets in Resources */,
-				EA57CF1F1B4BC4F700E658E7 /* DishuTheme.png in Resources */,
-				EA3E22F71B72F8D600349A95 /* LWPinYinFullKeyboard.xib in Resources */,
-				EA57CF1C1B4BC4EB00E658E7 /* MachineTheme.plist in Resources */,
 				EA56C0AE1B42E4300076EC00 /* Localizable.strings in Resources */,
+				EA3E23BD1B732C0300349A95 /* LWEnFullKeyboard.xib in Resources */,
+				EA3E23C51B732C0300349A95 /* BubbleTheme.png in Resources */,
+				EA3E23C31B732C0300349A95 /* LWPinYinNineKeyboard.xib in Resources */,
+				EA3E23D21B73652700349A95 /* waterglass.png in Resources */,
+				BEF063B061238131C98190AE /* DishuTheme.plist in Resources */,
+				BEF069306002FA7C5CC700E1 /* DishuTheme.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,7 +727,6 @@
 				EA56C0661B42E1140076EC00 /* ViewController.m in Sources */,
 				EA56C0631B42E1140076EC00 /* AppDelegate.m in Sources */,
 				EA56C0601B42E1140076EC00 /* main.m in Sources */,
-				BEF06A2B32C1793DF9B52331 /* LWHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,15 +742,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EABF4BCA1B42FFBE00918AE1 /* LWPinYinFullKeyboard.m in Sources */,
-				EA56C08D1B42E1670076EC00 /* MyKeyboardViewController.m in Sources */,
-				BEF0622F4BCDB4DC8FEC575F /* LWBaseKeyboard.m in Sources */,
-				BEF0648D569B86A109B153FB /* LWBaseKBBtn.m in Sources */,
-				BEF0696049A242C462CCFA37 /* LWKeyboardConfig.m in Sources */,
-				BEF069A2AB9991757EFDD99D /* LWCharKBBtn.m in Sources */,
-				EAE29B141B4A48770051FF98 /* LWToolbar.m in Sources */,
-				BEF0670CCDDD21259FA67C09 /* LWKeyKBBtn.m in Sources */,
-				BEF068B7C57694B6E02C6D47 /* LWHelper.m in Sources */,
+				EA3E23891B732B5100349A95 /* LWSingleHandView.m in Sources */,
+				EA3E23B91B732C0300349A95 /* LWHelper.m in Sources */,
+				EA3E23931B732B6800349A95 /* LWKeyboardConfig.m in Sources */,
+				EA3E23801B732B5100349A95 /* LWNumCharBtn.m in Sources */,
+				EA3E237E1B732B5100349A95 /* LWKeyKBBtn.m in Sources */,
+				EA3E237C1B732B5100349A95 /* LWCharKBBtn.m in Sources */,
+				EA3E23C21B732C0300349A95 /* LWPinYinNineKeyboard.m in Sources */,
+				EA3E23941B732B6800349A95 /* LWKeyboardLogic.m in Sources */,
+				EA3E23BC1B732C0300349A95 /* LWEnFullKeyboard.m in Sources */,
+				EA3E237B1B732B5100349A95 /* LWBaseKBBtn.m in Sources */,
+				EA3E23C01B732C0300349A95 /* LWPinYinFullKeyboard.m in Sources */,
+				EA3E23861B732B5100349A95 /* LWSettingPopView.m in Sources */,
+				EA3E23BB1B732C0300349A95 /* LWBaseKeyboard.m in Sources */,
+				EA3E237F1B732B5100349A95 /* LWNineCharBtn.m in Sources */,
+				EA3E238A1B732B5100349A95 /* LWTopView.m in Sources */,
+				EA3E23821B732B5100349A95 /* LWNumLeftTabView.m in Sources */,
+				EA3E23841B732B5100349A95 /* LWToolBar.m in Sources */,
+				EA3E23831B732B5100349A95 /* LWPinYinLeftTabView.m in Sources */,
+				EA3E23851B732B5100349A95 /* LWOftenWordsPopView.m in Sources */,
+				EA3E23CA1B732C0300349A95 /* UIColor+HexValue.m in Sources */,
+				EA3E237D1B732B5100349A95 /* LWFullCharBtn.m in Sources */,
+				EA3E23981B732BDC00349A95 /* MyKeyboardViewController.m in Sources */,
+				EA3E23881B732B5100349A95 /* LWRootWrapView.m in Sources */,
+				EA3E23811B732B5100349A95 /* LWLeftTabView.m in Sources */,
+				EA3E23921B732B6800349A95 /* LWDataConfig.m in Sources */,
+				EA3E23871B732B5100349A95 /* LWKeyboardWrap.m in Sources */,
+				EA3E23BE1B732C0300349A95 /* LWNumKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,7 +777,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA56C0BD1B42F1740076EC00 /* EmojiKeyboardViewController.m in Sources */,
-				BEF0634800B82D34169C244D /* LWHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,14 +801,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EA3E22F51B72F8D600349A95 /* LWPinYinFullKeyboard.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EA3E22F61B72F8D600349A95 /* Base */,
-			);
-			name = LWPinYinFullKeyboard.xib;
-			sourceTree = "<group>";
-		};
 		EA56C0671B42E1140076EC00 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
