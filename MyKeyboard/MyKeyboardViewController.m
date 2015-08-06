@@ -7,11 +7,7 @@
 //
 
 #import "MyKeyboardViewController.h"
-#import "FullKeyboard.h"
-#import "BaseKeyboard.h"
-#import "Defines.h"
-#import "UIInputViewController.h"
-#import "CharKBBtn.h"
+#import "LWFullKeyboard.h"
 
 
 @interface MyKeyboardViewController ()
@@ -58,7 +54,7 @@
 
     if (!self.keyboard) {
         //26键盘
-        _keyboard = (FullKeyboard *) [[NSBundle mainBundle] loadNibNamed:@"FullKeyboard" owner:self.view options:nil][0];
+        _keyboard = (LWFullKeyboard *) [[NSBundle mainBundle] loadNibNamed:@"LWFullKeyboard" owner:self.view options:nil][0];
 //        [_keyboard setupBackground:[UIImage imageNamed:@"keyboardBG"]];
         [_keyboard setupKeyboard:KBKeyboard_PingYingFull];
 

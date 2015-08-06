@@ -1,15 +1,15 @@
 //
-//  KBToolbar.m
+//  LWKBToolbar.m
 //  MyInputMethod
 //
 //  Created by luowei on 15/7/6.
 //  Copyright (c) 2015年 luowei. All rights reserved.
 //
 
-#import "KBToolbar.h"
+#import "LWKBToolbar.h"
 #import "Defines.h"
 
-@implementation KBToolbar
+@implementation LWKBToolbar
 
 - (id)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];

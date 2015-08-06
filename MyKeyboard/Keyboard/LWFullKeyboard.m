@@ -1,19 +1,19 @@
 //
-//  FullKeyboard.m
+//  LWFullKeyboard.m
 //  MyInputMethod
 //
 //  Created by luowei on 15/7/1.
 //  Copyright (c) 2015年 luowei. All rights reserved.
 //
 
-#import "FullKeyboard.h"
+#import "LWFullKeyboard.h"
 #import "Defines.h"
-#import "CharKBBtn.h"
-#import "KeyKBBtn.h"
-#import "KeyboardConfig.h"
+#import "LWCharKBBtn.h"
+#import "LWKeyKBBtn.h"
+#import "LWKeyboardConfig.h"
 
 
-@implementation FullKeyboard {
+@implementation LWFullKeyboard {
     
 }
 
@@ -23,8 +23,8 @@
     
     if (self) {
 //        [self setUpFullKeyboard];
-        if([KeyboardConfig currentTheme]){
-            NSDictionary *rootDic = [KeyboardConfig currentTheme];
+        if([LWKeyboardConfig currentTheme]){
+            NSDictionary *rootDic = [LWKeyboardConfig currentTheme];
 
             UIImage *bigImage = [UIImage imageNamed:rootDic[@"meta"][@"image"]];
             CGFloat bigWidth = ((NSNumber *) rootDic[@"meta"][@"width"]).floatValue;
@@ -60,20 +60,20 @@
     
     switch (keyboardType) {
         case KBKeyboard_ENFull: {
-            [self setupCharKBBtns:[KeyboardConfig enFullKBCharTextTagDict]];
-            [self setupKeyKBBtns:[KeyboardConfig enFullKBKeyTextTagDict]];
+            [self setupCharKBBtns:[LWKeyboardConfig enFullKBCharTextTagDict]];
+            [self setupKeyKBBtns:[LWKeyboardConfig enFullKBKeyTextTagDict]];
             break;
         };
         case KBKeyboard_PingYingFull: {
-            [self setupCharKBBtns:[KeyboardConfig pingYingFullKBCharTextTagDict]];
-            [self setupKeyKBBtns:[KeyboardConfig pingYingFullKBKeyTextTagDict]];
+            [self setupCharKBBtns:[LWKeyboardConfig pingYingFullKBCharTextTagDict]];
+            [self setupKeyKBBtns:[LWKeyboardConfig pingYingFullKBKeyTextTagDict]];
 
 /*
             NSString *key = @"image|space,space_Highlighted";
             NSArray *charTextArr = [key componentsSeparatedByString:@"|"];
             if (charTextArr.count && [charTextArr[0] isEqualToString:@"image"]) {
                 NSArray *imgNameArr = [charTextArr[1] componentsSeparatedByString:@","];
-                CharKBBtn *charKBBtn = (CharKBBtn *) [self viewWithTag:404];
+                LWCharKBBtn *charKBBtn = (LWCharKBBtn *) [self viewWithTag:404];
                 [charKBBtn setImage:[UIImage imageNamed:imgNameArr[0]] forState:UIControlStateNormal];
 //              [_aView setImage:[UIImage imageNamed:imgNameArr[1]] forState:UIControlStateHighlighted];
             }
@@ -91,16 +91,16 @@
 //设置字符按键显示及事件处理
 - (void)setupCharKBBtns:(NSDictionary *)charTextTagDict {
     
-    __block CharKBBtn *charKBBtn = nil;
+    __block LWCharKBBtn *charKBBtn = nil;
 //    [charTextTagDict keysOfEntriesWithOptions:NSEnumerationConcurrent passingTest:^BOOL(NSString *key, NSNumber *tag, BOOL *stop) {
     [charTextTagDict enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSNumber *tag, BOOL *stop) {
     
-        charKBBtn = (CharKBBtn *) [self viewWithTag:tag.intValue];
+        charKBBtn = (LWCharKBBtn *) [self viewWithTag:tag.intValue];
     
         //设置字符键内容
         NSArray *charTextArr = [key componentsSeparatedByString:@"|"];
         //如果是图片
-        if (charTextArr.count && [charTextArr[0] isEqualToString:@"image"] && ![KeyboardConfig currentTheme]) {
+        if (charTextArr.count && [charTextArr[0] isEqualToString:@"image"] && ![LWKeyboardConfig currentTheme]) {
             NSArray *imgNameArr = [charTextArr[1] componentsSeparatedByString:@","];
             [charKBBtn setImage:[UIImage imageNamed:imgNameArr[0]] forState:UIControlStateNormal];
 //        [_aView setImage:[UIImage imageNamed:imgNameArr[1]] forState:UIControlStateHighlighted];
@@ -134,17 +134,17 @@
 //设置功能按键显示及事件处理
 - (void)setupKeyKBBtns:(NSDictionary *)keyTextTagDict {
     
-    __block KeyKBBtn *keyKBBtn = nil;
+    __block LWKeyKBBtn *keyKBBtn = nil;
 //    [keyTextTagDict keysOfEntriesWithOptions:NSEnumerationConcurrent passingTest:^BOOL(NSString *key, NSNumber *tag, BOOL *stop) {
     
     [keyTextTagDict enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSNumber *tag, BOOL *stop) {
     
-        keyKBBtn = (KeyKBBtn *) [self viewWithTag:tag.intValue];
+        keyKBBtn = (LWKeyKBBtn *) [self viewWithTag:tag.intValue];
         //设置功能按键内容
         NSArray *keyTextArr = [key componentsSeparatedByString:@"|"];
 
         //如果是图片
-        if (keyTextArr.count && [keyTextArr[0] isEqualToString:@"image"] && ![KeyboardConfig currentTheme]) {
+        if (keyTextArr.count && [keyTextArr[0] isEqualToString:@"image"] && ![LWKeyboardConfig currentTheme]) {
             NSArray *imgNameArr = [keyTextArr[1] componentsSeparatedByString:@","];
             [keyKBBtn setImage:[UIImage imageNamed:imgNameArr[0]] forState:UIControlStateNormal];
             [keyKBBtn setImage:[UIImage imageNamed:imgNameArr[1]] forState:UIControlStateHighlighted];
@@ -172,48 +172,48 @@
 }
 
 
-#pragma mark CharKBBtn's Touch and Gesture Event
+#pragma mark LWCharKBBtn's Touch and Gesture Event
 
-- (void)charKBBtnTouchDown:(CharKBBtn *)charKBBtnTouchDown {
+- (void)charKBBtnTouchDown:(LWCharKBBtn *)charKBBtnTouchDown {
     
 }
 
-- (void)charKBBtnTouchRepeat:(CharKBBtn *)charKBBtnTouchRepeat {
+- (void)charKBBtnTouchRepeat:(LWCharKBBtn *)charKBBtnTouchRepeat {
     
 }
 
-- (void)charKBBtnTouchUpInside:(CharKBBtn *)charKBBtnTouchUpInside {
+- (void)charKBBtnTouchUpInside:(LWCharKBBtn *)charKBBtnTouchUpInside {
     
 }
 
-- (void)charKBBtnTouchCancel:(CharKBBtn *)charKBBtnTouchCancel {
+- (void)charKBBtnTouchCancel:(LWCharKBBtn *)charKBBtnTouchCancel {
     
 }
 
 
 #pragma mark KeyKBBtn's Touch and Gesture Event
 
-- (void)keyKBBtnTouchDown:(KeyKBBtn *)keyKBBtnTouchDown {
+- (void)keyKBBtnTouchDown:(LWKeyKBBtn *)keyKBBtnTouchDown {
     
 }
 
-- (void)keyKBBtnTouchUpInside:(KeyKBBtn *)keyKBBtnTouchUpInside {
+- (void)keyKBBtnTouchUpInside:(LWKeyKBBtn *)keyKBBtnTouchUpInside {
     
 }
 
-- (void)keyKBBtnTouchCancel:(KeyKBBtn *)keyKBBtnTouchCancel {
+- (void)keyKBBtnTouchCancel:(LWKeyKBBtn *)keyKBBtnTouchCancel {
     
 }
 
-- (void)keyKBBtnLongPress:(KeyKBBtn *)keyKBBtnLongPress {
+- (void)keyKBBtnLongPress:(LWKeyKBBtn *)keyKBBtnLongPress {
     
 }
 
-- (void)keyKBBtnSwip:(KeyKBBtn *)keyKBBtnSwip {
+- (void)keyKBBtnSwip:(LWKeyKBBtn *)keyKBBtnSwip {
     
 }
 
-- (void)keyKBBtnPanUp:(KeyKBBtn *)keyKBBtnPanUp {
+- (void)keyKBBtnPanUp:(LWKeyKBBtn *)keyKBBtnPanUp {
     
 }
 

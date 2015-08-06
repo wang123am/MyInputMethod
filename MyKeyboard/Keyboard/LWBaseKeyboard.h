@@ -1,5 +1,5 @@
 //
-//  BaseKeyboard.h
+//  LWBaseKeyboard.h
 //  MyInputMethod
 //
 //  Created by luowei on 15/7/1.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Defines.h"
 
-@interface BaseKeyboard : UIView
+@interface LWBaseKeyboard : UIView
 
 //设置键盘
 - (void)setupKeyboard:(KBKeyboardType)keyboardType;

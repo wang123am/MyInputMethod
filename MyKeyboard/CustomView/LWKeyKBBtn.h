@@ -1,5 +1,5 @@
 //
-//  KeyKBBtn.h
+//  LWKeyKBBtn.h
 //  MyInputMethod
 //
 //  Created by luowei on 15/7/1.
@@ -8,9 +8,9 @@
 
 
 
-#import "BaseKBBtn.h"
+#import "LWBaseKBBtn.h"
 
-@interface KeyKBBtn : BaseKBBtn
+@interface LWKeyKBBtn : LWBaseKBBtn
 
 @property(nonatomic, strong) UILabel *mainLabel;
 

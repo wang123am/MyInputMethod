@@ -1,5 +1,5 @@
 //
-//  BaseKBBtn.h
+//  LWBaseKBBtn.h
 //  MyInputMethod
 //
 //  Created by luowei on 15/7/1.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseKBBtn : UIButton
+@interface LWBaseKBBtn : UIButton
 
 @property(nonatomic, strong) UIView *contentView;
 

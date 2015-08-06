@@ -3,9 +3,9 @@
 // Copyright (c) 2015 luowei. All rights reserved.
 //
 
-#import "KeyboardConfig.h"
+#import "LWKeyboardConfig.h"
 
-@implementation KeyboardConfig {
+@implementation LWKeyboardConfig {
 
 }
 
@@ -57,8 +57,8 @@
 
 //根据当前主题获得按键的内容图片
 + (void)setKBLabImagewithTag:(NSInteger)tag onLayer:(CALayer *)layer {
-    NSString *smallName = [KeyboardConfig fullKBTagImageDic][@(tag)];
-    NSDictionary *rootDic = [KeyboardConfig currentTheme];
+    NSString *smallName = [LWKeyboardConfig fullKBTagImageDic][@(tag)];
+    NSDictionary *rootDic = [LWKeyboardConfig currentTheme];
 
     UIImage *bigImage = [UIImage imageNamed:rootDic[@"meta"][@"image"]];
     CGFloat bigWidth = ((NSNumber *)rootDic[@"meta"][@"width"]).floatValue;

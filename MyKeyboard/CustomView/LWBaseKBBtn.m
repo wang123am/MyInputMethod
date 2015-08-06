@@ -1,21 +1,21 @@
 //
-//  BaseKBBtn.m
+//  LWBaseKBBtn.m
 //  MyInputMethod
 //
 //  Created by luowei on 15/7/1.
 //  Copyright (c) 2015 luowei. All rights reserved.
 //
 
-#import "BaseKBBtn.h"
-#import "KeyboardConfig.h"
+#import "LWBaseKBBtn.h"
+#import "LWKeyboardConfig.h"
 #import "Defines.h"
 
 
-@interface BaseKBBtn ()
+@interface LWBaseKBBtn ()
 
 @end
 
-@implementation BaseKBBtn {
+@implementation LWBaseKBBtn {
     CALayer *_shadowlayer;      //阴影
     CALayer *_innerGlow;        //内边框
 //    CALayer *backgroundLayer, *highlightBackgroundLayer;
@@ -64,7 +64,7 @@
     [self addSubview:_contentView];
 
     //当有主题设置
-    if ([KeyboardConfig currentTheme]) {
+    if ([LWKeyboardConfig currentTheme]) {
     } else {
         //当没有设置主题
         //设置背景图层
@@ -163,7 +163,7 @@
     _contentView.frame = CGRectInset(self.bounds, SPACE_BTN_BG_HORIZON, SPACE_BTN_BG_VERTICAL);
 
     //当有主题设置
-    if ([KeyboardConfig currentTheme]) {
+    if ([LWKeyboardConfig currentTheme]) {
     } else {
         //重设阴影大小
         _shadowlayer.frame = CGRectOffset(_contentView.frame, 0, OFFSET_SHADOWLAYER);

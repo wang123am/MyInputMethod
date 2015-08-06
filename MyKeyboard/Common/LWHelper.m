@@ -3,7 +3,7 @@
 // Copyright (c) 2015 luowei. All rights reserved.
 //
 
-#import "MyHelper.h"
+#import "LWHelper.h"
 
 
 @implementation UIImage(Alpha)

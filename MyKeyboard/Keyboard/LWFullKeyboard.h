@@ -1,14 +1,14 @@
 //
-//  FullKeyboard.h
+//  LWFullKeyboard.h
 //  MyInputMethod
 //
 //  Created by luowei on 15/7/1.
 //  Copyright (c) 2015年 luowei. All rights reserved.
 //
 
-#import "BaseKeyboard.h"
+#import "LWBaseKeyboard.h"
 
-@interface FullKeyboard : BaseKeyboard
+@interface LWFullKeyboard : LWBaseKeyboard
 
 
 //设置功能按键显示及事件处理

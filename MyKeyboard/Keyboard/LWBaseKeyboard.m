@@ -1,15 +1,15 @@
 //
-//  BaseKeyboard.m
+//  LWBaseKeyboard.m
 //  MyInputMethod
 //
 //  Created by luowei on 15/7/1.
 //  Copyright (c) 2015 luowei. All rights reserved.
 //
 
-#import "BaseKeyboard.h"
+#import "LWBaseKeyboard.h"
 #import "Defines.h"
 
-@implementation BaseKeyboard
+@implementation LWBaseKeyboard
 
 //设置键盘
 - (void)setupKeyboard:(KBKeyboardType)keyboardType{

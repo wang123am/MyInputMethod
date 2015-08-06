@@ -1,17 +1,17 @@
 //
-//  CharKBBtn.m
+//  LWCharKBBtn.m
 //  MyInputMethod
 //
 //  Created by luowei on 15/7/1.
 //  Copyright (c) 2015 luowei. All rights reserved.
 //
 
-#import "CharKBBtn.h"
-#import "KeyboardConfig.h"
+#import "LWCharKBBtn.h"
+#import "LWKeyboardConfig.h"
 #import "Defines.h"
-#import "MyHelper.h"
+#import "LWHelper.h"
 
-@implementation CharKBBtn {
+@implementation LWCharKBBtn {
     NSString *topText;
     NSString *mainText;
 }
@@ -38,7 +38,7 @@
     [super layoutSubviews];
 
     //当有主题设置
-    if ([KeyboardConfig currentTheme]) {
+    if ([LWKeyboardConfig currentTheme]) {
     } else {
         [_topLabel sizeToFit];
         [_mainLabel sizeToFit];
@@ -60,7 +60,7 @@
 - (void)setTopText:(NSString *)upText text:(NSString *)text {
     
     //当有主题设置
-    if ([KeyboardConfig currentTheme]) {
+    if ([LWKeyboardConfig currentTheme]) {
         if (_topLabel) {
             [_topLabel removeFromSuperview];
             _topLabel = nil;
@@ -71,8 +71,8 @@
         }
 
         //设置图片
-        NSString *smallName = [KeyboardConfig fullKBTagImageDic][@(self.tag)];
-        NSDictionary *rootDic = [KeyboardConfig currentTheme];
+        NSString *smallName = [LWKeyboardConfig fullKBTagImageDic][@(self.tag)];
+        NSDictionary *rootDic = [LWKeyboardConfig currentTheme];
         
         UIImage *bigImage = [UIImage imageNamed:rootDic[@"meta"][@"image"]];
         CGFloat bigWidth = ((NSNumber *) rootDic[@"meta"][@"width"]).floatValue;

@@ -6,7 +6,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface KeyboardConfig : NSObject
+@interface LWKeyboardConfig : NSObject
 
 //英文全键字符键text->tag字典
 +(NSDictionary *)enFullKBCharTextTagDict;
