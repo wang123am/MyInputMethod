@@ -1,5 +1,5 @@
 //
-//  LWKBToolbar.h
+//  LWToolbar.h
 //  MyInputMethod
 //
 //  Created by luowei on 15/7/6.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LWKBToolbar : UIView
+@interface LWToolbar : UIView
 
 @end

@@ -7,11 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LWFullKeyboard">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LWPinYinFullKeyboard">
             <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqf-2D-cOL" userLabel="ToolBar" customClass="LWKBToolbar">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqf-2D-cOL" userLabel="ToolBar" customClass="LWToolbar">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
                     <color key="backgroundColor" red="0.72549019609999998" green="0.77647058820000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                 </view>

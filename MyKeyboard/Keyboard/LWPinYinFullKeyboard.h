@@ -1,5 +1,5 @@
 //
-//  LWFullKeyboard.h
+//  LWPinYinFullKeyboard.h
 //  MyInputMethod
 //
 //  Created by luowei on 15/7/1.
@@ -8,7 +8,7 @@
 
 #import "LWBaseKeyboard.h"
 
-@interface LWFullKeyboard : LWBaseKeyboard
+@interface LWPinYinFullKeyboard : LWBaseKeyboard
 
 
 //设置功能按键显示及事件处理

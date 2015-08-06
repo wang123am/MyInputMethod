@@ -1,19 +1,19 @@
 //
-//  LWFullKeyboard.m
+//  LWPinYinFullKeyboard.m
 //  MyInputMethod
 //
 //  Created by luowei on 15/7/1.
 //  Copyright (c) 2015年 luowei. All rights reserved.
 //
 
-#import "LWFullKeyboard.h"
+#import "LWPinYinFullKeyboard.h"
 #import "Defines.h"
 #import "LWCharKBBtn.h"
 #import "LWKeyKBBtn.h"
 #import "LWKeyboardConfig.h"
 
 
-@implementation LWFullKeyboard {
+@implementation LWPinYinFullKeyboard {
     
 }
 
