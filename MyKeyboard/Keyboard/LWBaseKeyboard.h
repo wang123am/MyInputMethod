@@ -89,6 +89,11 @@
 - (void)setupBackground:(UIImage *)image;
 
 /**
+* 设置键盘提示文字
+*/
+-(void)setBtnTip:(NSString *)tip withTag:(NSInteger)tag;
+
+/**
 * 设置字符按键显示及事件处理
 */
 - (void)setupCharKBBtns:(NSDictionary *)charTextTagDict;

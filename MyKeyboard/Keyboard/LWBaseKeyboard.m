@@ -11,6 +11,7 @@
 #import "LWCharKBBtn.h"
 #import "LWBaseKBBtn.h"
 #import "LWKeyboardConfig.h"
+#import "UIImage+Color.h"
 
 @implementation LWBaseKeyboard
 
@@ -71,6 +72,15 @@
 }
 
 /**
+* 设置键盘提示文字
+*/
+-(void)setBtnTip:(NSString *)tip withTag:(NSInteger)tag{
+    LWBaseKBBtn *btn = (LWBaseKBBtn *) [self viewWithTag:tag];
+
+    [btn setupTip:tip];
+}
+
+/**
 * 设置字符按键显示及事件处理
 */
 - (void)setupCharKBBtns:(NSDictionary *)charTextTagDict {
@@ -86,8 +96,16 @@
         //如果是图片
         if (charTextArr.count && [charTextArr[0] isEqualToString:@"image"]) {
             NSArray *imgNameArr = [charTextArr[1] componentsSeparatedByString:@","];
-            [charKBBtn setImage:[UIImage imageNamed:imgNameArr[0]] forState:UIControlStateNormal];
-//        [_aView setImage:[UIImage imageNamed:imgNameArr[1]] forState:UIControlStateHighlighted];
+
+            UIImage *normalImg = [[UIImage imageNamed:imgNameArr[0]] imageWithOverlayColor:COLOR_KBBTN_IMG_NORMAL];
+            [charKBBtn setImage:normalImg forState:UIControlStateNormal];
+
+            //处理高亮图片
+            UIImage *highlightedImg = [[UIImage imageNamed:imgNameArr[0]] imageWithOverlayColor:COLOR_KBBTN_IMG_HIGHLIGHT];
+            if(imgNameArr.count > 1){
+                highlightedImg = [UIImage imageNamed:imgNameArr[1]];
+            }
+            [charKBBtn setImage:highlightedImg forState:UIControlStateHighlighted];
 
         } else {
             //如果是字符
@@ -129,8 +147,16 @@
         //如果是图片
         if (keyTextArr.count && [keyTextArr[0] isEqualToString:@"image"]) {
             NSArray *imgNameArr = [keyTextArr[1] componentsSeparatedByString:@","];
-            [keyKBBtn setImage:[UIImage imageNamed:imgNameArr[0]] forState:UIControlStateNormal];
-            [keyKBBtn setImage:[UIImage imageNamed:imgNameArr[1]] forState:UIControlStateHighlighted];
+
+            UIImage *normalImg = [[UIImage imageNamed:imgNameArr[0]] imageWithOverlayColor:COLOR_KBBTN_IMG_NORMAL];
+            [keyKBBtn setImage:normalImg forState:UIControlStateNormal];
+
+            //处理高亮图片
+            UIImage *highlightedImg = [[UIImage imageNamed:imgNameArr[0]] imageWithOverlayColor:COLOR_KBBTN_IMG_HIGHLIGHT];
+            if(imgNameArr.count > 1){
+                highlightedImg = [UIImage imageNamed:imgNameArr[1]];
+            }
+            [keyKBBtn setImage:highlightedImg forState:UIControlStateHighlighted];
 
         } else {
             //如果是字符

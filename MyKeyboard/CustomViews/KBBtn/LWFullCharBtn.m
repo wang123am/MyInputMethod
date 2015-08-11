@@ -66,6 +66,7 @@
             _topLabel.textAlignment = NSTextAlignmentCenter;
 //                _topLabel.backgroundColor = [UIColor blueColor];
             _topLabel.font = TOPTEXT_FONT;
+            _topLabel.textColor = COLOR_TOPTEXT;
             [self.contentView addSubview:_topLabel];
         }
         _topLabel.text = upText;
@@ -80,6 +81,7 @@
             _mainLabel.textAlignment = NSTextAlignmentCenter;
 //                _mainLabel.backgroundColor = [UIColor greenColor];
             _mainLabel.font = MAINTEXT_FONT;
+            _mainLabel.textColor = COLOR_TOPTEXT;
             [self.contentView addSubview:_mainLabel];
         }
         _mainLabel.text = text;

@@ -16,6 +16,7 @@
     if (self) {
         [self setupCharKBBtns:[LWKeyboardConfig pinYinNineKBCharTextTagDict]];
         [self setupKeyKBBtns:[LWKeyboardConfig pinYinNineKBKeyTextTagDict]];
+        [self setBtnTip:@"拼音九键" withTag:404];
     }
 
     return self;

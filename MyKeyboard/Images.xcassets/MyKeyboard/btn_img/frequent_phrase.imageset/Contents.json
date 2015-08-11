@@ -2,8 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "frequent_phrase.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",

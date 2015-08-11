@@ -19,6 +19,8 @@
 #import "LWRootWrapView.h"
 #import "LWBaseKBBtn.h"
 #import "LWNumKeyboard.h"
+#import "LWWuBiFullKeyboard.h"
+#import "LWBiHuaKeyboard.h"
 #import "LWKeyboardWrap.h"
 #import "LWTopView.h"
 #import "LWLeftTabView.h"
@@ -135,12 +137,14 @@
         case Keyboard_ENFull: {
             _keyboard = (LWEnFullKeyboard *) [[NSBundle mainBundle] loadNibNamed:@"LWEnFullKeyboard" owner:self.view options:nil][0];
             [LWKeyboardConfig setCurrentKeyboardType:Keyboard_ENFull];
+            break;
         };
         case Keyboard_NumNine: {
             _keyboard = (LWEnFullKeyboard *) [[NSBundle mainBundle] loadNibNamed:@"LWNumKeyboard" owner:self.view options:nil][0];
             LWLeftTabView *leftTab = (LWLeftTabView *) [_keyboard viewWithTag:100];
             leftTab.delegate = self;
             [LWKeyboardConfig setCurrentKeyboardType:Keyboard_NumNine];
+            break;
         };
 
         default : {
@@ -150,15 +154,19 @@
                 [LWKeyboardConfig setCurrentKeyboardType:Keyboard_PingYingNine];
                 LWLeftTabView *leftTab = (LWLeftTabView *) [_keyboard viewWithTag:100];
                 leftTab.delegate = self;
-            } else {
+            }else if(keyboardType == keyboard_WuBiFull){
+                _keyboard = (LWWuBiFullKeyboard *) [[NSBundle mainBundle] loadNibNamed:@"LWWuBiFullKeyboard" owner:self.view options:nil][0];
+                [LWKeyboardConfig setCurrentKeyboardType:keyboard_WuBiFull];
+            }else if(keyboardType == keyboard_BiHuaNine){
+                _keyboard = (LWBiHuaKeyboard *) [[NSBundle mainBundle] loadNibNamed:@"LWBiHuaKeyboard" owner:self.view options:nil][0];
+                LWLeftTabView *leftTab = (LWLeftTabView *) [_keyboard viewWithTag:100];
+                leftTab.delegate = self;
+                [LWKeyboardConfig setCurrentKeyboardType:keyboard_BiHuaNine];
+            }else {
                 _keyboard = (LWPinYinFullKeyboard *) [[NSBundle mainBundle] loadNibNamed:@"LWPinYinFullKeyboard" owner:self.view options:nil][0];
                 [LWKeyboardConfig setCurrentKeyboardType:Keyboard_PingYingFull];
-
-//                _keyboard = (LWPinYinFullKeyboard *) [[NSBundle mainBundle] loadNibNamed:@"LWPinYinNineKeyboard" owner:self.view options:nil][0];
-//                [LWKeyboardConfig setCurrentKeyboardType:RCKeyboard_PingYingNine];
-//                LWLeftTabView *leftTab = (LWLeftTabView *) [_keyboard viewWithTag:100];
-//                leftTab.delegate = self;
             }
+            break;
         };
 
     }

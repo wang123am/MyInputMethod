@@ -16,6 +16,7 @@
     if (self) {
         [self setupCharKBBtns:[LWKeyboardConfig enFullKBCharTextTagDict]];
         [self setupKeyKBBtns:[LWKeyboardConfig enFullKBKeyTextTagDict]];
+        [self setBtnTip:@"英文" withTag:404];
     }
 
     return self;

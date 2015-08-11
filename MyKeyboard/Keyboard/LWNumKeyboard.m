@@ -17,7 +17,7 @@
     if (self) {
         [self setupCharKBBtns:[LWKeyboardConfig numNineKBCharTextTagDict]];
         [self setupKeyKBBtns:[LWKeyboardConfig numNineKBKeyTextTagDict]];
-
+        [self setBtnTip:@"数字" withTag:402];
     }
 
     return self;

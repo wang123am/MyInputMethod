@@ -66,6 +66,8 @@
 		EA56C0C01B42F1740076EC00 /* MyEmojiKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EA56C0B71B42F1740076EC00 /* MyEmojiKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EA56C0C81B42F1F00076EC00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA56C0CA1B42F1F00076EC00 /* InfoPlist.strings */; };
 		EA56C0CC1B42F1F60076EC00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA56C0CE1B42F1F60076EC00 /* Localizable.strings */; };
+		EA60605D1B798D2300A9EC45 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = EA60605C1B798D2300A9EC45 /* UIImage+Color.m */; };
+		EA60605E1B798D2300A9EC45 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = EA60605C1B798D2300A9EC45 /* UIImage+Color.m */; };
 		EAA2785E1B78F9BB00730A4C /* LWWuBiFullKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA2785D1B78F9BB00730A4C /* LWWuBiFullKeyboard.xib */; };
 		EAA278601B78F9C800730A4C /* LWBiHuaKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA2785F1B78F9C800730A4C /* LWBiHuaKeyboard.xib */; };
 		EAFB53841B46A1700076DAA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFB53831B46A1700076DAA7 /* Images.xcassets */; };
@@ -222,6 +224,8 @@
 		EA56C0CD1B42F1F60076EC00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA56C0CF1B42F1F70076EC00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA56C0D01B42F2480076EC00 /* MyEmojiKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyEmojiKeyboard.entitlements; sourceTree = "<group>"; };
+		EA60605B1B798D2300A9EC45 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		EA60605C1B798D2300A9EC45 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 		EAA2785D1B78F9BB00730A4C /* LWWuBiFullKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LWWuBiFullKeyboard.xib; sourceTree = "<group>"; };
 		EAA2785F1B78F9C800730A4C /* LWBiHuaKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LWBiHuaKeyboard.xib; sourceTree = "<group>"; };
 		EAFB53831B46A1700076DAA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MyKeyboard/Images.xcassets; sourceTree = "<group>"; };
@@ -417,6 +421,8 @@
 			children = (
 				EA3E23B71B732C0300349A95 /* UIColor+HexValue.h */,
 				EA3E23B81B732C0300349A95 /* UIColor+HexValue.m */,
+				EA60605B1B798D2300A9EC45 /* UIImage+Color.h */,
+				EA60605C1B798D2300A9EC45 /* UIImage+Color.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -743,6 +749,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA56C0661B42E1140076EC00 /* ViewController.m in Sources */,
+				EA60605D1B798D2300A9EC45 /* UIImage+Color.m in Sources */,
 				EA56C0631B42E1140076EC00 /* AppDelegate.m in Sources */,
 				EA56C0601B42E1140076EC00 /* main.m in Sources */,
 			);
@@ -787,6 +794,7 @@
 				EA3E23921B732B6800349A95 /* LWDataConfig.m in Sources */,
 				EA3E23871B732B5100349A95 /* LWKeyboardWrap.m in Sources */,
 				EA3E23BE1B732C0300349A95 /* LWNumKeyboard.m in Sources */,
+				EA60605E1B798D2300A9EC45 /* UIImage+Color.m in Sources */,
 				BEF062B581AF72A0C7CF56CD /* LWBiHuaKeyboard.m in Sources */,
 				BEF0643CC3CA937BE0736A57 /* LWWuBiFullKeyboard.m in Sources */,
 			);

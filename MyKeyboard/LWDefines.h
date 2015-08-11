@@ -34,11 +34,13 @@
 typedef NS_OPTIONS(NSUInteger, KeyboardType) {
     //常规键盘
     Keyboard_PingYingFull = 1,              //拼音全键
-    Keyboard_ENFull = 1 << 1,               //英文全键
-    Keyboard_NumNine = 1 << 2,           //数字九键
-    Keyboard_PingYingNine = 1 << 3,     //拼音九键
-    Keyboard_SymbolCollection = 1 << 4,   //符号方键
-    Keyboard_SymbolFull = 1 << 5,        //符号全键
+    keyboard_WuBiFull = 1 << 1,             //全键盘五笔
+    Keyboard_ENFull = 1 << 2,               //英文全键
+    Keyboard_NumNine = 1 << 3,           //数字九键
+    Keyboard_PingYingNine = 1 << 4,     //拼音九键
+    keyboard_BiHuaNine = 1 << 5,        //笔画九键
+    Keyboard_SymbolCollection = 1 << 6,   //符号方键
+    Keyboard_SymbolFull = 1 << 7,        //符号全键
 
     //特定键盘
 
@@ -114,10 +116,10 @@ typedef NS_ENUM(NSInteger, ReturnKeyType) {
 
 
 //topView的高度
-#define TopView_H  ((CGFloat) ([LWKeyboardConfig predictiveMode] == Predictive_DoubleLine ? 78.0 : 40.0))
+#define TopView_H  ((CGFloat) ([LWKeyboardConfig predictiveMode] == Predictive_DoubleLine ? 60.0 : 40.0))
 //键盘工具栏高度
 #define Toolbar_H 40.0
-#define Toolbar_Y ((CGFloat) ([LWKeyboardConfig predictiveMode] == Predictive_DoubleLine ? 38.0 : 0.0))
+#define Toolbar_Y ((CGFloat) ([LWKeyboardConfig predictiveMode] == Predictive_DoubleLine ? 20.0 : 0.0))
 
 
 
@@ -141,7 +143,9 @@ typedef NS_ENUM(NSInteger, ReturnKeyType) {
 #define OPACITY_KBBTN_CONTENTVIEW_BG 0.2
 #define OPACITY_KBBTN_CONTENTVIEW_BG_HIGHLIGHT 0.5
 
-
+//按键图片内容的颜色
+#define COLOR_KBBTN_IMG_NORMAL [UIColor colorWithRed:1 green:0.93 blue:0.78 alpha:1]
+#define COLOR_KBBTN_IMG_HIGHLIGHT [UIColor whiteColor]
 
 //按键阴影颜色
 #define COLOR_SHADOWLAYER [UIColor grayColor].CGColor
@@ -156,6 +160,10 @@ typedef NS_ENUM(NSInteger, ReturnKeyType) {
 //按键中mainLabel的字体
 #define MAINTEXT_FONT [UIFont systemFontOfSize:17]
 #define TOPTEXT_FONT [UIFont systemFontOfSize:9]
+
+//字体颜色
+#define COLOR_MAINTEXT [UIColor colorWithRed:1 green:0.93 blue:0.78 alpha:1]
+#define COLOR_TOPTEXT [UIColor colorWithRed:1 green:0.93 blue:0.78 alpha:1]
 
 //按键中topLb与mainLb的间距
 #define SPACE_TOP_MAIN 0.5

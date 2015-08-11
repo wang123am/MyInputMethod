@@ -2,8 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "pop_wide.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",

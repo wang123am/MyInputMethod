@@ -2,8 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "emoticon_expand.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",

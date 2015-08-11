@@ -16,6 +16,7 @@
     if (self) {
         [self setupCharKBBtns:[LWKeyboardConfig pinYinFullKBCharTextTagDict]];
         [self setupKeyKBBtns:[LWKeyboardConfig pinYinFullKBKeyTextTagDict]];
+        [self setBtnTip:@"拼音全键" withTag:404];
     }
 
     return self;

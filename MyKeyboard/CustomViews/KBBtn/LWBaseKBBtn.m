@@ -45,6 +45,11 @@
     _backgroundLayer.frame = CGRectInset(_contentView.frame, 0, 0);
     _highlightBackgroundLayer.frame = CGRectInset(_contentView.frame, 0, 0);
 
+    if(_tipLb){
+        [_tipLb sizeToFit];
+        CGSize tipLbSize = _tipLb.frame.size;
+        _tipLb.frame = CGRectMake(_contentView.frame.size.width-tipLbSize.width, 0, tipLbSize.width, 20);
+    }
     [super layoutSubviews];
 
 }
@@ -203,5 +208,15 @@
     [self.layer insertSublayer:_shadowlayer below:_contentView.layer];
 }
 
+//设置提示到按键上
+- (void)setupTip:(NSString *)tip {
+    if(!self.tipLb){
+        self.tipLb = [[UILabel alloc] initWithFrame:CGRectMake(_contentView.frame.size.width-60, 0, 60, 20)];
+        self.tipLb.text = tip;
+        self.tipLb.textColor = COLOR_TOPTEXT;
+        self.tipLb.font = TOPTEXT_FONT;
+        [self.contentView addSubview:self.tipLb];
+    }
+}
 
 @end

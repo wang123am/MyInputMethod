@@ -16,43 +16,67 @@
 //英文全键字符键text->tag字典
 + (NSDictionary *)enFullKBCharTextTagDict {
     return @{@"1|q" : @101, @"2|w" : @102, @"3|e" : @103, @"4|r" : @104, @"5|t" : @105, @"6|y" : @106, @"7|u" : @107, @"8|i" : @108, @"9|o" : @109, @"0|p" : @110,
-            @".|a" : @201, @"@|s" : @202, @"/|d" : @203, @"$|f" : @204, @"%|g" : @205, @"&|h" : @206, @"*|j" : @207, @"(|k" : @208, @")|l" : @209,
-            @"~|z" : @302, @":|x" : @303, @"#|c" : @304, @"-|v" : @305, @"!|b" : @306, @"_|n" : @307, @"?|m" : @308, @"@|." : @403, @"image|space,space_highlighted" : @404};
+            @"=|a" : @201, @"@|s" : @202, @"/|d" : @203, @"$|f" : @204, @"%|g" : @205, @"&|h" : @206, @"*|j" : @207, @"(|k" : @208, @")|l" : @209,
+            @"~|z" : @302, @":|x" : @303, @"#|c" : @304, @"-|v" : @305, @"!|b" : @306, @"_|n" : @307, @"?|m" : @308, @"@|." : @403, @"image|space_wide" : @404};
 }
 
 //英文全键功能键text->tag字典
 + (NSDictionary *)enFullKBKeyTextTagDict {
-    return @{@"image|shift_normal,shift_selected" : @301, @"image|delete_normal,delete_highlight" : @309, @"123" : @401, @"image|english_btn,english_btn" : @402, @"符" : @405, @"换行" : @406};
+    return @{@"image|shift" : @301, @"image|delete" : @309, @"123" : @401, @"image|en_zh" : @402, @"符" : @405, @"换行" : @406};
 }
 
 //拼音全键字符键text->tag字典
 + (NSDictionary *)pinYinFullKBCharTextTagDict {
     return @{@"1|Q" : @101, @"2|W" : @102, @"3|E" : @103, @"4|R" : @104, @"5|T" : @105, @"6|Y" : @106, @"7|U" : @107, @"8|I" : @108, @"9|O" : @109, @"0|P" : @110,
             @"@|A" : @201, @"~|S" : @202, @"?|D" : @203, @"…|F" : @204, @"：|G" : @205, @"；|H" : @206, @"、|J" : @207, @"（|K" : @208, @"）|L" : @209,
-            @"。|，" : @301, @".|Z" : @302, @"！|X" : @303, @"=|C" : @304, @"“|V" : @305, @"”|B" : @306, @"《|N" : @307, @"》|M" : @308, @"image|space,space" : @404};
+            @"。|，" : @301, @"！|Z" : @302, @".|X" : @303, @"=|C" : @304, @"“|V" : @305, @"”|B" : @306, @"_|N" : @307, @"-|M" : @308, @"image|space_wide" : @404};
 }
 
 //拼音全键功能键text->tag字典
 + (NSDictionary *)pinYinFullKBKeyTextTagDict {
-    return @{@"image|delete_normal,delete_highlight" : @309, @"123" : @401, @"image|chinese_btn,chinese_btn" : @402, @"image|next_normal,next_highlight" : @403, @"符" : @405, @"换行" : @406};
+    return @{@"image|delete" : @309, @"123" : @401, @"image|zh_en" : @402, @"image|next" : @403, @"符" : @405, @"换行" : @406};
 }
 
+//五笔全键
++ (NSDictionary *)wubiFullKBCharTextTagDict {
+    return @{@"1|Q" : @101, @"2|W" : @102, @"3|E" : @103, @"4|R" : @104, @"5|T" : @105, @"6|Y" : @106, @"7|U" : @107, @"8|I" : @108, @"9|O" : @109, @"0|P" : @110,
+            @"@|A" : @201, @"~|S" : @202, @"?|D" : @203, @"…|F" : @204, @"：|G" : @205, @"；|H" : @206, @"、|J" : @207, @"（|K" : @208, @"）|L" : @209,
+            @"。|，" : @301, @"！|Z" : @302, @".|X" : @303, @"=|C" : @304, @"“|V" : @305, @"”|B" : @306, @"_|N" : @307, @"-|M" : @308, @"image|space_wide" : @404};
+}
+
+//五笔全键
++ (NSDictionary *)wubiFullKBKeyTextTagDict {
+    return @{@"image|delete" : @309, @"123" : @401, @"image|zh_en" : @402, @"image|next" : @403, @"符" : @405, @"换行" : @406};
+}
+
+//拼音九键
 +(NSDictionary *)pinYinNineKBCharTextTagDict{
     return @{@"1|(●─●)/@":@101,@"2|ABC":@102,@"3|DEF":@103,@"4|GHI":@201,@"5|JKL":@202,@"6|MNO":@203,@"7|PQRS":@301,@"8|TUV":@302,@"9|WXYZ":@303,@"0| ":@404};
 }
 
-
+//拼音九键
 +(NSDictionary *)pinYinNineKBKeyTextTagDict{
-    return @{@"image|delete_normal,delete_highlight":@104,@"重输":@204,@"123":@401,@"image|chinese_btn,chinese_btn":@402,@"image|next_normal,next_highlight":@403,@"符":@405,@"换行":@406};
+    return @{@"image|delete":@104,@"重输":@204,@"123":@401,@"image|zh_en":@402,@"image|next":@403,@"符":@405,@"换行":@406};
 }
 
+//笔画九键
++ (NSDictionary *)biHuaKBCharTextTagDict {
+    return @{@"1|一":@101,@"2|｜":@102,@"3|ノ":@103,@"4|、":@201,@"5|ㄥ":@202,@"6|通配":@203,@"7|分隔":@301,@"8|：":@302,@"9|；":@303,@"0| ":@404};
+}
+
+//笔画九键
++ (NSDictionary *)biHuaKBKeyTextTagDict {
+    return @{@"image|delete":@104,@"重输":@204,@"123":@401,@"image|zh_en":@402,@"image|next":@403,@"符":@405,@"换行":@406};
+}
+
+//数字九键
 +(NSDictionary *)numNineKBCharTextTagDict{
-    return @{@"|1":@101,@"|2":@102,@"|3":@103,@"|4":@201,@"|5":@202,@"|6":@203,@"|@":@204,@"|7":@301,@"|8":@302,@"|9":@303,@"|.":@304,@"image|space,space":@402,@"|0":@403};
+    return @{@"|1":@101,@"|2":@102,@"|3":@103,@"|4":@201,@"|5":@202,@"|6":@203,@"|@":@204,@"|7":@301,@"|8":@302,@"|9":@303,@"|.":@304,@"image|space_wide":@402,@"|0":@403};
 }
 
-
+//数字九键
 +(NSDictionary *)numNineKBKeyTextTagDict{
-    return @{@"image|delete_normal,delete_highlight":@104,@"返回":@401,@"符":@404,@"换行":@405};
+    return @{@"image|delete":@104,@"返回":@401,@"符":@404,@"换行":@405};
 }
 
 /**
@@ -172,4 +196,7 @@
     //通过获取剪贴板的方式来判断是否开启了权限
     return [UIPasteboard generalPasteboard] != nil;
 }
+
+
+
 @end

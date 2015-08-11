@@ -4,9 +4,22 @@
 //
 
 #import "LWBiHuaKeyboard.h"
+#import "LWKeyboardConfig.h"
 
 
 @implementation LWBiHuaKeyboard {
 
 }
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self setupCharKBBtns:[LWKeyboardConfig biHuaKBCharTextTagDict]];
+        [self setupKeyKBBtns:[LWKeyboardConfig biHuaKBKeyTextTagDict]];
+        [self setBtnTip:@"笔画" withTag:404];
+    }
+
+    return self;
+}
+
 @end

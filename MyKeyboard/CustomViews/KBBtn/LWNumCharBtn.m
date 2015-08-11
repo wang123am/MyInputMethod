@@ -60,6 +60,7 @@
             self.mainLabel.center = CGPointMake(boundSize.width/2, boundSize.height/2);
             self.mainLabel.textAlignment = NSTextAlignmentCenter;
             self.mainLabel.font = MAINTEXT_FONT;
+            self.mainLabel.textColor = COLOR_MAINTEXT;
             [self.contentView addSubview:self.mainLabel];
         }
         self.mainLabel.text = text;

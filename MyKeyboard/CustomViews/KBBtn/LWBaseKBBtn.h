@@ -20,11 +20,14 @@
 //高亮背景图层
 @property(nonatomic, strong) CALayer *highlightBackgroundLayer;
 
+@property(nonatomic, strong) UILabel *tipLb;
+
 /**
 * 设置子视图
 */
 - (void)setupSubViews;
 
 
+- (void)setupTip:(NSString *)tip;
 @end
 

@@ -87,4 +87,11 @@
 */
 + (BOOL)isFullAccessGranted;
 
++ (NSDictionary *)biHuaKBCharTextTagDict;
+
++ (NSDictionary *)biHuaKBKeyTextTagDict;
+
++ (NSDictionary *)wubiFullKBCharTextTagDict;
+
++ (NSDictionary *)wubiFullKBKeyTextTagDict;
 @end
